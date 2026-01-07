@@ -14,7 +14,10 @@ export function FinalCta() {
             <Waveform className="h-6 w-6 text-cyan-400" />
           </div>
 
-          <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">Stop Guessing. Start Measuring.</h2>
+          <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
+            Ready to Ship Voice Agents{" "}
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">That Work?</span>
+          </h2>
           <p className="mx-auto mb-8 max-w-xl text-gray-400">
             Join the engineering teams building voice agents that users actually want to talk to. Get your Flow Score in
             under 5 minutes.

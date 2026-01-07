@@ -18,13 +18,13 @@ export function Hero() {
           </div>
 
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            The Waveform is the{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Truth</span>
+            Evaluate Voice AI.{" "}
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Before It Breaks.</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg text-gray-400 text-balance sm:text-xl">
-            Enterprise-grade infrastructure for evaluating Voice AI quality. Measure latency jitter, barge-in recovery,
-            and tonal consistency—metrics invisible to text-based eval tools.
+            Launch voice agents that work in every scenario. Pre-production testing, real-time monitoring, 
+            and acoustic-native evals—metrics invisible to text-based tools.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">

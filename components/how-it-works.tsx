@@ -1,29 +1,26 @@
-import { ArrowRight, Mic, Shield, Activity, CheckCircle } from "lucide-react"
+import { ArrowRight, Plug, Beaker, BarChart3 } from "lucide-react"
 
 export function HowItWorks() {
   const steps = [
     {
-      icon: <Mic className="h-6 w-6" />,
-      title: "Input",
-      description: "Voice agent receives user audio",
+      step: "01",
+      icon: <Plug className="h-6 w-6" />,
+      title: "Connect",
+      description: "Integrate NeoAI with your voice agent in minutes. Works with Vapi, Retell, LiveKit, and more.",
       color: "cyan",
     },
     {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Neo AI Guardrails",
-      description: "Real-time PII redaction & fraud detection",
+      step: "02",
+      icon: <Beaker className="h-6 w-6" />,
+      title: "Test",
+      description: "Run pre-production simulations across diverse personas. Catch issues before users do.",
       color: "purple",
     },
     {
-      icon: <Activity className="h-6 w-6" />,
-      title: "Neo AI Evals",
-      description: "Flow scoring & acoustic analysis",
-      color: "blue",
-    },
-    {
-      icon: <CheckCircle className="h-6 w-6" />,
-      title: "Safe Output",
-      description: "Verified, compliant response delivery",
+      step: "03",
+      icon: <BarChart3 className="h-6 w-6" />,
+      title: "Monitor",
+      description: "Track production conversations in real-time. Get alerts on latency spikes and flow issues.",
       color: "emerald",
     },
   ]
@@ -32,32 +29,38 @@ export function HowItWorks() {
     <section id="how-it-works" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-400">
+            Simple. Seamless. Smart.
+          </div>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">How It Works</h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            End-to-end acoustic assurance for every voice interaction
+            End-to-end acoustic assurance for every voice interaction in three easy steps
           </p>
         </div>
 
         <div className="relative">
           {/* Connection line - desktop only */}
-          <div className="absolute top-16 left-0 right-0 hidden h-0.5 bg-gradient-to-r from-cyan-500 via-purple-500 to-emerald-500 lg:block" />
+          <div className="absolute top-20 left-0 right-0 hidden h-0.5 bg-gradient-to-r from-cyan-500 via-purple-500 to-emerald-500 lg:block" />
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-3">
             {steps.map((step, index) => (
               <div key={step.title} className="relative">
                 <div className="flex flex-col items-center text-center">
+                  {/* Step number */}
+                  <div className="mb-4 font-mono text-sm text-gray-500">{step.step}</div>
+
                   <div
-                    className={`relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-${step.color}-500 bg-[#0a0a0f] text-${step.color}-400`}
+                    className={`relative z-10 mb-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-${step.color}-500 bg-[#0a0a0f] text-${step.color}-400`}
                   >
                     {step.icon}
                   </div>
-                  <h3 className="mb-2 font-semibold text-white">{step.title}</h3>
+                  <h3 className="mb-2 text-xl font-semibold text-white">{step.title}</h3>
                   <p className="text-sm text-gray-400">{step.description}</p>
                 </div>
 
                 {/* Arrow for mobile/tablet */}
                 {index < steps.length - 1 && (
-                  <div className="mt-4 flex justify-center sm:hidden">
+                  <div className="mt-6 flex justify-center sm:hidden">
                     <ArrowRight className="h-5 w-5 rotate-90 text-gray-600" />
                   </div>
                 )}
@@ -74,31 +77,21 @@ export function HowItWorks() {
               <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
               <div className="h-3 w-3 rounded-full bg-green-500/80" />
             </div>
-            <span className="font-mono text-xs text-gray-500">barge-in-test.py</span>
+            <span className="font-mono text-xs text-gray-500">quick-start.py</span>
           </div>
           <pre className="overflow-x-auto p-4 font-mono text-sm">
             <code className="text-gray-300">
               <span className="text-purple-400">from</span> neo_ai <span className="text-purple-400">import</span>{" "}
-              EvalClient, PersonaSwarm{"\n\n"}
-              <span className="text-gray-500"># Initialize the eval client</span>
+              EvalClient{"\n\n"}
+              <span className="text-gray-500"># Connect in one line</span>
               {"\n"}
               client = EvalClient(target=<span className="text-cyan-400">"wss://your-agent.vapi.ai"</span>){"\n\n"}
-              <span className="text-gray-500"># Run barge-in stress test</span>
+              <span className="text-gray-500"># Run your first test</span>
               {"\n"}
-              results = client.run_test({"\n"}
-              {"  "}persona=PersonaSwarm.INTERRUPTER,{"\n"}
-              {"  "}delays=[<span className="text-cyan-400">150</span>, <span className="text-cyan-400">300</span>,{" "}
-              <span className="text-cyan-400">500</span>], <span className="text-gray-500"># ms</span>
-              {"\n"}
-              {"  "}iterations=<span className="text-cyan-400">20</span>
-              {"\n"}){"\n\n"}
+              results = client.quick_test(){"\n\n"}
               <span className="text-purple-400">print</span>(f<span className="text-cyan-400">"Flow Score: </span>
               {"{"}results.flow_score{"}"}
-              <span className="text-cyan-400">"</span>){"\n"}
-              <span className="text-purple-400">print</span>(f
-              <span className="text-cyan-400">"Recovery Time P99: </span>
-              {"{"}results.recovery_p99{"}"}
-              <span className="text-cyan-400">ms"</span>)
+              <span className="text-cyan-400">"</span>)
             </code>
           </pre>
         </div>

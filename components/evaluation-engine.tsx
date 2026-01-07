@@ -1,7 +1,30 @@
 import type React from "react"
-import { Activity, GitBranch, DollarSign, Zap } from "lucide-react"
+import { Activity, MessageSquareWarning, Clock, Shield, Zap } from "lucide-react"
 
 export function EvaluationEngine() {
+  const questionCards = [
+    {
+      icon: <MessageSquareWarning className="h-5 w-5" />,
+      question: "Your prompt broke the conversation flow?",
+      description: "Test how prompt changes impact conversational quality before they hit production.",
+    },
+    {
+      icon: <Clock className="h-5 w-5" />,
+      question: "Latency spikes killing user experience?",
+      description: "Monitor P99 latency in real-time and catch issues before users notice.",
+    },
+    {
+      icon: <Zap className="h-5 w-5" />,
+      question: "Barge-ins causing agent confusion?",
+      description: "Stress test with interruptive synthetic personas at 150ms, 300ms, and 500ms intervals.",
+    },
+    {
+      icon: <Shield className="h-5 w-5" />,
+      question: "Compliance checks getting skipped?",
+      description: "Automated evaluation for safety guardrails and required disclaimers.",
+    },
+  ]
+
   return (
     <section id="features" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -69,28 +92,16 @@ export function EvaluationEngine() {
             </div>
           </div>
 
-          {/* Feature cards */}
+          {/* Question-driven feature cards (Cekura style) */}
           <div className="grid gap-4 sm:grid-cols-2">
-            <FeatureCard
-              icon={<Zap className="h-5 w-5" />}
-              title="Barge-In Stress Test"
-              description="Automated testing with synthetic personas that interrupt at 150ms, 300ms, and 500ms intervals."
-            />
-            <FeatureCard
-              icon={<GitBranch className="h-5 w-5" />}
-              title="Prompt Versioning"
-              description="Track acoustic performance across prompt iterations with automatic regression detection."
-            />
-            <FeatureCard
-              icon={<Activity className="h-5 w-5" />}
-              title="Jitter Analysis"
-              description="P99 latency tracking that exposes the spikes your users actually experience."
-            />
-            <FeatureCard
-              icon={<DollarSign className="h-5 w-5" />}
-              title="Cost Attribution"
-              description="Token-level cost tracking per conversation with STT/LLM/TTS breakdown."
-            />
+            {questionCards.map((card) => (
+              <QuestionCard
+                key={card.question}
+                icon={card.icon}
+                question={card.question}
+                description={card.description}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -98,21 +109,21 @@ export function EvaluationEngine() {
   )
 }
 
-function FeatureCard({
+function QuestionCard({
   icon,
-  title,
+  question,
   description,
 }: {
   icon: React.ReactNode
-  title: string
+  question: string
   description: string
 }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-[#12121a] p-5 transition-colors hover:border-cyan-500/30">
-      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+    <div className="group rounded-xl border border-white/10 bg-[#12121a] p-5 transition-all hover:border-cyan-500/30 hover:bg-[#12121a]/80">
+      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400 transition-colors group-hover:bg-cyan-500/20">
         {icon}
       </div>
-      <h3 className="mb-2 font-semibold text-white">{title}</h3>
+      <h3 className="mb-2 font-semibold text-white">{question}</h3>
       <p className="text-sm text-gray-400">{description}</p>
     </div>
   )

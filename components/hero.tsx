@@ -79,13 +79,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
-            <Button
-              size="lg"
-              className="rounded-full bg-indigo-500 px-8 text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-600 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 hover:scale-105 font-medium"
-            >
-              Get Early Access
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+
             <Button
               size="lg"
               variant="outline"

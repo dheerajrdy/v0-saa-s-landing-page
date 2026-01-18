@@ -61,7 +61,7 @@ export default function VoiceAISecurityPost() {
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               But as these systems proliferate, a critical gap has emerged: <strong>the security infrastructure
-              hasn&apos;t kept pace</strong>. Most AI safety tools were designed for text. They analyze prompts,
+                hasn&apos;t kept pace</strong>. Most AI safety tools were designed for text. They analyze prompts,
               filter outputs, and enforce policies&mdash;all at the text level. Voice is different.
             </p>
           </motion.div>
@@ -257,8 +257,8 @@ export default function VoiceAISecurityPost() {
             <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Stage 2: Parallel Detection Models</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Three specialized models run in parallel on the extracted features. The <strong>Injection
-              Detector</strong> identifies malicious commands embedded in audio. The <strong>Deepfake
-              Detector</strong> verifies voice authenticity. The <strong>Policy Validator</strong> ensures
+                Detector</strong> identifies malicious commands embedded in audio. The <strong>Deepfake
+                  Detector</strong> verifies voice authenticity. The <strong>Policy Validator</strong> ensures
               requests comply with your defined guardrails. Each model produces a confidence score.
             </p>
 
@@ -404,30 +404,7 @@ export default function VoiceAISecurityPost() {
             </p>
           </motion.div>
 
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mt-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 p-8 text-center"
-          >
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to secure your voice agents?
-            </h3>
-            <p className="text-indigo-100 mb-6">
-              Join the waitlist for early access to ProofLayer.
-            </p>
-            <Link href="/#">
-              <Button
-                size="lg"
-                className="rounded-full bg-white px-8 text-indigo-600 hover:bg-indigo-50 font-medium shadow-lg"
-              >
-                Get Early Access
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </motion.div>
+
         </div>
       </article>
 

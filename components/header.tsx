@@ -32,22 +32,14 @@ export function Header() {
           <a href="#features" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Features
           </a>
-          <a href="#docs" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
-            Docs
-          </a>
+
           <Link href="/blog" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Blog
           </Link>
         </nav>
 
         {/* CTA Button - Pill shaped */}
-        <div className="hidden items-center gap-3 md:flex">
-          <Button
-            className="rounded-full bg-indigo-500 px-6 text-white shadow-md shadow-indigo-500/25 transition-all hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 font-medium"
-          >
-            Get Early Access
-          </Button>
-        </div>
+
 
         {/* Mobile Menu Toggle */}
         <button
@@ -72,19 +64,11 @@ export function Header() {
             <a href="#features" className="text-gray-600 hover:text-gray-900">
               Features
             </a>
-            <a href="#docs" className="text-gray-600 hover:text-gray-900">
-              Docs
-            </a>
+
             <Link href="/blog" className="text-gray-600 hover:text-gray-900">
               Blog
             </Link>
-            <div className="pt-4">
-              <Button
-                className="w-full rounded-full bg-indigo-500 text-white hover:bg-indigo-600"
-              >
-                Get Early Access
-              </Button>
-            </div>
+
           </nav>
         </div>
       )}

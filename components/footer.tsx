@@ -1,35 +1,29 @@
 import { Github, Twitter, Linkedin, Sparkles } from "lucide-react"
-import { DiscordCta } from "@/components/discord-cta"
-import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-800 bg-gray-900 px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="border-t border-gray-200 bg-[#FAFAFA] px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        {/* Discord CTA */}
-        <DiscordCta />
-
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500">
                 <Sparkles className="h-4 w-4 text-white" />
               </div>
-              <span className="text-lg font-semibold text-white">
-                Proof<span className="text-indigo-400">Layer</span>
+              <span className="text-lg font-semibold text-gray-900">
+                Proof<span className="text-indigo-500">Layer</span>
               </span>
             </div>
-            <p className="text-sm text-gray-400">Diligence for intelligence.</p>
-            <p className="text-xs text-gray-500 mt-2">San Francisco, CA</p>
+            <p className="text-sm text-gray-600">Diligence for intelligence.</p>
             <div className="mt-4 flex gap-4">
-              <a href="#" className="text-gray-500 transition-colors hover:text-gray-300">
+              <a href="#" className="text-gray-400 transition-colors hover:text-gray-600">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-500 transition-colors hover:text-gray-300">
+              <a href="#" className="text-gray-400 transition-colors hover:text-gray-600">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-500 transition-colors hover:text-gray-300">
+              <a href="#" className="text-gray-400 transition-colors hover:text-gray-600">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -37,25 +31,25 @@ export function Footer() {
 
           {/* Product */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Product</h4>
+            <h4 className="mb-4 text-sm font-semibold text-gray-900">Product</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#product" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#product" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Overview
                 </a>
               </li>
               <li>
-                <a href="#features" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#architecture" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#architecture" className="text-gray-600 hover:text-gray-900 transition-colors">
                   How it Works
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Integrations
                 </a>
               </li>
@@ -64,25 +58,25 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Resources</h4>
+            <h4 className="mb-4 text-sm font-semibold text-gray-900">Resources</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   API Reference
                 </a>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Blog
-                </Link>
+                </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Contact
                 </a>
               </li>
@@ -91,25 +85,25 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Legal</h4>
+            <h4 className="mb-4 text-sm font-semibold text-gray-900">Legal</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Security
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Compliance
                 </a>
               </li>
@@ -118,7 +112,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 border-t border-gray-800 pt-8">
+        <div className="mt-12 border-t border-gray-200 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500">
               &copy; {new Date().getFullYear()} ProofLayer. All rights reserved.
@@ -134,9 +128,6 @@ export function Footer() {
               </span>
             </div>
           </div>
-          <p className="mt-4 text-center text-xs text-gray-600">
-            Designed and developed with ❤️ by the ProofLayer team
-          </p>
         </div>
       </div>
     </footer>

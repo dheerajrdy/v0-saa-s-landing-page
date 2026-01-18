@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-40 lg:pb-28">
+    <section className="relative overflow-hidden px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-40 lg:pb-32">
       {/* Decorative blobs */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="blob blob-purple absolute top-20 left-1/4 h-[400px] w-[400px]" />
@@ -35,9 +35,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-4xl text-5xl font-bold leading-tight tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
           >
-            Real-time Security for{" "}
+            Diligence,{" "}
             <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              Voice AI
+              Automated.
             </span>
           </motion.h1>
 
@@ -48,7 +48,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 max-w-2xl text-lg text-gray-600 sm:text-xl"
           >
-            Audio-native safety that actually works. Detect injection attacks, deepfakes, and policy violations in real-time.
+            Audio-native safety for voice AI that actually works.
           </motion.p>
 
           {/* Value props */}
@@ -60,15 +60,15 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-emerald-700">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Privacy-First
+              Privacy
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 px-3 py-1 text-violet-700">
               <span className="h-1.5 w-1.5 rounded-full bg-violet-500" />
-              Zero Latency
+              Safety
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1 text-orange-700">
               <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-              SOC2 Ready
+              Fairness
             </span>
           </motion.div>
 
@@ -81,9 +81,9 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 text-white shadow-lg shadow-indigo-500/25 transition-all hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 hover:scale-105 font-medium"
+              className="rounded-full bg-indigo-500 px-8 text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-600 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 hover:scale-105 font-medium"
             >
-              Start for Free
+              Get Early Access
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
@@ -91,7 +91,7 @@ export function Hero() {
               variant="outline"
               className="rounded-full border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all"
             >
-              Request Demo
+              See How It Works
             </Button>
           </motion.div>
 

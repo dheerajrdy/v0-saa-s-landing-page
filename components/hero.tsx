@@ -81,7 +81,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="rounded-full bg-indigo-500 px-8 text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-600 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 hover:scale-[1.02] font-medium"
+              className="rounded-full bg-indigo-500 px-8 text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-600 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 hover:scale-105 font-medium"
             >
               Get Early Access
               <ArrowRight className="ml-2 h-4 w-4" />

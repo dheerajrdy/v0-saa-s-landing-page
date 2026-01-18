@@ -156,7 +156,7 @@
 
   /* Playful button bounce */
   .btn-bounce {
-    @apply transition-all duration-200 ease-out hover:scale-[1.02] hover:-translate-y-0.5 active:scale-[0.98];
+    @apply transition-all duration-200 ease-out hover:scale-105 hover:-translate-y-0.5 active:scale-[0.98];
   }
 
   /* Decorative blobs */

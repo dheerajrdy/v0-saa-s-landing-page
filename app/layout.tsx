@@ -3,18 +3,38 @@ import type { Metadata } from "next"
 
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import { Geist, Geist_Mono, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 
-// Initialize fonts
-const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
+// Initialize fonts - Clean, modern sans-serif
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ["400", "500", "600", "700"],
+  variable: '--font-inter',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ["400", "500"],
+  variable: '--font-mono',
+})
 
 export const metadata: Metadata = {
-  title: "Neo AI - Acoustic-Native Evaluation Platform for Voice AI",
+  title: "ProofLayer - Diligence, Automated",
   description:
-    "Enterprise-grade infrastructure for evaluating Voice AI quality. Measure latency jitter, barge-in recovery, and tonal consistency—metrics invisible to text-based eval tools.",
-  generator: "v0.app",
+    "Audio-native safety for voice AI that actually works. Protect your voice agents from prompt injection, deepfakes, and unauthorized actions. Privacy. Safety. Fairness.",
+  keywords: ["voice AI security", "deepfake detection", "audio security", "speech-to-speech", "AI safety", "voice agent protection", "prompt injection"],
+  authors: [{ name: "ProofLayer" }],
+  openGraph: {
+    title: "ProofLayer - Diligence, Automated",
+    description: "Audio-native safety for voice AI that actually works. Privacy. Safety. Fairness.",
+    type: "website",
+    siteName: "ProofLayer",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ProofLayer - Diligence, Automated",
+    description: "Audio-native safety for voice AI that actually works.",
+  },
   icons: {
     icon: [
       {
@@ -40,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`font-sans antialiased`}>
+    <html lang="en">
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

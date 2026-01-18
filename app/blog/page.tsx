@@ -8,6 +8,17 @@ import Link from "next/link"
 
 const posts = [
   {
+    slug: "detecting-deepfakes",
+    title: "The Spectral Lie: Detecting Deepfakes",
+    subtitle: "Why Your Ears (and Your Text Filters) Can't Catch AI-Generated Voices",
+    excerpt: "Why transcription-based security misses 100% of voice cloning attacks, and how to fix it.",
+    category: "Security",
+    categoryColor: "rose",
+    readTime: "6 min read",
+    date: "January 18, 2026",
+    featured: true,
+  },
+  {
     slug: "voice-ai-security",
     title: "The Anatomy of Voice AI Security",
     subtitle: "Why Text-Based Guardrails Aren't Enough",
@@ -16,7 +27,7 @@ const posts = [
     categoryColor: "violet",
     readTime: "8 min read",
     date: "January 18, 2026",
-    featured: true,
+    featured: false,
   },
 ]
 
@@ -35,6 +46,11 @@ const categoryColors = {
     bg: "bg-emerald-50",
     text: "text-emerald-600",
     border: "border-emerald-100",
+  },
+  rose: {
+    bg: "bg-rose-50",
+    text: "text-rose-600",
+    border: "border-rose-100",
   },
 }
 

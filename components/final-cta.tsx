@@ -30,21 +30,24 @@ export function FinalCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-500 p-8 text-center sm:p-12 shadow-xl"
+          className="relative overflow-hidden rounded-3xl bg-gray-900 p-8 text-center sm:p-12 shadow-2xl"
         >
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-transparent to-violet-600/20" />
+
           {/* Decorative elements */}
-          <div className="absolute top-0 left-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute top-0 left-0 h-40 w-40 rounded-full bg-indigo-500/10 blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-violet-500/10 blur-3xl" />
 
           <div className="relative">
-            <div className="mb-6 inline-flex items-center justify-center rounded-full bg-white/20 p-3">
-              <Sparkles className="h-6 w-6 text-white" />
+            <div className="mb-6 inline-flex items-center justify-center rounded-full bg-white/10 p-3 ring-1 ring-white/20">
+              <Sparkles className="h-6 w-6 text-indigo-400" />
             </div>
 
             <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
               Ready to protect your voice agents?
             </h2>
-            <p className="mx-auto mb-8 max-w-xl text-indigo-100">
+            <p className="mx-auto mb-8 max-w-xl text-gray-400">
               Join the waitlist for early access to ProofLayer.
             </p>
 
@@ -54,11 +57,11 @@ export function FinalCta() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center gap-4"
               >
-                <div className="h-16 w-16 rounded-full bg-white/20 flex items-center justify-center">
-                  <CheckCircle className="h-8 w-8 text-white" />
+                <div className="h-16 w-16 rounded-full bg-emerald-500/20 flex items-center justify-center ring-1 ring-emerald-500/30">
+                  <CheckCircle className="h-8 w-8 text-emerald-400" />
                 </div>
                 <p className="text-lg font-medium text-white">You&apos;re on the list!</p>
-                <p className="text-sm text-indigo-100">We&apos;ll be in touch soon with early access.</p>
+                <p className="text-sm text-gray-400">We&apos;ll be in touch soon with early access.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
@@ -68,13 +71,13 @@ export function FinalCta() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-indigo-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all"
+                  className="flex-1 px-5 py-3 rounded-full bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-transparent transition-all"
                 />
                 <Button
                   type="submit"
                   size="lg"
                   disabled={status === "loading"}
-                  className="rounded-full bg-white px-6 text-indigo-600 hover:bg-indigo-50 font-medium disabled:opacity-50 shadow-lg"
+                  className="rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-6 text-white hover:opacity-90 font-medium disabled:opacity-50 shadow-lg shadow-indigo-500/25"
                 >
                   {status === "loading" ? (
                     <>
@@ -92,17 +95,17 @@ export function FinalCta() {
             )}
 
             {/* Trust indicators */}
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-indigo-100">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
               <span className="flex items-center gap-1.5">
-                <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                <div className="h-1.5 w-1.5 rounded-full bg-gray-400" />
                 No credit card required
               </span>
               <span className="flex items-center gap-1.5">
-                <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                 SOC2 Compliant
               </span>
               <span className="flex items-center gap-1.5">
-                <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                 HIPAA Ready
               </span>
             </div>

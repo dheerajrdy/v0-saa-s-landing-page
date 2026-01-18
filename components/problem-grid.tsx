@@ -1,59 +1,77 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ShieldAlert, Mic, Bot, FileWarning } from "lucide-react"
+import { ShieldAlert, Mic, Bot, FileWarning, Zap, Lock } from "lucide-react"
 
-const threats = [
+const reasons = [
   {
-    icon: ShieldAlert,
-    title: "Voice Injection",
-    description:
-      "Attackers can hijack your agent with carefully crafted audio. We detect manipulation attempts in real-time.",
+    icon: Zap,
+    title: "REAL-TIME ANALYSIS",
+    description: "Under 50ms latency. We audit the stream without blocking the conversation.",
     color: "indigo",
   },
   {
-    icon: Mic,
-    title: "Deepfakes",
-    description:
-      "Synthetic voices can impersonate anyone convincingly. We verify authenticity at the audio level.",
+    icon: ShieldAlert,
+    title: "INJECTION DETECTION",
+    description: "Detect manipulation attempts and prompt injection in audio streams.",
     color: "violet",
   },
   {
+    icon: Mic,
+    title: "DEEPFAKE PROTECTION",
+    description: "Verify speaker identity and detect synthetic clones in real-time.",
+    color: "rose",
+  },
+  {
+    icon: Lock,
+    title: "POLICY ENFORCEMENT",
+    description: "Define guardrails for what your agent can and cannot do.",
+    color: "emerald",
+  },
+  {
     icon: Bot,
-    title: "Unauthorized Actions",
-    description:
-      "One wrong command can trigger unintended tool calls. We enforce policy before execution.",
+    title: "ZERO INFRASTRUCTURE",
+    description: "Fully managed. No GPU required. Just point your stream to us.",
     color: "orange",
   },
   {
     icon: FileWarning,
-    title: "Compliance Gaps",
-    description:
-      "Voice interactions need audit trails too. We generate compliant logs for every conversation.",
-    color: "emerald",
+    title: "COMPLIANCE READY",
+    description: "SOC2, HIPAA, GDPR audit logs built-in from day one.",
+    color: "blue",
   },
 ]
 
 const colorClasses = {
   indigo: {
-    iconBg: "bg-indigo-50",
-    iconColor: "text-indigo-500",
-    ring: "ring-indigo-100",
+    iconBg: "bg-indigo-500/10",
+    iconColor: "text-indigo-400",
+    ring: "ring-indigo-500/20",
   },
   violet: {
-    iconBg: "bg-violet-50",
-    iconColor: "text-violet-500",
-    ring: "ring-violet-100",
+    iconBg: "bg-violet-500/10",
+    iconColor: "text-violet-400",
+    ring: "ring-violet-500/20",
   },
-  orange: {
-    iconBg: "bg-orange-50",
-    iconColor: "text-orange-500",
-    ring: "ring-orange-100",
+  rose: {
+    iconBg: "bg-rose-500/10",
+    iconColor: "text-rose-400",
+    ring: "ring-rose-500/20",
   },
   emerald: {
-    iconBg: "bg-emerald-50",
-    iconColor: "text-emerald-500",
-    ring: "ring-emerald-100",
+    iconBg: "bg-emerald-500/10",
+    iconColor: "text-emerald-400",
+    ring: "ring-emerald-500/20",
+  },
+  orange: {
+    iconBg: "bg-orange-500/10",
+    iconColor: "text-orange-400",
+    ring: "ring-orange-500/20",
+  },
+  blue: {
+    iconBg: "bg-blue-500/10",
+    iconColor: "text-blue-400",
+    ring: "ring-blue-500/20",
   },
 }
 
@@ -80,14 +98,11 @@ const cardVariants = {
 
 export function ProblemGrid() {
   return (
-    <section id="product" className="relative px-4 py-24 sm:px-6 lg:px-8 bg-white">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="blob blob-indigo absolute top-0 right-1/4 h-[300px] w-[300px]" />
-        <div className="blob blob-purple absolute bottom-0 left-1/4 h-[250px] w-[250px]" />
-      </div>
+    <section id="product" className="relative px-4 py-24 sm:px-6 lg:px-8 bg-gray-900">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-violet-900/20" />
 
-      <div className="mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-7xl">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -96,31 +111,31 @@ export function ProblemGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center rounded-full bg-orange-50 px-4 py-1.5 text-sm font-medium text-orange-600 mb-4">
-            The Challenge
+          <span className="inline-flex items-center rounded-full bg-orange-500/10 px-4 py-1.5 text-sm font-medium text-orange-400 ring-1 ring-inset ring-orange-500/20 mb-4">
+            Why ProofLayer?
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Voice AI has a{" "}
-            <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
               blind spot.
             </span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
             Text-based safety tools miss what makes voice unique. We built protection for the audio-native era.
           </p>
         </motion.div>
 
-        {/* Threat cards grid */}
+        {/* Reason cards grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {threats.map((threat, index) => {
-            const Icon = threat.icon
-            const colors = colorClasses[threat.color as keyof typeof colorClasses]
+          {reasons.map((reason, index) => {
+            const Icon = reason.icon
+            const colors = colorClasses[reason.color as keyof typeof colorClasses]
 
             return (
               <motion.div
@@ -128,20 +143,20 @@ export function ProblemGrid() {
                 variants={cardVariants}
                 className="group"
               >
-                <div className={`h-full rounded-2xl bg-white p-6 shadow-sm ring-1 ${colors.ring} transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}>
+                <div className={`h-full rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1`}>
                   {/* Icon */}
-                  <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${colors.iconBg}`}>
+                  <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${colors.iconBg} ring-1 ring-inset ${colors.ring}`}>
                     <Icon className={`h-6 w-6 ${colors.iconColor}`} />
                   </div>
 
                   {/* Title */}
-                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
-                    {threat.title}
+                  <h3 className="mb-2 text-sm font-bold text-white uppercase tracking-wide">
+                    {reason.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {threat.description}
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    {reason.description}
                   </p>
                 </div>
               </motion.div>

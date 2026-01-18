@@ -13,25 +13,27 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500">
-            <Sparkles className="h-4 w-4 text-white" />
-          </div>
-          <span className="text-lg font-semibold tracking-tight text-gray-900">
-            Proof<span className="text-indigo-500">Layer</span>
-          </span>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500">
+              <Sparkles className="h-4 w-4 text-white" />
+            </div>
+            <span className="text-lg font-semibold tracking-tight text-gray-900">
+              Proof<span className="text-indigo-500">Layer</span>
+            </span>
+          </Link>
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
-          <a href="#product" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
+          <Link href="/#product" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Product
-          </a>
-          <a href="#architecture" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
+          </Link>
+          <Link href="/#architecture" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             How it Works
-          </a>
-          <a href="#features" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
+          </Link>
+          <Link href="/#features" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Features
-          </a>
+          </Link>
 
           <Link href="/blog" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Blog
@@ -55,15 +57,15 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="border-t border-gray-200 bg-white md:hidden">
           <nav className="flex flex-col gap-4 px-4 py-6">
-            <a href="#product" className="text-gray-600 hover:text-gray-900">
+            <Link href="/#product" className="text-gray-600 hover:text-gray-900">
               Product
-            </a>
-            <a href="#architecture" className="text-gray-600 hover:text-gray-900">
+            </Link>
+            <Link href="/#architecture" className="text-gray-600 hover:text-gray-900">
               How it Works
-            </a>
-            <a href="#features" className="text-gray-600 hover:text-gray-900">
+            </Link>
+            <Link href="/#features" className="text-gray-600 hover:text-gray-900">
               Features
-            </a>
+            </Link>
 
             <Link href="/blog" className="text-gray-600 hover:text-gray-900">
               Blog

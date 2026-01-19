@@ -236,6 +236,7 @@ export default function DetectingDeepfakesPost() {
                             If a deepfake says &quot;Hello,&quot; the transcription is just &quot;Hello.&quot; There&apos;s nothing malicious
                             about the word itself. The threat isn&apos;t in the <em>content</em>&mdash;it&apos;s in the <em>voice</em>.
                             When you convert audio to text, you throw away the exact information needed to detect the attack.
+                            This is why Proof Layer's <strong>Acoustic Safety Module</strong> operates on the raw waveform.
                         </p>
 
                         <div className="rounded-xl bg-gray-50 border border-gray-200 p-6 my-8">
@@ -452,6 +453,26 @@ export default function DetectingDeepfakesPost() {
                             the Tandem Detection Cost Function (t-DCF), SASV forces attackers to fool two
                             fundamentally different mathematical models simultaneously.
                         </p>
+
+                        <h3 className="text-xl font-semibold text-gray-900 mt-10 mb-4">
+                            WaveGuard: Audio Adversarial Defense
+                        </h3>
+
+                        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                            Beyond standard SASV, Proof Layer deploys <strong>WaveGuard</strong>, a defense mechanism specifically
+                            for adversarial noise. It maintains parallel streams: the original audio and a &quot;sanitized&quot; version
+                            (processed through lossy transformations like MP3 compression or band-pass filtering).
+                        </p>
+
+                        <div className="rounded-xl bg-indigo-50 border border-indigo-100 p-6 my-8">
+                            <h4 className="font-semibold text-indigo-900 mb-3">The Divergence Check</h4>
+                            <p className="text-indigo-800">
+                                WaveGuard runs high-speed ASR on both streams. Adversarial perturbations are fragile&mdash;they
+                                often break under transformation. If the transcription of the original stream differs
+                                significantly from the sanitized stream, WaveGuard flags the input as an active adversarial
+                                attack and forces the model to use the sanitized (safe) stream.
+                            </p>
+                        </div>
                     </motion.div>
 
                     {/* Section 7: Engineering for Real-Time */}
@@ -497,6 +518,14 @@ export default function DetectingDeepfakesPost() {
                                 <p className="text-sm text-gray-600">
                                     Detection output is a time-series of probabilities. Moving averages or voting
                                     mechanisms prevent false alarms from momentary glitches.
+                                </p>
+                            </div>
+                            <div className="rounded-xl bg-white border border-gray-200 p-5">
+                                <h4 className="font-semibold text-gray-900 mb-2">Global Voice Fingerprint</h4>
+                                <p className="text-sm text-gray-600">
+                                    A network-effect defense: creating a shared database of known synthetic artifacts
+                                    and attacker voice prints (hashed), preventing the same deepfake capability
+                                    from attacking multiple tenants.
                                 </p>
                             </div>
                         </div>

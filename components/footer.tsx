@@ -18,7 +18,7 @@ export function Footer() {
                 className="rounded-lg"
               />
               <span className="text-lg font-semibold text-gray-900">
-                Proof<span className="text-indigo-500">Layer</span>
+                Proof <span className="text-indigo-500">Layer</span>
               </span>
             </div>
             <div className="mt-4 flex gap-4">

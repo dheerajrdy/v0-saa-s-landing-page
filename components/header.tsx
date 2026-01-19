@@ -22,7 +22,7 @@ export function Header() {
               className="rounded-lg"
             />
             <span className="text-lg font-semibold tracking-tight text-gray-900">
-              Proof<span className="text-indigo-500">Layer</span>
+              Proof <span className="text-indigo-500">Layer</span>
             </span>
           </Link>
         </div>

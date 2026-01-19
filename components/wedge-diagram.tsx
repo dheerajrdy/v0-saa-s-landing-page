@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, Shield, Bot, FileCheck, ArrowRight, CheckCircle } from "lucide-react"
+import { Phone, Bot, FileCheck, ArrowRight, CheckCircle } from "lucide-react"
+import Image from "next/image"
 
 export function WedgeDiagram() {
   return (
@@ -80,8 +81,14 @@ export function WedgeDiagram() {
                 transition={{ delay: 0.5 }}
                 className="relative flex flex-col items-center"
               >
-                <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                  <Shield className="h-12 w-12 text-white" />
+                <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 p-2">
+                  <Image
+                    src="/logo.png"
+                    alt="ProofLayer"
+                    width={72}
+                    height={72}
+                    className="rounded-lg"
+                  />
                 </div>
                 <span className="mt-3 text-sm font-semibold text-indigo-600">ProofLayer</span>
 
@@ -148,8 +155,14 @@ export function WedgeDiagram() {
               {/* ProofLayer */}
               <div className="flex justify-center">
                 <div className="flex flex-col items-center">
-                  <div className="h-20 w-20 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                    <Shield className="h-10 w-10 text-white" />
+                  <div className="h-20 w-20 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 p-2">
+                    <Image
+                      src="/logo.png"
+                      alt="ProofLayer"
+                      width={56}
+                      height={56}
+                      className="rounded-lg"
+                    />
                   </div>
                   <span className="mt-2 text-sm font-semibold text-indigo-600">ProofLayer</span>
                 </div>

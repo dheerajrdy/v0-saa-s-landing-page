@@ -69,18 +69,13 @@ export function SocialProofSection() {
                     <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-8">
                         Integrates with
                     </h3>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                    <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
                         {integrations.map((integration, i) => (
                             <div
                                 key={integration.name}
-                                className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors"
+                                className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
                             >
-                                <img
-                                    src={integration.logo}
-                                    alt={integration.name}
-                                    className="h-8 w-8 object-contain grayscale hover:grayscale-0 transition-all"
-                                />
-                                <span className="text-sm font-medium hidden sm:inline">{integration.name}</span>
+                                <span className="text-sm font-medium">{integration.name}</span>
                             </div>
                         ))}
                     </div>

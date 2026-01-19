@@ -12,8 +12,8 @@ export function Footer() {
               <Image
                 src="/logo.png"
                 alt="ProofLayer Logo"
-                width={44}
-                height={44}
+                width={48}
+                height={48}
                 className="rounded-lg"
               />
               <span className="text-lg font-semibold text-gray-900">

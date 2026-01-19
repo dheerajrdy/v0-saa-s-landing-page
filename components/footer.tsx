@@ -1,4 +1,5 @@
-import { Github, Twitter, Linkedin, Sparkles } from "lucide-react"
+import { Github, Twitter, Linkedin } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,9 +9,13 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500">
-                <Sparkles className="h-4 w-4 text-white" />
-              </div>
+              <Image
+                src="/logo.png"
+                alt="ProofLayer Logo"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
               <span className="text-lg font-semibold text-gray-900">
                 Proof<span className="text-indigo-500">Layer</span>
               </span>

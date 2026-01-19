@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Sparkles } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,9 +15,13 @@ export function Header() {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500">
-              <Sparkles className="h-4 w-4 text-white" />
-            </div>
+            <Image
+              src="/logo.png"
+              alt="ProofLayer Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
             <span className="text-lg font-semibold tracking-tight text-gray-900">
               Proof<span className="text-indigo-500">Layer</span>
             </span>

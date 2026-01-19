@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin } from "lucide-react"
+import { Github, Twitter, Linkedin, Shield, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -21,7 +21,6 @@ export function Footer() {
                 Proof<span className="text-indigo-500">Layer</span>
               </span>
             </div>
-            <p className="text-sm text-gray-600">Diligence for intelligence.</p>
             <div className="mt-4 flex gap-4">
               <a href="https://twitter.com/prooflayer" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-gray-600">
                 <Twitter className="h-5 w-5" />
@@ -59,16 +58,29 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Compliance */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-gray-900">Contact</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="mailto:hello@proof-layer.com" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  hello@proof-layer.com
-                </a>
-              </li>
-            </ul>
+            <h4 className="mb-4 text-sm font-semibold text-gray-900">Compliance</h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-50">
+                  <Shield className="h-4 w-4 text-emerald-600" />
+                </div>
+                <div>
+                  <span className="font-medium text-gray-900">SOC2 Type II</span>
+                  <p className="text-xs text-gray-500">Certified</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50">
+                  <CheckCircle className="h-4 w-4 text-indigo-600" />
+                </div>
+                <div>
+                  <span className="font-medium text-gray-900">HIPAA</span>
+                  <p className="text-xs text-gray-500">Compliant</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -117,17 +117,6 @@ export function PricingSection() {
                                     )}
                                 </div>
                             </div>
-
-                            <a href="mailto:hello@proof-layer.com?subject=Pricing Inquiry - ${tier.name} Plan">
-                                <Button
-                                    className={`w-full rounded-full ${tier.popular
-                                        ? "bg-gradient-to-r from-indigo-500 to-violet-500 text-white hover:from-indigo-600 hover:to-violet-600"
-                                        : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
-                                        }`}
-                                >
-                                    Contact for Pricing
-                                </Button>
-                            </a>
                         </motion.div>
                     ))}
                 </div>

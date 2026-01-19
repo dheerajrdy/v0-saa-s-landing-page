@@ -1,11 +1,12 @@
 import { Github, Twitter, Linkedin } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-[#FAFAFA] px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-1.5">
@@ -22,13 +23,10 @@ export function Footer() {
             </div>
             <p className="text-sm text-gray-600">Diligence for intelligence.</p>
             <div className="mt-4 flex gap-4">
-              <a href="#" className="text-gray-400 transition-colors hover:text-gray-600">
+              <a href="https://twitter.com/prooflayer" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-gray-600">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 transition-colors hover:text-gray-600">
-                <Github className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 transition-colors hover:text-gray-600">
+              <a href="https://linkedin.com/company/prooflayer" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-gray-600">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -54,62 +52,20 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Integrations
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold text-gray-900">Resources</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  API Reference
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link href="/blog" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Contact */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-gray-900">Legal</h4>
+            <h4 className="mb-4 text-sm font-semibold text-gray-900">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Security
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Compliance
+                <a href="mailto:hello@proof-layer.com" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  hello@proof-layer.com
                 </a>
               </li>
             </ul>

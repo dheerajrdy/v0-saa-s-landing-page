@@ -29,34 +29,25 @@ export function FinalCta() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="rounded-full bg-white px-8 text-indigo-600 hover:bg-indigo-50 font-medium shadow-lg"
-              >
-                <Zap className="mr-2 h-4 w-4" />
-                Start Free Trial
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
-              >
-                <Calendar className="mr-2 h-4 w-4" />
-                Talk to an Expert
-              </Button>
-            </div>
-
-            {/* Secondary links */}
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">
-              <Link href="/docs" className="text-indigo-200 hover:text-white transition-colors">
-                Read the Docs
-              </Link>
-              <Link href="/case-studies" className="text-indigo-200 hover:text-white transition-colors">
-                View Case Studies
-              </Link>
-              <Link href="/blog" className="text-indigo-200 hover:text-white transition-colors">
-                Read the Blog
-              </Link>
+              <a href="mailto:hello@proof-layer.com?subject=Start Free Trial">
+                <Button
+                  size="lg"
+                  className="rounded-full bg-white px-8 text-indigo-600 hover:bg-indigo-50 font-medium shadow-lg"
+                >
+                  <Zap className="mr-2 h-4 w-4" />
+                  Start Free Trial
+                </Button>
+              </a>
+              <a href="mailto:hello@proof-layer.com?subject=Talk to an Expert">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
+                >
+                  <Calendar className="mr-2 h-4 w-4" />
+                  Talk to an Expert
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>

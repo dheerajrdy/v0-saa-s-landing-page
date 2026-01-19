@@ -79,14 +79,47 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
-
+            <Button
+              size="lg"
+              className="rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 text-white hover:from-indigo-600 hover:to-violet-600 shadow-lg shadow-indigo-500/25 transition-all btn-bounce"
+            >
+              Get Started Free
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
             <Button
               size="lg"
               variant="outline"
               className="rounded-full border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all"
             >
-              See How It Works
+              Book a Demo
             </Button>
+          </motion.div>
+
+          {/* Trust Indicators */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500"
+          >
+            <span className="inline-flex items-center gap-2">
+              <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              SOC2 Type II Certified
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              &lt;50ms Latency
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              1-Line Integration
+            </span>
           </motion.div>
 
           {/* Hero Visual - Waveform Animation */}

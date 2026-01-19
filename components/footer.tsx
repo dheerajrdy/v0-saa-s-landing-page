@@ -8,12 +8,12 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="mb-4 flex items-center gap-2">
+            <div className="mb-4 flex items-center gap-1.5">
               <Image
                 src="/logo.png"
                 alt="ProofLayer Logo"
-                width={40}
-                height={40}
+                width={44}
+                height={44}
                 className="rounded-lg"
               />
               <span className="text-lg font-semibold text-gray-900">

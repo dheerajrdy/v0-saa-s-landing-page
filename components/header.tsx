@@ -35,10 +35,6 @@ export function Header() {
             Features
           </Link>
 
-
-          <Link href="/#pricing" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
-            Pricing
-          </Link>
           <Link href="/blog" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Blog
           </Link>
@@ -69,11 +65,6 @@ export function Header() {
             </Link>
             <Link href="/#features" className="text-gray-600 hover:text-gray-900">
               Features
-            </Link>
-
-
-            <Link href="/#pricing" className="text-gray-600 hover:text-gray-900">
-              Pricing
             </Link>
 
             <Link href="/blog" className="text-gray-600 hover:text-gray-900">

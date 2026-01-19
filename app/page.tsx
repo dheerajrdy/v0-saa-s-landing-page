@@ -4,7 +4,6 @@ import { ProblemGrid } from "@/components/problem-grid"
 import { WedgeDiagram } from "@/components/wedge-diagram"
 import { Integration } from "@/components/integration"
 import { Features } from "@/components/features"
-import { Pricing } from "@/components/pricing"
 import { FinalCta } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
 
@@ -17,7 +16,6 @@ export default function Home() {
       <WedgeDiagram />
       <Integration />
       <Features />
-      <Pricing />
       <FinalCta />
       <Footer />
     </main>

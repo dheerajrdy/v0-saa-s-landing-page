@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Clock, Calendar, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import { SocialShare } from "./social-share"
 
 interface BlogHeaderProps {
   title: string
@@ -94,22 +95,25 @@ export function BlogHeader({
             <p className="mt-4 text-xl text-gray-500">{subtitle}</p>
           )}
 
-          {/* Meta info */}
-          <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-gray-500">
-            <span className="flex items-center gap-1.5">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xs font-medium">
-                PL
-              </div>
-              <span className="font-medium text-gray-700">{author}</span>
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Calendar className="h-4 w-4" />
-              {date}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="h-4 w-4" />
-              {readTime}
-            </span>
+          {/* Meta info with social share */}
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+              <span className="flex items-center gap-1.5">
+                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xs font-medium">
+                  PL
+                </div>
+                <span className="font-medium text-gray-700">{author}</span>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Calendar className="h-4 w-4" />
+                {date}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Clock className="h-4 w-4" />
+                {readTime}
+              </span>
+            </div>
+            <SocialShare title={title} />
           </div>
         </motion.div>
       </div>

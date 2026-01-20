@@ -5,31 +5,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ArrowRight, Clock, Calendar } from "lucide-react"
 import Link from "next/link"
-
-const posts = [
-  {
-    slug: "detecting-deepfakes",
-    title: "The Spectral Lie: Detecting Deepfakes",
-    subtitle: "Why Your Ears (and Your Text Filters) Can't Catch AI-Generated Voices",
-    excerpt: "Why transcription-based security misses 100% of voice cloning attacks, and how to fix it.",
-    category: "Security",
-    categoryColor: "rose",
-    readTime: "6 min read",
-    date: "January 18, 2026",
-    featured: true,
-  },
-  {
-    slug: "voice-ai-security",
-    title: "The Anatomy of Voice AI Security",
-    subtitle: "Why Text-Based Guardrails Aren't Enough",
-    excerpt: "Voice AI is experiencing explosive growth. From customer service bots to healthcare agents, voice-first interfaces are becoming the default way humans interact with AI. But there's a problem: the security tools built for text-based AI don't work for voice.",
-    category: "Engineering",
-    categoryColor: "violet",
-    readTime: "8 min read",
-    date: "January 18, 2026",
-    featured: false,
-  },
-]
+import { blogPosts } from "@/lib/blog-data"
 
 const categoryColors = {
   violet: {
@@ -97,11 +73,11 @@ export default function BlogPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-8"
           >
-            {posts.map((post, index) => {
+            {blogPosts.map((post, index) => {
               const colors = categoryColors[post.categoryColor as keyof typeof categoryColors]
 
               return (
-                <Link href={`/blog/${post.slug}`} key={index}>
+                <Link href={`/blog/${post.slug}`} key={post.slug}>
                   <motion.article
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -1,49 +1,49 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Zap, Fingerprint, ShieldCheck, FileText, Globe, Lock } from "lucide-react"
+import { Target, ShieldCheck, GitBranch, Mic, FileText, Globe } from "lucide-react"
 
 const features = [
   {
-    icon: Zap,
-    title: "Real-time Analysis",
-    description: "Under 50ms latency. We audit the stream without blocking the conversation.",
-    color: "indigo",
+    icon: Target,
+    title: "Automated Red Teaming",
+    description: "Context-aware attack generation covering 50+ vulnerability types including prompt injection, jailbreaks, and data exfiltration.",
+    color: "rose",
     size: "large",
   },
   {
-    icon: Fingerprint,
-    title: "Voice Authentication",
-    description: "Verify speaker identity and detect synthetic clones in real-time.",
+    icon: ShieldCheck,
+    title: "Bidirectional Guardrails",
+    description: "Input AND output protection. Validate prompts before execution and responses before delivery.",
     color: "violet",
     size: "small",
   },
   {
-    icon: ShieldCheck,
-    title: "Policy Enforcement",
-    description: "Define guardrails for what your agent can and cannot do.",
+    icon: GitBranch,
+    title: "Agent Workflow Testing",
+    description: "Multi-step interaction simulation for complex agent behaviors and tool chains.",
     color: "emerald",
+    size: "small",
+  },
+  {
+    icon: Mic,
+    title: "Voice Agent Security",
+    description: "Audio-native testing for voice AI. Detect deepfakes, injection attacks, and synthetic speech.",
+    color: "indigo",
     size: "small",
   },
   {
     icon: FileText,
     title: "Compliance Ready",
-    description: "SOC2, HIPAA, GDPR audit logs built-in from day one.",
+    description: "OWASP, NIST, MITRE ATLAS mapping. SOC2 audit logs built-in from day one.",
     color: "orange",
     size: "small",
   },
   {
     icon: Globe,
-    title: "Multi-provider",
-    description: "Works with OpenAI, Google, Twilio, LiveKit, and more.",
+    title: "CI/CD Integration",
+    description: "GitHub Actions, GitLab CI, Jenkins support. Test agents in your deployment pipeline.",
     color: "blue",
-    size: "small",
-  },
-  {
-    icon: Lock,
-    title: "Zero Trust",
-    description: "Every request verified. Every response validated. No exceptions.",
-    color: "rose",
     size: "large",
   },
 ]
@@ -126,17 +126,17 @@ export function Features() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-600 mb-4">
-            Capabilities
+          <span className="inline-flex items-center rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-4">
+            Platform Capabilities
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Built for the{" "}
+            Complete security{" "}
             <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              audio-native era.
+              for AI agents.
             </span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Purpose-built detection and enforcement for voice AI. Security that understands audio, not just text.
+            Test, protect, and deploy AI agents with confidence. From pre-deployment testing to runtime guardrails.
           </p>
         </motion.div>
 

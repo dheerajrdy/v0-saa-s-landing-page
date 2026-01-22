@@ -4,23 +4,23 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 
 const integrations = [
-    { name: "Retell AI", logo: "https://cdn.prod.website-files.com/65cf99990ba1a3e79ec2e449/66c48826a2d31cbb99e14f50_cropped%20logo.svg" },
-    { name: "Twilio", logo: "https://www.vectorlogo.zone/logos/twilio/twilio-icon.svg" },
-    { name: "LiveKit", logo: "https://livekit.io/images/livekit-mark.svg" },
-    { name: "OpenAI", logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" },
-    { name: "Anthropic", logo: "https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg" },
+    { name: "OpenAI" },
+    { name: "Anthropic" },
+    { name: "Google AI" },
+    { name: "GitHub Actions" },
+    { name: "GitLab CI" },
 ]
 
 const testimonials = [
     {
-        quote: "We deployed 15 voice agents in 3 weeks. Zero compliance incidents.",
-        author: "VP Operations",
-        company: "Series B Fintech",
+        quote: "Proof Layer caught a prompt injection vulnerability we completely missed in testing. Saved us before launch.",
+        author: "Security Lead",
+        company: "Enterprise AI Platform",
     },
     {
-        quote: "The kill switch saved us from a jailbreak attempt on day one.",
+        quote: "The automated red teaming found edge cases our manual testing never discovered. Essential for any production agent.",
         author: "CISO",
-        company: "Regional Bank",
+        company: "Healthcare Tech Company",
     },
 ]
 
@@ -37,7 +37,7 @@ export function SocialProofSection() {
                     className="text-center mb-16"
                 >
                     <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-8">
-                        Trusted by Compliance Teams
+                        Trusted by Security Teams
                     </h3>
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {testimonials.map((t, i) => (

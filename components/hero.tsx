@@ -25,7 +25,7 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm text-indigo-600"
           >
             <Sparkles className="h-4 w-4" />
-            <span>Audio-Native Safety Platform</span>
+            <span>AI Agent Security Platform</span>
           </motion.div>
 
           {/* Headline */}
@@ -35,10 +35,11 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-4xl text-5xl font-bold leading-tight tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
           >
-            Diligence,{" "}
+            Ship{" "}
             <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              Automated.
-            </span>
+              Secure
+            </span>{" "}
+            AI Agents
           </motion.h1>
 
           {/* Subheadline */}
@@ -48,7 +49,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 max-w-2xl text-lg text-gray-600 sm:text-xl"
           >
-            Audio-native safety for voice AI that actually works.
+            Complete security testing for AI agents. Find vulnerabilities before production.
           </motion.p>
 
           {/* Value props */}
@@ -58,17 +59,17 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="mt-4 flex flex-wrap justify-center gap-4 text-sm"
           >
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-emerald-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Privacy
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-rose-50 px-3 py-1 text-rose-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
+              Red Teaming
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 px-3 py-1 text-violet-700">
               <span className="h-1.5 w-1.5 rounded-full bg-violet-500" />
-              Safety
+              Guardrails
             </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1 text-orange-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-              Fairness
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-emerald-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              Compliance
             </span>
           </motion.div>
 
@@ -110,19 +111,19 @@ export function Hero() {
               <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              SOC2 Type II Certified
+              50+ Vulnerability Types
             </span>
             <span className="inline-flex items-center gap-2">
               <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              &lt;50ms Latency
+              OWASP/NIST Compliant
             </span>
             <span className="inline-flex items-center gap-2">
               <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              1-Line Integration
+              CI/CD Integration
             </span>
           </motion.div>
 

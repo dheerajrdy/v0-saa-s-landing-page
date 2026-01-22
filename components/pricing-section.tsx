@@ -6,36 +6,42 @@ import { Button } from "@/components/ui/button"
 
 const tiers = [
     {
-        name: "Starter",
-        description: "For teams exploring voice AI compliance",
-        calls: "1,000",
-        latency: "<50ms",
+        name: "Developer",
+        description: "For individual developers and small teams",
+        tests: "1,000 tests",
+        support: "Community",
         features: {
+            redTeaming: true,
+            guardrails: true,
+            cicd: true,
             sso: false,
-            auditLogs: false,
             dedicatedSupport: false,
         },
     },
     {
-        name: "Growth",
-        description: "For production voice AI deployments",
-        calls: "10,000",
-        latency: "<50ms",
+        name: "Team",
+        description: "For growing teams testing multiple agents",
+        tests: "10,000 tests",
+        support: "Email",
         popular: true,
         features: {
+            redTeaming: true,
+            guardrails: true,
+            cicd: true,
             sso: true,
-            auditLogs: true,
             dedicatedSupport: false,
         },
     },
     {
         name: "Enterprise",
-        description: "For mission-critical compliance needs",
-        calls: "Unlimited",
-        latency: "<30ms",
+        description: "For organizations with compliance requirements",
+        tests: "Unlimited",
+        support: "Priority",
         features: {
+            redTeaming: true,
+            guardrails: true,
+            cicd: true,
             sso: true,
-            auditLogs: true,
             dedicatedSupport: true,
         },
     },
@@ -52,11 +58,17 @@ export function PricingSection() {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-16"
                 >
+                    <span className="inline-flex items-center rounded-full bg-violet-50 px-4 py-1.5 text-sm font-medium text-violet-600 mb-4">
+                        Pricing
+                    </span>
                     <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
-                        Simple, Transparent Pricing
+                        Plans that scale{" "}
+                        <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
+                            with you.
+                        </span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        No hidden fees. No compliance surprises. Pay for what you use.
+                        From individual developers to enterprise teams. Start testing in minutes.
                     </p>
                 </motion.div>
 
@@ -85,24 +97,40 @@ export function PricingSection() {
 
                             <div className="space-y-4 mb-8">
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                    <span className="text-sm text-gray-500">Calls/month</span>
-                                    <span className="font-semibold text-gray-900">{tier.calls}</span>
+                                    <span className="text-sm text-gray-500">Security Tests</span>
+                                    <span className="font-semibold text-gray-900">{tier.tests}</span>
                                 </div>
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                    <span className="text-sm text-gray-500">Latency</span>
-                                    <span className="font-semibold text-gray-900">{tier.latency}</span>
+                                    <span className="text-sm text-gray-500">Support</span>
+                                    <span className="font-semibold text-gray-900">{tier.support}</span>
                                 </div>
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                    <span className="text-sm text-gray-500">SSO</span>
-                                    {tier.features.sso ? (
+                                    <span className="text-sm text-gray-500">Red Teaming</span>
+                                    {tier.features.redTeaming ? (
                                         <Check className="h-4 w-4 text-emerald-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />
                                     )}
                                 </div>
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                    <span className="text-sm text-gray-500">Audit Logs</span>
-                                    {tier.features.auditLogs ? (
+                                    <span className="text-sm text-gray-500">Guardrails</span>
+                                    {tier.features.guardrails ? (
+                                        <Check className="h-4 w-4 text-emerald-500" />
+                                    ) : (
+                                        <Minus className="h-4 w-4 text-gray-300" />
+                                    )}
+                                </div>
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-sm text-gray-500">CI/CD Integration</span>
+                                    {tier.features.cicd ? (
+                                        <Check className="h-4 w-4 text-emerald-500" />
+                                    ) : (
+                                        <Minus className="h-4 w-4 text-gray-300" />
+                                    )}
+                                </div>
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-sm text-gray-500">SSO</span>
+                                    {tier.features.sso ? (
                                         <Check className="h-4 w-4 text-emerald-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />

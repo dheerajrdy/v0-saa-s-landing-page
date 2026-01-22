@@ -19,21 +19,21 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "ProofLayer - Diligence, Automated",
+  title: "ProofLayer - Ship Secure AI Agents",
   description:
-    "Audio-native safety for voice AI that actually works. Protect your voice agents from prompt injection, deepfakes, and unauthorized actions. Privacy. Safety. Fairness.",
-  keywords: ["voice AI security", "deepfake detection", "audio security", "speech-to-speech", "AI safety", "voice agent protection", "prompt injection"],
+    "Complete security testing for AI agents. Find vulnerabilities before production with automated red teaming, bidirectional guardrails, and compliance-ready testing. OWASP & NIST compliant.",
+  keywords: ["AI agent security", "red teaming", "prompt injection", "AI security testing", "guardrails", "agent testing", "LLM security", "AI compliance", "OWASP", "NIST"],
   authors: [{ name: "ProofLayer" }],
   openGraph: {
-    title: "ProofLayer - Diligence, Automated",
-    description: "Audio-native safety for voice AI that actually works. Privacy. Safety. Fairness.",
+    title: "ProofLayer - Ship Secure AI Agents",
+    description: "Complete security testing for AI agents. Find vulnerabilities before production.",
     type: "website",
     siteName: "ProofLayer",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ProofLayer - Diligence, Automated",
-    description: "Audio-native safety for voice AI that actually works.",
+    title: "ProofLayer - Ship Secure AI Agents",
+    description: "Complete security testing for AI agents. Find vulnerabilities before production.",
   },
   icons: {
     icon: [

@@ -1,35 +1,35 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ShieldAlert, Mic, Bot, FileWarning } from "lucide-react"
+import { ShieldAlert, Database, AlertTriangle, Mic } from "lucide-react"
 
 const threats = [
   {
     icon: ShieldAlert,
-    title: "Voice Injection",
+    title: "Prompt Injection",
     description:
-      "Attackers can hijack your agent with carefully crafted audio. We detect manipulation attempts in real-time.",
+      "Jailbreak attacks bypass agent safety guardrails. We detect and block adversarial prompts before execution.",
     color: "indigo",
   },
   {
-    icon: Mic,
-    title: "Deepfakes",
+    icon: Database,
+    title: "Data Exfiltration",
     description:
-      "Synthetic voices can impersonate anyone convincingly. We verify authenticity at the audio level.",
+      "RAG poisoning can leak sensitive documents to attackers. We monitor retrieval patterns and block unauthorized access.",
     color: "violet",
   },
   {
-    icon: Bot,
-    title: "Unauthorized Actions",
+    icon: AlertTriangle,
+    title: "Hallucination Risk",
     description:
-      "One wrong command can trigger unintended tool calls. We enforce policy before execution.",
+      "False information creates legal liability. We validate agent outputs against ground truth and flag inconsistencies.",
     color: "orange",
   },
   {
-    icon: FileWarning,
-    title: "Compliance Gaps",
+    icon: Mic,
+    title: "Voice Deepfakes",
     description:
-      "Voice interactions need audit trails too. We generate compliant logs for every conversation.",
+      "Synthetic voices bypass biometric verification. We analyze audio fingerprints to detect AI-generated speech.",
     color: "emerald",
   },
 ]
@@ -96,17 +96,17 @@ export function ProblemGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center rounded-full bg-orange-50 px-4 py-1.5 text-sm font-medium text-orange-600 mb-4">
-            The Challenge
+          <span className="inline-flex items-center rounded-full bg-rose-50 px-4 py-1.5 text-sm font-medium text-rose-600 mb-4">
+            The Threat Landscape
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Voice AI has a{" "}
+            Every AI agent is a{" "}
             <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              blind spot.
+              security risk.
             </span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Text-based safety tools miss what makes voice unique. We built protection for the audio-native era.
+            AI agents face unique vulnerabilities that traditional security tools can't catch. Test before attackers exploit.
           </p>
         </motion.div>
 

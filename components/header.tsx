@@ -30,15 +30,14 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
           <Link href="/#product" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
-            Product
-          </Link>
-          <Link href="/#architecture" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
-            How it Works
+            Platform
           </Link>
           <Link href="/#features" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Features
           </Link>
-
+          <Link href="/#pricing" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
+            Pricing
+          </Link>
           <Link href="/blog" className="text-sm text-gray-600 transition-colors hover:text-gray-900">
             Blog
           </Link>
@@ -62,19 +61,17 @@ export function Header() {
         <div className="border-t border-gray-200 bg-white md:hidden">
           <nav className="flex flex-col gap-4 px-4 py-6">
             <Link href="/#product" className="text-gray-600 hover:text-gray-900">
-              Product
-            </Link>
-            <Link href="/#architecture" className="text-gray-600 hover:text-gray-900">
-              How it Works
+              Platform
             </Link>
             <Link href="/#features" className="text-gray-600 hover:text-gray-900">
               Features
             </Link>
-
+            <Link href="/#pricing" className="text-gray-600 hover:text-gray-900">
+              Pricing
+            </Link>
             <Link href="/blog" className="text-gray-600 hover:text-gray-900">
               Blog
             </Link>
-
           </nav>
         </div>
       )}

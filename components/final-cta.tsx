@@ -22,30 +22,30 @@ export function FinalCta() {
 
           <div className="relative">
             <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
-              Ready to deploy compliant voice AI?
+              Ready to test your AI agents?
             </h2>
             <p className="mx-auto mb-8 max-w-xl text-indigo-100">
-              Get started in minutes. No compliance nightmare. No liability.
+              Start finding vulnerabilities in minutes. No credit card required.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:hello@proof-layer.com?subject=Start Free Trial">
+              <a href="mailto:hello@proof-layer.com?subject=Get Started with Proof Layer">
                 <Button
                   size="lg"
                   className="rounded-full bg-white px-8 text-indigo-600 hover:bg-indigo-50 font-medium shadow-lg"
                 >
                   <Zap className="mr-2 h-4 w-4" />
-                  Start Free Trial
+                  Get Started Free
                 </Button>
               </a>
-              <a href="mailto:hello@proof-layer.com?subject=Talk to an Expert">
+              <a href="mailto:hello@proof-layer.com?subject=Book a Demo">
                 <Button
                   size="lg"
                   variant="outline"
                   className="rounded-full border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
                 >
                   <Calendar className="mr-2 h-4 w-4" />
-                  Talk to an Expert
+                  Book a Demo
                 </Button>
               </a>
             </div>

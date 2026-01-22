@@ -37,7 +37,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#product" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  Overview
+                  Platform
                 </a>
               </li>
               <li>
@@ -46,8 +46,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#architecture" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  How it Works
+                <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  Pricing
                 </a>
               </li>
               <li>
@@ -58,17 +58,17 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Compliance */}
+          {/* Security & Compliance */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-gray-900">Compliance</h4>
+            <h4 className="mb-4 text-sm font-semibold text-gray-900">Security & Compliance</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-50">
                   <Shield className="h-4 w-4 text-emerald-600" />
                 </div>
                 <div>
-                  <span className="font-medium text-gray-900">SOC2 Type II</span>
-                  <p className="text-xs text-gray-500">Certified</p>
+                  <span className="font-medium text-gray-900">OWASP</span>
+                  <p className="text-xs text-gray-500">Compliant</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -76,8 +76,8 @@ export function Footer() {
                   <CheckCircle className="h-4 w-4 text-indigo-600" />
                 </div>
                 <div>
-                  <span className="font-medium text-gray-900">HIPAA</span>
-                  <p className="text-xs text-gray-500">Compliant</p>
+                  <span className="font-medium text-gray-900">NIST</span>
+                  <p className="text-xs text-gray-500">Aligned</p>
                 </div>
               </div>
             </div>
@@ -93,11 +93,11 @@ export function Footer() {
             <div className="flex items-center gap-6 text-sm text-gray-500">
               <span className="flex items-center gap-1.5">
                 <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                SOC2 Compliant
+                OWASP Compliant
               </span>
               <span className="flex items-center gap-1.5">
                 <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                HIPAA Ready
+                NIST Aligned
               </span>
             </div>
           </div>

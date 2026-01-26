@@ -89,7 +89,7 @@ export function SpectralVisualizer() {
                                                 key={i}
                                                 className={`w-1 rounded-full ${isGlitch
                                                         ? "bg-gradient-to-t from-rose-500 to-rose-400"
-                                                        : "bg-gradient-to-t from-indigo-400 to-violet-400"
+                                                        : "bg-gradient-to-t from-emerald-400 to-teal-400"
                                                     }`}
                                                 animate={{
                                                     height: [
@@ -187,7 +187,7 @@ export function SpectralVisualizer() {
                                                 key={i}
                                                 className={`w-1 rounded-full ${isGlitch
                                                         ? "bg-gradient-to-t from-rose-500 to-rose-400"
-                                                        : "bg-gradient-to-t from-indigo-400 to-violet-400"
+                                                        : "bg-gradient-to-t from-emerald-400 to-teal-400"
                                                     }`}
                                                 animate={{
                                                     height: [

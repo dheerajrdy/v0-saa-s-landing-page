@@ -46,8 +46,8 @@ export function SafetyPipelineDiagram() {
           className="p-6 border-b border-gray-100"
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-8 w-8 rounded-lg bg-indigo-100 flex items-center justify-center">
-              <Activity className="h-4 w-4 text-indigo-500" />
+            <div className="h-8 w-8 rounded-lg bg-emerald-100 flex items-center justify-center">
+              <Activity className="h-4 w-4 text-emerald-500" />
             </div>
             <div>
               <span className="text-sm font-semibold text-gray-900">Audio Stream</span>
@@ -65,7 +65,7 @@ export function SafetyPipelineDiagram() {
               {Array.from({ length: 40 }).map((_, i) => (
                 <motion.div
                   key={i}
-                  className="w-1 bg-gradient-to-t from-indigo-400 to-violet-400 rounded-full"
+                  className="w-1 bg-gradient-to-t from-emerald-400 to-teal-400 rounded-full"
                   animate={{
                     height: [
                       Math.random() * 20 + 10,
@@ -95,8 +95,8 @@ export function SafetyPipelineDiagram() {
         >
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-violet-100 flex items-center justify-center">
-                <Cpu className="h-4 w-4 text-violet-500" />
+              <div className="h-8 w-8 rounded-lg bg-teal-100 flex items-center justify-center">
+                <Cpu className="h-4 w-4 text-teal-500" />
               </div>
               <div>
                 <span className="text-sm font-semibold text-gray-900">Feature Extraction</span>
@@ -135,8 +135,8 @@ export function SafetyPipelineDiagram() {
         >
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-indigo-100 flex items-center justify-center">
-                <Shield className="h-4 w-4 text-indigo-500" />
+              <div className="h-8 w-8 rounded-lg bg-emerald-100 flex items-center justify-center">
+                <Shield className="h-4 w-4 text-emerald-500" />
               </div>
               <div>
                 <span className="text-sm font-semibold text-gray-900">Parallel Detection Models</span>
@@ -289,7 +289,7 @@ export function SafetyPipelineDiagram() {
                   className="text-gray-300"
                 >
                   <td className="pr-4 py-1 text-gray-500">10:23:45</td>
-                  <td className="pr-4 py-1 text-indigo-400">abc123</td>
+                  <td className="pr-4 py-1 text-emerald-400">abc123</td>
                   <td className="pr-4 py-1 text-emerald-400">ALLOW</td>
                   <td className="pr-4 py-1 text-amber-400">0.98</td>
                   <td className="py-1 text-gray-400">policy_pass</td>

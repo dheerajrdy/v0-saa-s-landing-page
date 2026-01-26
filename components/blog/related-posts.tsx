@@ -40,14 +40,14 @@ export function RelatedPosts({ currentSlug, maxPosts = 2 }: RelatedPostsProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="group rounded-xl bg-white border border-gray-200 p-5 hover:border-indigo-200 hover:shadow-md transition-all h-full"
+                  className="group rounded-xl bg-white border border-gray-200 p-5 hover:border-emerald-200 hover:shadow-md transition-all h-full"
                 >
                   <span
                     className={`inline-flex items-center rounded-full ${colors.bg} ${colors.text} px-2.5 py-0.5 text-xs font-medium mb-3`}
                   >
                     {post.category}
                   </span>
-                  <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors mb-2">
+                  <h4 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
                     {post.title}
                   </h4>
                   <p className="text-sm text-gray-600 line-clamp-2 mb-3">{post.excerpt}</p>
@@ -56,7 +56,7 @@ export function RelatedPosts({ currentSlug, maxPosts = 2 }: RelatedPostsProps) {
                       <Clock className="h-3 w-3" />
                       {post.readTime}
                     </span>
-                    <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-indigo-500 transition-colors" />
+                    <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-emerald-500 transition-colors" />
                   </div>
                 </motion.article>
               </Link>

@@ -1,31 +1,30 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
-import { WaveformAnimation } from "@/components/waveform-animation"
 import { motion } from "framer-motion"
+import { Shield, Mic, Code } from "lucide-react"
+import { WaitlistForm } from "@/components/waitlist-form"
+import { SecurityAnimation } from "@/components/security-animation"
+
+const services = [
+  { icon: Shield, label: "AI Red Teaming", color: "text-rose-500 bg-rose-50" },
+  { icon: Mic, label: "Voice Security", color: "text-amber-500 bg-amber-50" },
+  { icon: Code, label: "Code Security", color: "text-violet-500 bg-violet-50" },
+]
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-40 lg:pb-32">
-      {/* Decorative blobs */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="blob blob-purple absolute top-20 left-1/4 h-[400px] w-[400px]" />
-        <div className="blob blob-blue absolute top-40 right-1/4 h-[300px] w-[300px]" />
-        <div className="blob blob-orange absolute bottom-20 left-1/3 h-[250px] w-[250px]" />
-      </div>
-
+    <section className="relative px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-44 lg:pb-32">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center text-center">
-          {/* Badge */}
+          {/* Status badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm text-indigo-600"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm text-emerald-700"
           >
-            <Sparkles className="h-4 w-4" />
-            <span>AI Agent Security Platform</span>
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            Now accepting early access partners
           </motion.div>
 
           {/* Headline */}
@@ -33,108 +32,63 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="max-w-4xl text-5xl font-bold leading-tight tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
+            className="max-w-4xl text-5xl font-semibold leading-[1.1] tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
           >
-            Ship{" "}
-            <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              Secure
-            </span>{" "}
-            AI Agents
+            Security for{" "}
+            <span className="text-emerald-600">every</span>
+            <br />
+            AI agent.
           </motion.h1>
 
-          {/* Subheadline */}
+          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 max-w-2xl text-lg text-gray-600 sm:text-xl"
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-500 sm:text-xl"
           >
-            Complete security testing for AI agents. Find vulnerabilities before production.
+            Red teaming, runtime guardrails, and code security for text agents,
+            voice agents, and coding agents. One platform.
           </motion.p>
 
-          {/* Value props */}
+          {/* Waitlist Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="mt-4 flex flex-wrap justify-center gap-4 text-sm"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-10 w-full max-w-md"
           >
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-rose-50 px-3 py-1 text-rose-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
-              Red Teaming
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 px-3 py-1 text-violet-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-violet-500" />
-              Guardrails
-            </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-emerald-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Compliance
-            </span>
+            <WaitlistForm variant="hero" />
           </motion.div>
 
-          {/* CTAs */}
+          {/* Service pills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-12 flex flex-wrap justify-center gap-3"
           >
-            <a href="mailto:hello@proof-layer.com?subject=Get Started with ProofLayer">
-              <Button
-                size="lg"
-                className="rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 text-white hover:from-indigo-600 hover:to-violet-600 shadow-lg shadow-indigo-500/25 transition-all btn-bounce"
+            {services.map((service) => (
+              <div
+                key={service.label}
+                className="inline-flex items-center gap-2.5 rounded-xl border border-gray-100 bg-white px-5 py-3 shadow-sm"
               >
-                Get Started Free
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
-            <a href="mailto:hello@proof-layer.com?subject=Book a Demo">
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all"
-              >
-                Book a Demo
-              </Button>
-            </a>
+                <div className={`rounded-lg p-1.5 ${service.color}`}>
+                  <service.icon className="h-4 w-4" />
+                </div>
+                <span className="text-sm font-medium text-gray-700">{service.label}</span>
+              </div>
+            ))}
           </motion.div>
 
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500"
-          >
-            <span className="inline-flex items-center gap-2">
-              <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              50+ Vulnerability Types
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              OWASP/NIST Compliant
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <svg className="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              CI/CD Integration
-            </span>
-          </motion.div>
-
-          {/* Hero Visual - Waveform Animation */}
+          {/* Hero Visual */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-16 w-full"
           >
-            <WaveformAnimation />
+            <SecurityAnimation />
           </motion.div>
         </div>
       </div>

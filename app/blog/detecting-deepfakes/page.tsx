@@ -345,9 +345,9 @@ export default function DetectingDeepfakesPost() {
 
                 <ProsodicMetricsViz />
 
-                <div className="rounded-xl bg-violet-50 border border-violet-100 p-6 my-8">
-                  <h4 className="font-semibold text-violet-900 mb-3">Explainability Advantage</h4>
-                  <p className="text-violet-800">
+                <div className="rounded-xl bg-emerald-50 border border-emerald-100 p-6 my-8">
+                  <h4 className="font-semibold text-emerald-900 mb-3">Explainability Advantage</h4>
+                  <p className="text-emerald-800">
                     Prosodic analysis offers <strong>explainability</strong>. By integrating attention mechanisms
                     that focus on prosodic features, forensic systems can state: &quot;This audio is fake because
                     the pitch micro-tremors are statistically absent&quot;&mdash;rather than simply &quot;the neural

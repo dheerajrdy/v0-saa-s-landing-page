@@ -19,21 +19,21 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "ProofLayer - Ship Secure AI Agents",
+  title: "ProofLayer — Security for Every AI Agent",
   description:
-    "Complete security testing for AI agents. Find vulnerabilities before production with automated red teaming, bidirectional guardrails, and compliance-ready testing. OWASP & NIST compliant.",
-  keywords: ["AI agent security", "red teaming", "prompt injection", "AI security testing", "guardrails", "agent testing", "LLM security", "AI compliance", "OWASP", "NIST"],
+    "Red teaming, runtime guardrails, and code security for text agents, voice agents, and coding agents. One platform to secure every AI modality.",
+  keywords: ["AI agent security", "red teaming", "prompt injection", "AI guardrails", "voice AI security", "coding agent security", "LLM security", "AI code review", "code generation security", "OWASP", "NIST"],
   authors: [{ name: "ProofLayer" }],
   openGraph: {
-    title: "ProofLayer - Ship Secure AI Agents",
-    description: "Complete security testing for AI agents. Find vulnerabilities before production.",
+    title: "ProofLayer — Security for Every AI Agent",
+    description: "Red teaming, runtime guardrails, and code security for text agents, voice agents, and coding agents.",
     type: "website",
     siteName: "ProofLayer",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ProofLayer - Ship Secure AI Agents",
-    description: "Complete security testing for AI agents. Find vulnerabilities before production.",
+    title: "ProofLayer — Security for Every AI Agent",
+    description: "Red teaming, runtime guardrails, and code security for text agents, voice agents, and coding agents.",
   },
   icons: {
     icon: [

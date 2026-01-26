@@ -51,8 +51,8 @@ export function ArchitectureDiagram() {
               transition={{ delay: 0.3 }}
               className="flex-1 flex items-center max-w-[100px]"
             >
-              <div className="h-0.5 flex-1 bg-gradient-to-r from-gray-300 to-indigo-400" />
-              <ArrowRight className="h-5 w-5 text-indigo-500 -ml-1" />
+              <div className="h-0.5 flex-1 bg-gradient-to-r from-gray-300 to-emerald-400" />
+              <ArrowRight className="h-5 w-5 text-emerald-500 -ml-1" />
             </motion.div>
 
             {/* ProofLayer */}
@@ -63,15 +63,15 @@ export function ArchitectureDiagram() {
               transition={{ delay: 0.4 }}
               className="flex flex-col items-center relative"
             >
-              <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+              <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
                 <Shield className="h-12 w-12 text-white" />
               </div>
-              <span className="mt-3 text-sm font-semibold text-indigo-600">ProofLayer</span>
+              <span className="mt-3 text-sm font-semibold text-emerald-600">ProofLayer</span>
               <span className="text-xs text-gray-500">Safety Proxy</span>
 
               {/* Pulsing ring */}
               <motion.div
-                className="absolute inset-0 -m-2 rounded-2xl border-2 border-indigo-300"
+                className="absolute inset-0 -m-2 rounded-2xl border-2 border-emerald-300"
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.5, 0, 0.5],
@@ -91,7 +91,7 @@ export function ArchitectureDiagram() {
               transition={{ delay: 0.5 }}
               className="flex-1 flex items-center max-w-[100px]"
             >
-              <div className="h-0.5 flex-1 bg-gradient-to-r from-indigo-400 to-emerald-400" />
+              <div className="h-0.5 flex-1 bg-gradient-to-r from-emerald-400 to-emerald-400" />
               <ArrowRight className="h-5 w-5 text-emerald-500 -ml-1" />
             </motion.div>
 
@@ -160,23 +160,23 @@ export function ArchitectureDiagram() {
 
           {/* Arrow */}
           <div className="flex justify-center">
-            <div className="h-8 w-0.5 bg-gradient-to-b from-gray-300 to-indigo-400" />
+            <div className="h-8 w-0.5 bg-gradient-to-b from-gray-300 to-emerald-400" />
           </div>
 
           {/* ProofLayer */}
-          <div className="flex items-center gap-4 p-4 rounded-xl bg-indigo-50 border border-indigo-100">
-            <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25 shrink-0">
+          <div className="flex items-center gap-4 p-4 rounded-xl bg-emerald-50 border border-emerald-100">
+            <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25 shrink-0">
               <Shield className="h-7 w-7 text-white" />
             </div>
             <div>
-              <span className="text-sm font-semibold text-indigo-600">ProofLayer</span>
+              <span className="text-sm font-semibold text-emerald-600">ProofLayer</span>
               <span className="text-xs text-gray-500 block">Safety Proxy</span>
             </div>
           </div>
 
           {/* Arrow */}
           <div className="flex justify-center">
-            <div className="h-8 w-0.5 bg-gradient-to-b from-indigo-400 to-emerald-400" />
+            <div className="h-8 w-0.5 bg-gradient-to-b from-emerald-400 to-emerald-400" />
           </div>
 
           {/* AI Model */}

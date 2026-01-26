@@ -4,7 +4,7 @@ export interface BlogPost {
   subtitle: string
   excerpt: string
   category: string
-  categoryColor: "violet" | "indigo" | "emerald" | "rose"
+  categoryColor: "violet" | "indigo" | "emerald" | "rose" | "amber"
   readTime: string
   date: string
   featured: boolean
@@ -21,6 +21,17 @@ export interface Author {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "coding-agent-security",
+    title: "The Growing Attack Surface: Security Incidents in AI Coding Agents",
+    subtitle: "Why AI-Generated Code Is the Next Big Security Challenge",
+    excerpt: "From Amazon Q exploits to Cursor crypto drains, AI coding agents are becoming a prime attack vector. A comprehensive look at real-world incidents and what they mean for your security posture.",
+    category: "Security Analysis",
+    categoryColor: "emerald",
+    readTime: "12 min read",
+    date: "January 26, 2026",
+    featured: true,
+  },
+  {
     slug: "detecting-deepfakes",
     title: "The Spectral Lie: Detecting Deepfakes",
     subtitle: "Why Your Ears (and Your Text Filters) Can't Catch AI-Generated Voices",
@@ -29,7 +40,7 @@ export const blogPosts: BlogPost[] = [
     categoryColor: "rose",
     readTime: "15 min read",
     date: "January 18, 2026",
-    featured: true,
+    featured: false,
   },
   {
     slug: "voice-ai-security",
@@ -48,14 +59,14 @@ export const authors: Record<string, Author> = {
   research: {
     name: "ProofLayer Research Team",
     role: "Security Research",
-    bio: "Our research team focuses on advancing the frontier of audio security, deepfake detection, and voice AI safety.",
+    bio: "Our research team focuses on advancing the frontier of AI security, from audio forensics and deepfake detection to code generation safety.",
     twitter: "prooflayer",
     linkedin: "prooflayer",
   },
   engineering: {
     name: "ProofLayer Engineering",
     role: "Platform Engineering",
-    bio: "Building the infrastructure that powers secure voice AI at scale.",
+    bio: "Building the infrastructure that powers secure AI agents at scale.",
     twitter: "prooflayer",
     linkedin: "prooflayer",
   },

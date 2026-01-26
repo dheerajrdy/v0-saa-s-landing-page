@@ -20,7 +20,7 @@ export function AuthorCard({ author, variant = "full" }: AuthorCardProps) {
   if (variant === "inline") {
     return (
       <div className="flex items-center gap-3">
-        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-sm font-medium overflow-hidden">
+        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-sm font-medium overflow-hidden">
           {author.avatar ? (
             <Image src={author.avatar} alt={author.name} width={40} height={40} />
           ) : (
@@ -43,7 +43,7 @@ export function AuthorCard({ author, variant = "full" }: AuthorCardProps) {
       className="border-t border-gray-200 pt-8 mt-12"
     >
       <div className="flex items-start gap-4">
-        <div className="h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xl font-medium overflow-hidden shrink-0">
+        <div className="h-16 w-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xl font-medium overflow-hidden shrink-0">
           {author.avatar ? (
             <Image src={author.avatar} alt={author.name} width={64} height={64} />
           ) : (
@@ -52,7 +52,7 @@ export function AuthorCard({ author, variant = "full" }: AuthorCardProps) {
         </div>
         <div className="flex-1">
           <h4 className="font-semibold text-gray-900">{author.name}</h4>
-          <p className="text-sm text-indigo-600 mb-2">{author.role}</p>
+          <p className="text-sm text-emerald-600 mb-2">{author.role}</p>
           {author.bio && <p className="text-sm text-gray-600 mb-3">{author.bio}</p>}
           <div className="flex gap-3">
             {author.twitter && (

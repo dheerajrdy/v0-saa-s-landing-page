@@ -28,37 +28,34 @@ const categoryColors = {
     text: "text-rose-600",
     border: "border-rose-100",
   },
+  amber: {
+    bg: "bg-amber-50",
+    text: "text-amber-600",
+    border: "border-amber-100",
+  },
 }
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-[#FAFAFA] text-gray-900">
+    <main className="min-h-screen bg-white text-gray-900">
       <Header />
 
       {/* Hero Section */}
       <section className="relative px-4 pt-32 pb-16 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="blob blob-purple absolute top-20 right-1/4 h-[300px] w-[300px]" />
-          <div className="blob blob-blue absolute bottom-0 left-1/4 h-[250px] w-[250px]" />
-        </div>
-
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-flex items-center rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-6">
+            <span className="inline-flex items-center rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-600 mb-6">
               Blog
             </span>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Insights on{" "}
-              <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-                Voice AI Security
-              </span>
+            <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+              Insights on AI Security
             </h1>
-            <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-              Deep dives into the technology, architecture, and best practices for protecting voice AI systems.
+            <p className="mt-6 text-lg text-gray-500 max-w-2xl mx-auto">
+              Deep dives into the technology, research, and best practices for securing AI agents across every modality.
             </p>
           </motion.div>
         </div>
@@ -82,12 +79,12 @@ export default function BlogPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 + 0.3 }}
-                    className="group relative rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:ring-indigo-100 cursor-pointer"
+                    className="group relative rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-100 transition-all duration-300 hover:shadow-lg hover:ring-emerald-100 cursor-pointer"
                   >
                     {/* Featured badge */}
                     {post.featured && (
                       <div className="absolute -top-3 left-6">
-                        <span className="inline-flex items-center rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-3 py-1 text-xs font-medium text-white shadow-sm">
+                        <span className="inline-flex items-center rounded-full bg-emerald-600 px-3 py-1 text-xs font-medium text-white shadow-sm">
                           Featured
                         </span>
                       </div>
@@ -101,7 +98,7 @@ export default function BlogPage() {
                         </span>
 
                         {/* Title */}
-                        <h2 className="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                        <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
                           {post.title}
                         </h2>
                         <p className="text-lg text-gray-500 mt-1">{post.subtitle}</p>
@@ -125,8 +122,8 @@ export default function BlogPage() {
                       </div>
 
                       {/* Arrow */}
-                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-50 group-hover:bg-indigo-50 transition-colors shrink-0">
-                        <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-indigo-500 transition-colors" />
+                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-50 group-hover:bg-emerald-50 transition-colors shrink-0">
+                        <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-emerald-600 transition-colors" />
                       </div>
                     </div>
                   </motion.article>

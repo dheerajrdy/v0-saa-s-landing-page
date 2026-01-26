@@ -51,12 +51,6 @@ export function BlogHeader({
 
   return (
     <header className="relative px-4 pt-32 pb-16 sm:px-6 lg:px-8">
-      {/* Decorative blobs */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="blob blob-indigo absolute top-10 left-1/4 h-[400px] w-[400px]" />
-        <div className="blob blob-purple absolute top-40 right-1/4 h-[300px] w-[300px]" />
-      </div>
-
       <div className="mx-auto max-w-3xl">
         {/* Back link */}
         <motion.div
@@ -66,7 +60,7 @@ export function BlogHeader({
         >
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-emerald-600 transition-colors mb-8"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Blog
@@ -84,10 +78,8 @@ export function BlogHeader({
           </span>
 
           {/* Title */}
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              {title}
-            </span>
+          <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            {title}
           </h1>
 
           {/* Subtitle */}
@@ -99,7 +91,7 @@ export function BlogHeader({
           <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
               <span className="flex items-center gap-1.5">
-                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xs font-medium">
+                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xs font-medium">
                   PL
                 </div>
                 <span className="font-medium text-gray-700">{author}</span>

@@ -72,7 +72,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
         {/* Progress bar */}
         <div className="h-1 w-full bg-gray-100 rounded-full mb-4">
           <div
-            className="h-full bg-indigo-500 rounded-full transition-all duration-150"
+            className="h-full bg-emerald-500 rounded-full transition-all duration-150"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -85,7 +85,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
                   item.level === 3 ? "pl-4" : ""
                 } ${
                   activeId === item.id
-                    ? "text-indigo-600 font-medium"
+                    ? "text-emerald-600 font-medium"
                     : "text-gray-500 hover:text-gray-900"
                 }`}
               >
@@ -123,7 +123,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
                       className={`block py-1.5 text-sm text-left w-full ${
                         item.level === 3 ? "pl-4" : ""
                       } ${
-                        activeId === item.id ? "text-indigo-600 font-medium" : "text-gray-600"
+                        activeId === item.id ? "text-emerald-600 font-medium" : "text-gray-600"
                       }`}
                     >
                       {item.title}

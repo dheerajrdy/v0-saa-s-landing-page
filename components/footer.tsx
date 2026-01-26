@@ -4,32 +4,32 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
               <Image
                 src="/logo.png"
                 alt="ProofLayer Logo"
-                width={36}
-                height={36}
+                width={40}
+                height={40}
                 className="rounded-lg"
               />
-              <span className="text-lg font-semibold text-gray-900">
+              <span className="text-xl font-semibold text-gray-900">
                 Proof<span className="text-indigo-600">Layer</span>
               </span>
             </div>
-            <p className="mt-3 text-sm text-gray-500">Security for every AI agent.</p>
-            <div className="mt-4 flex gap-3">
+            <p className="mt-4 text-base text-gray-500">Security for every AI agent.</p>
+            <div className="mt-6 flex gap-4">
               <a
                 href="https://twitter.com/prooflayer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 transition-colors hover:text-gray-600"
               >
-                <Twitter className="h-4 w-4" />
+                <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="https://linkedin.com/company/prooflayer"
@@ -37,16 +37,16 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-400 transition-colors hover:text-gray-600"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
 
           {/* Links */}
-          <div className="flex gap-12">
+          <div className="flex gap-16">
             <div>
-              <h4 className="text-xs font-medium uppercase tracking-wider text-gray-400">Product</h4>
-              <ul className="mt-3 space-y-2 text-sm">
+              <h4 className="text-sm font-medium uppercase tracking-wider text-gray-400">Product</h4>
+              <ul className="mt-4 space-y-3 text-base">
                 <li>
                   <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors">
                     Services
@@ -60,8 +60,8 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="text-xs font-medium uppercase tracking-wider text-gray-400">Contact</h4>
-              <ul className="mt-3 space-y-2 text-sm">
+              <h4 className="text-sm font-medium uppercase tracking-wider text-gray-400">Contact</h4>
+              <ul className="mt-4 space-y-3 text-base">
                 <li>
                   <a
                     href="https://calendly.com/divyachitimalla/intro"
@@ -78,8 +78,8 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 border-t border-gray-100 pt-8">
-          <p className="text-xs text-gray-300">
+        <div className="mt-16 border-t border-gray-100 pt-10">
+          <p className="text-sm text-gray-300">
             &copy; {new Date().getFullYear()} ProofLayer. All rights reserved.
           </p>
         </div>

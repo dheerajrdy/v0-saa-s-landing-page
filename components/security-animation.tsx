@@ -84,20 +84,20 @@ export function SecurityAnimation() {
   }
 
   return (
-    <div ref={ref} className="mx-auto max-w-2xl">
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xl">
+    <div ref={ref} className="mx-auto max-w-3xl">
+      <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-2xl">
         {/* Title bar */}
-        <div className="flex items-center gap-2 border-b border-gray-100 px-4 py-3">
+        <div className="flex items-center gap-2 border-b border-gray-100 px-5 py-3.5">
           <div className="flex gap-1.5">
             <div className="h-3 w-3 rounded-full bg-red-400" />
             <div className="h-3 w-3 rounded-full bg-amber-400" />
             <div className="h-3 w-3 rounded-full bg-indigo-400" />
           </div>
-          <span className="ml-2 text-xs text-gray-400 font-mono">ProofLayer Security Scanner</span>
+          <span className="ml-2 text-sm text-gray-400 font-mono">ProofLayer Security Scanner</span>
         </div>
 
         {/* Terminal body */}
-        <div className="bg-gray-950 p-5 font-mono text-[13px] leading-relaxed min-h-[380px]">
+        <div className="bg-gray-950 p-6 sm:p-8 font-mono text-sm leading-relaxed min-h-[420px]">
           {scanLines.slice(0, visibleLines).map((line, index) => (
             <motion.div
               key={index}
@@ -110,7 +110,7 @@ export function SecurityAnimation() {
             </motion.div>
           ))}
           {visibleLines < scanLines.length && isInView && (
-            <span className="inline-block h-4 w-1.5 animate-pulse bg-indigo-400" />
+            <span className="inline-block h-4 w-2 animate-pulse bg-indigo-400" />
           )}
         </div>
       </div>

@@ -72,32 +72,32 @@ const accentClasses = {
 
 export function ServicesSection() {
   return (
-    <section id="services" className="scroll-mt-24 px-4 py-28 sm:px-6 lg:px-8 lg:py-40">
+    <section id="services" className="scroll-mt-24 px-4 py-32 sm:px-6 lg:px-8 lg:py-48">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-indigo-600/80">
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-indigo-600/80">
             Three Pillars
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tighter text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 text-4xl font-extrabold tracking-tighter text-gray-900 sm:text-5xl lg:text-[64px] lg:leading-[1.05]">
             Comprehensive security.
             <br />
             Every modality.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-400">
+          <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
             Purpose-built security for text agents, voice agents, and coding agents.
             Test before deployment, protect at runtime.
           </p>
         </motion.div>
 
         {/* Service cards - 3 column grid */}
-        <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-24 grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {services.map((service, index) => {
             const colors = accentClasses[service.accentColor as keyof typeof accentClasses]
             const Icon = service.icon
@@ -109,25 +109,25 @@ export function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative flex flex-col rounded-2xl border border-gray-100/80 bg-white p-10 transition-all duration-300 hover:shadow-lg"
+                className="group relative flex flex-col rounded-3xl border border-gray-100/80 bg-white p-10 transition-all duration-300 hover:shadow-xl lg:p-12"
               >
                 {/* Icon */}
-                <div className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl ${colors.iconBg}`}>
-                  <Icon className={`h-7 w-7 ${colors.iconColor}`} />
+                <div className={`mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl ${colors.iconBg}`}>
+                  <Icon className={`h-8 w-8 ${colors.iconColor}`} />
                 </div>
 
                 {/* Badge */}
-                <span className={`mb-3 inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-medium ${colors.badgeBg} ${colors.badgeText}`}>
+                <span className={`mb-4 inline-flex w-fit items-center rounded-full px-4 py-1.5 text-sm font-medium ${colors.badgeBg} ${colors.badgeText}`}>
                   {service.badge}
                 </span>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold tracking-tight text-gray-900">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-3 text-sm leading-relaxed text-gray-500 flex-grow">
+                <p className="mt-4 text-base leading-relaxed text-gray-500 flex-grow lg:text-lg">
                   {service.description}
                 </p>
 
@@ -135,7 +135,7 @@ export function ServicesSection() {
                 <div className="my-8 h-px bg-gray-100/60" />
 
                 {/* Features */}
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {service.features.map((feature, fIndex) => (
                     <motion.li
                       key={fIndex}
@@ -146,17 +146,17 @@ export function ServicesSection() {
                       className="flex items-start gap-3"
                     >
                       <div className="mt-0.5 rounded-full bg-indigo-50 p-1">
-                        <Check className="h-3.5 w-3.5 text-indigo-600" />
+                        <Check className="h-4 w-4 text-indigo-600" />
                       </div>
-                      <span className="text-sm text-gray-600">{feature}</span>
+                      <span className="text-base text-gray-600">{feature}</span>
                     </motion.li>
                   ))}
                 </ul>
 
                 {/* Learn more link */}
-                <Link href={service.blogSlug} className="mt-8 flex items-center gap-1.5 text-sm font-medium text-indigo-600 transition-colors">
+                <Link href={service.blogSlug} className="mt-10 flex items-center gap-2 text-base font-medium text-indigo-600 transition-colors">
                   <span>Learn more</span>
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </motion.div>
             )

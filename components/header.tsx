@@ -9,9 +9,9 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-2xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-1.5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-2xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo.png"
             alt="ProofLayer Logo"
@@ -19,24 +19,24 @@ export function Header() {
             height={40}
             className="rounded-lg"
           />
-          <span className="text-lg font-semibold tracking-tight text-gray-900">
+          <span className="text-xl font-semibold tracking-tight text-gray-900">
             Proof<span className="text-indigo-600">Layer</span>
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 md:flex">
-          <Link href="/#services" className="text-sm text-gray-400 transition-colors hover:text-gray-800">
+        <nav className="hidden items-center gap-10 md:flex">
+          <Link href="/#services" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
             Services
           </Link>
-          <Link href="/blog" className="text-sm text-gray-400 transition-colors hover:text-gray-800">
+          <Link href="/blog" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
             Blog
           </Link>
           <a
             href="https://calendly.com/divyachitimalla/intro"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-gray-900 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800"
+            className="rounded-full bg-gray-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-gray-800 hover:scale-[1.02]"
           >
             Book a Call
           </a>
@@ -48,24 +48,24 @@ export function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="bg-white md:hidden">
-          <nav className="flex flex-col gap-1 px-4 py-4">
+        <div className="bg-white/95 backdrop-blur-xl md:hidden">
+          <nav className="flex flex-col gap-1 px-4 py-6">
             <Link
               href="/#services"
-              className="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-50 hover:text-gray-800"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-400 hover:bg-gray-50 hover:text-gray-900"
               onClick={() => setMobileMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               href="/blog"
-              className="rounded-lg px-3 py-2 text-sm text-gray-400 hover:bg-gray-50 hover:text-gray-800"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-400 hover:bg-gray-50 hover:text-gray-900"
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog
@@ -74,7 +74,7 @@ export function Header() {
               href="https://calendly.com/divyachitimalla/intro"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 rounded-lg bg-gray-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-800"
+              className="mt-3 rounded-full bg-gray-900 px-6 py-3 text-center text-base font-medium text-white hover:bg-gray-800"
               onClick={() => setMobileMenuOpen(false)}
             >
               Book a Call

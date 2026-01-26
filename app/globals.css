@@ -125,12 +125,6 @@
   --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
   --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
   --shadow: var(--shadow-md);
-  --color-shadow-color: var(--shadow-color);
-  --shadow-opacity: var(--shadow-opacity);
-  --shadow-spread: var(--shadow-spread);
-  --shadow-blur: var(--shadow-blur);
-  --shadow-y: var(--shadow-y);
-  --shadow-x: var(--shadow-x);
 }
 
 @layer base {
@@ -156,7 +150,13 @@
 
   /* Button hover */
   .btn-hover {
-    @apply transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98];
+    @apply transition-all duration-200 ease-out;
+  }
+  .btn-hover:hover {
+    transform: scale(1.02);
+  }
+  .btn-hover:active {
+    transform: scale(0.98);
   }
 
   /* Section backgrounds */

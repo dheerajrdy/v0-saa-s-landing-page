@@ -30,7 +30,7 @@ const threats = [
     title: "Voice Deepfakes",
     description:
       "Synthetic voices bypass biometric verification. We analyze audio fingerprints to detect AI-generated speech.",
-    color: "emerald",
+    color: "blue",
   },
 ]
 
@@ -50,10 +50,10 @@ const colorClasses = {
     iconColor: "text-orange-500",
     ring: "ring-orange-100",
   },
-  emerald: {
-    iconBg: "bg-emerald-50",
-    iconColor: "text-emerald-500",
-    ring: "ring-emerald-100",
+  blue: {
+    iconBg: "bg-blue-50",
+    iconColor: "text-blue-500",
+    ring: "ring-blue-100",
   },
 }
 

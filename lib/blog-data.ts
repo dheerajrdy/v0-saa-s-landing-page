@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Why AI-Generated Code Is the Next Big Security Challenge",
     excerpt: "From Amazon Q exploits to Cursor crypto drains, AI coding agents are becoming a prime attack vector. A comprehensive look at real-world incidents and what they mean for your security posture.",
     category: "Security Analysis",
-    categoryColor: "emerald",
+    categoryColor: "indigo",
     readTime: "12 min read",
     date: "January 26, 2026",
     featured: true,

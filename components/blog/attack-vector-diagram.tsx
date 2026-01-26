@@ -40,7 +40,7 @@ const vectors = [
   {
     icon: Users,
     title: "Social Engineering",
-    color: "text-emerald-500 bg-emerald-50",
+    color: "text-blue-500 bg-blue-50",
     items: [
       "Typosquatting attacks",
       "Malicious repository clones",

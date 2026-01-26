@@ -86,7 +86,7 @@ export function IncidentTimeline() {
               className="relative pl-12"
             >
               {/* Timeline dot */}
-              <div className="absolute left-2.5 top-1.5 h-3 w-3 rounded-full border-2 border-white bg-emerald-500 shadow-sm" />
+              <div className="absolute left-2.5 top-1.5 h-3 w-3 rounded-full border-2 border-white bg-indigo-500 shadow-sm" />
 
               <div className="rounded-xl border border-gray-100 bg-white p-5">
                 <div className="flex flex-wrap items-center gap-2 mb-2">

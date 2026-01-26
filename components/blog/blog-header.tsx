@@ -60,7 +60,7 @@ export function BlogHeader({
         >
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-emerald-600 transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors mb-8"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Blog
@@ -91,7 +91,7 @@ export function BlogHeader({
           <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
               <span className="flex items-center gap-1.5">
-                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xs font-medium">
+                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xs font-medium">
                   PL
                 </div>
                 <span className="font-medium text-gray-700">{author}</span>

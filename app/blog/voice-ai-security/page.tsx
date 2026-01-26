@@ -38,7 +38,7 @@ export default function VoiceAISecurityPost() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAFA] text-gray-900">
+    <main className="min-h-screen bg-white text-gray-900">
       <Header />
       <ReadingProgressBar />
 
@@ -64,7 +64,7 @@ export default function VoiceAISecurityPost() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="prose-section"
               >
-                <p className="text-xl text-gray-600 leading-relaxed mb-8 border-l-4 border-emerald-500 pl-6 italic">
+                <p className="text-xl text-gray-600 leading-relaxed mb-8 border-l-4 border-indigo-500 pl-6 italic">
                   Voice AI is experiencing explosive growth. From customer service bots to healthcare agents,
                   voice-first interfaces are becoming the default way humans interact with AI. But there&apos;s
                   a problem: the security tools built for text-based AI don&apos;t work for voice.
@@ -155,23 +155,23 @@ export default function VoiceAISecurityPost() {
                   The fundamental problem is this: <strong>audio carries information that text cannot capture</strong>.
                 </p>
 
-                <div className="rounded-xl bg-emerald-50 border border-emerald-100 p-6 my-8">
-                  <h4 className="font-semibold text-emerald-900 mb-4">What Gets Lost in Transcription:</h4>
-                  <ul className="space-y-3 text-emerald-800">
+                <div className="rounded-xl bg-indigo-50 border border-indigo-100 p-6 my-8">
+                  <h4 className="font-semibold text-indigo-900 mb-4">What Gets Lost in Transcription:</h4>
+                  <ul className="space-y-3 text-indigo-800">
                     <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                       <span><strong>Prosodic features:</strong> Pitch, rhythm, and stress patterns that can indicate deception or manipulation</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                       <span><strong>Spectral artifacts:</strong> The telltale signatures of AI-generated or manipulated audio</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                       <span><strong>Temporal patterns:</strong> Timing and pause structures that reveal hidden content</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                       <span><strong>Voice biometrics:</strong> The unique characteristics that verify speaker identity</span>
                     </li>
                   </ul>
@@ -334,8 +334,8 @@ export default function VoiceAISecurityPost() {
                     >
                       {copied ? (
                         <>
-                          <Check className="h-4 w-4 text-emerald-500" />
-                          <span className="text-emerald-500">Copied!</span>
+                          <Check className="h-4 w-4 text-indigo-500" />
+                          <span className="text-indigo-500">Copied!</span>
                         </>
                       ) : (
                         <>
@@ -351,9 +351,9 @@ export default function VoiceAISecurityPost() {
                     <pre className="text-sm font-mono overflow-x-auto">
                       <code>
                         <span className="text-gray-500">&lt;</span>
-                        <span className="text-emerald-400">Stream</span>
+                        <span className="text-indigo-400">Stream</span>
                         {" "}
-                        <span className="text-emerald-400">url</span>
+                        <span className="text-indigo-400">url</span>
                         <span className="text-gray-500">=</span>
                         <span className="text-amber-300">&quot;wss://prooflayer.com/v1&quot;</span>
                         {" "}

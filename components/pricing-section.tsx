@@ -107,7 +107,7 @@ export function PricingSection() {
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                                     <span className="text-sm text-gray-500">Red Teaming</span>
                                     {tier.features.redTeaming ? (
-                                        <Check className="h-4 w-4 text-emerald-500" />
+                                        <Check className="h-4 w-4 text-indigo-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />
                                     )}
@@ -115,7 +115,7 @@ export function PricingSection() {
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                                     <span className="text-sm text-gray-500">Guardrails</span>
                                     {tier.features.guardrails ? (
-                                        <Check className="h-4 w-4 text-emerald-500" />
+                                        <Check className="h-4 w-4 text-indigo-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />
                                     )}
@@ -123,7 +123,7 @@ export function PricingSection() {
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                                     <span className="text-sm text-gray-500">CI/CD Integration</span>
                                     {tier.features.cicd ? (
-                                        <Check className="h-4 w-4 text-emerald-500" />
+                                        <Check className="h-4 w-4 text-indigo-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />
                                     )}
@@ -131,7 +131,7 @@ export function PricingSection() {
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                                     <span className="text-sm text-gray-500">SSO</span>
                                     {tier.features.sso ? (
-                                        <Check className="h-4 w-4 text-emerald-500" />
+                                        <Check className="h-4 w-4 text-indigo-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />
                                     )}
@@ -139,7 +139,7 @@ export function PricingSection() {
                                 <div className="flex justify-between items-center py-2">
                                     <span className="text-sm text-gray-500">Dedicated Support</span>
                                     {tier.features.dedicatedSupport ? (
-                                        <Check className="h-4 w-4 text-emerald-500" />
+                                        <Check className="h-4 w-4 text-indigo-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />
                                     )}

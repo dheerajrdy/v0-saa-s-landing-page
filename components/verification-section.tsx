@@ -36,8 +36,8 @@ export function VerificationSection() {
                                 { icon: CheckCircle, text: "Instant compliance reports for regulators" },
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3 text-gray-700">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-100">
-                                        <item.icon className="h-4 w-4 text-emerald-600" />
+                                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100">
+                                        <item.icon className="h-4 w-4 text-indigo-600" />
                                     </div>
                                     <span>{item.text}</span>
                                 </div>
@@ -61,7 +61,7 @@ export function VerificationSection() {
                                     <Shield className="h-4 w-4 text-white" />
                                 </div>
                                 <span className="font-semibold text-gray-900">VERIFICATION CERTIFICATE</span>
-                                <div className="ml-auto flex items-center gap-1 text-emerald-600 text-xs font-medium bg-emerald-50 px-2 py-1 rounded-full">
+                                <div className="ml-auto flex items-center gap-1 text-indigo-600 text-xs font-medium bg-indigo-50 px-2 py-1 rounded-full">
                                     <CheckCircle className="h-3 w-3" />
                                     Verified
                                 </div>
@@ -79,19 +79,19 @@ export function VerificationSection() {
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-gray-400">Identity Verified:</span>
-                                    <span className="text-emerald-600 flex items-center gap-1">
+                                    <span className="text-indigo-600 flex items-center gap-1">
                                         <CheckCircle className="h-3 w-3" /> DOB match
                                     </span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-gray-400">PII Redacted:</span>
-                                    <span className="text-emerald-600 flex items-center gap-1">
+                                    <span className="text-indigo-600 flex items-center gap-1">
                                         <CheckCircle className="h-3 w-3" /> 3 entities
                                     </span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-gray-400">Disclosure Given:</span>
-                                    <span className="text-emerald-600 flex items-center gap-1">
+                                    <span className="text-indigo-600 flex items-center gap-1">
                                         <CheckCircle className="h-3 w-3" /> Mini-Miranda
                                     </span>
                                 </div>
@@ -108,8 +108,8 @@ export function VerificationSection() {
                                     <span className="text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">sha256:a1b2c3d4e5f6...</span>
                                 </div>
                                 <div className="flex items-center gap-2 text-xs">
-                                    <Lock className="h-3 w-3 text-emerald-500" />
-                                    <span className="text-emerald-600 font-medium">Signature: Immutable</span>
+                                    <Lock className="h-3 w-3 text-indigo-500" />
+                                    <span className="text-indigo-600 font-medium">Signature: Immutable</span>
                                 </div>
                             </div>
                         </div>

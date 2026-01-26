@@ -86,7 +86,7 @@ export function ProsodicMetricsViz() {
                                 type="monotone"
                                 dataKey="human"
                                 name="Human Voice"
-                                stroke="#10b981"
+                                stroke="#6366F1"
                                 strokeWidth={2}
                                 dot={false}
                                 animationDuration={1500}
@@ -127,7 +127,7 @@ export function ProsodicMetricsViz() {
                                 {/* Human bar */}
                                 <div className="mb-2">
                                     <div className="flex items-center justify-between text-xs mb-1">
-                                        <span className="text-emerald-600 font-medium">Human</span>
+                                        <span className="text-indigo-600 font-medium">Human</span>
                                         <span className="text-gray-500">{metric.human.value} — {metric.human.label}</span>
                                     </div>
                                     <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
@@ -136,7 +136,7 @@ export function ProsodicMetricsViz() {
                                             whileInView={{ width: `${metric.humanPercent}%` }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.8, delay: index * 0.15 }}
-                                            className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full"
+                                            className="h-full bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full"
                                         />
                                     </div>
                                 </div>

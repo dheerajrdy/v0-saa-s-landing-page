@@ -32,7 +32,7 @@ export function WhySection() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <span className="text-xs font-medium uppercase tracking-widest text-emerald-600">
+          <span className="text-xs font-medium uppercase tracking-widest text-indigo-600">
             The Problem
           </span>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">

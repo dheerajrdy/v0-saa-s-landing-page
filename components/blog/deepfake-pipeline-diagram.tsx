@@ -9,14 +9,14 @@ const pipelineSteps = [
         icon: FileText,
         title: "Input",
         description: "Text or source audio",
-        color: "emerald",
+        color: "indigo",
     },
     {
         id: "acoustic",
         icon: Music,
         title: "Acoustic Model",
         description: "Text→Mel-Spectrogram",
-        color: "teal",
+        color: "violet",
     },
     {
         id: "vocoder",
@@ -43,17 +43,17 @@ const artifacts = [
 ]
 
 const colorClasses = {
-    emerald: {
-        bg: "bg-emerald-50",
-        iconBg: "bg-emerald-100",
-        iconColor: "text-emerald-500",
-        border: "border-emerald-200",
+    indigo: {
+        bg: "bg-indigo-50",
+        iconBg: "bg-indigo-100",
+        iconColor: "text-indigo-500",
+        border: "border-indigo-200",
     },
-    teal: {
-        bg: "bg-teal-50",
-        iconBg: "bg-teal-100",
-        iconColor: "text-teal-500",
-        border: "border-teal-200",
+    violet: {
+        bg: "bg-violet-50",
+        iconBg: "bg-violet-100",
+        iconColor: "text-violet-500",
+        border: "border-violet-200",
     },
     rose: {
         bg: "bg-rose-50",

@@ -32,7 +32,7 @@ const tocItems: TocItem[] = [
 
 export default function DetectingDeepfakesPost() {
   return (
-    <main className="min-h-screen bg-[#FAFAFA] text-gray-900">
+    <main className="min-h-screen bg-white text-gray-900">
       <Header />
       <ReadingProgressBar />
 
@@ -345,9 +345,9 @@ export default function DetectingDeepfakesPost() {
 
                 <ProsodicMetricsViz />
 
-                <div className="rounded-xl bg-emerald-50 border border-emerald-100 p-6 my-8">
-                  <h4 className="font-semibold text-emerald-900 mb-3">Explainability Advantage</h4>
-                  <p className="text-emerald-800">
+                <div className="rounded-xl bg-indigo-50 border border-indigo-100 p-6 my-8">
+                  <h4 className="font-semibold text-indigo-900 mb-3">Explainability Advantage</h4>
+                  <p className="text-indigo-800">
                     Prosodic analysis offers <strong>explainability</strong>. By integrating attention mechanisms
                     that focus on prosodic features, forensic systems can state: &quot;This audio is fake because
                     the pitch micro-tremors are statistically absent&quot;&mdash;rather than simply &quot;the neural
@@ -405,19 +405,19 @@ export default function DetectingDeepfakesPost() {
 
                 <ul className="space-y-3 text-gray-700 mb-8">
                   <li className="flex items-start gap-3">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                     <span><strong>Feature Fusion:</strong> Extracts 1024-dim embeddings from the 8th Transformer layer of both HuBERT-Large and WavLM-Large</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                     <span><strong>Attentional Multi-Feature Fusion (AMFF):</strong> Dynamically weights HuBERT vs. WavLM streams per frame</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                     <span><strong>TS-ConvNeXt Backbone:</strong> Intra-frame FFN + inter-frame depth-wise temporal convolution</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
                     <span><strong>Efficient Channel Attention (ECA):</strong> Recalibrates channel saliency without heavy computation</span>
                   </li>
                 </ul>
@@ -563,15 +563,15 @@ export default function DetectingDeepfakesPost() {
                   <h4 className="font-semibold mb-4">The Defense of the Future:</h4>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 mt-2.5 shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
                       <span><strong>Multi-Modal Fusion:</strong> Combining spectral, prosodic, and visual cues to create defenses no single attack can bypass</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 mt-2.5 shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
                       <span><strong>Adversarial Robustness:</strong> Moving beyond &quot;clean&quot; accuracy to &quot;attack-resistant&quot; accuracy via SASV</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 mt-2.5 shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
                       <span><strong>Explainability:</strong> Providing forensic evidence beyond &quot;computer says fake&quot;</span>
                     </li>
                   </ul>

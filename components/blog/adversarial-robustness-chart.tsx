@@ -5,7 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { Shield, Skull } from "lucide-react"
 
 const data = [
-    { name: "Clean Audio", accuracy: 98, fill: "#10b981" },
+    { name: "Clean Audio", accuracy: 98, fill: "#4F46E5" },
     { name: "Black-box Attack", accuracy: 84, fill: "#eab308" },
     { name: "White-box (FGSM)", accuracy: 26, fill: "#ef4444" },
 ]
@@ -83,13 +83,13 @@ export function AdversarialRobustnessChart() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="rounded-xl bg-emerald-50 border border-emerald-100 p-4"
+                        className="rounded-xl bg-indigo-50 border border-indigo-100 p-4"
                     >
                         <div className="flex items-center gap-2 mb-2">
-                            <Shield className="h-4 w-4 text-emerald-500" />
-                            <span className="font-semibold text-emerald-900 text-sm">Clean Audio</span>
+                            <Shield className="h-4 w-4 text-indigo-500" />
+                            <span className="font-semibold text-indigo-900 text-sm">Clean Audio</span>
                         </div>
-                        <p className="text-xs text-emerald-700">
+                        <p className="text-xs text-indigo-700">
                             Unperturbed deepfakes. Models perform excellently under lab conditions.
                         </p>
                     </motion.div>

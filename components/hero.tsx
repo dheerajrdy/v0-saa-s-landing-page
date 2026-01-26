@@ -21,9 +21,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm text-emerald-700"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm text-indigo-700"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
             Now accepting early access partners
           </motion.div>
 
@@ -35,7 +35,7 @@ export function Hero() {
             className="max-w-4xl text-5xl font-semibold leading-[1.1] tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
           >
             Security for{" "}
-            <span className="text-emerald-600">every</span>
+            <span className="text-indigo-600">every</span>
             <br />
             AI agent.
           </motion.h1>

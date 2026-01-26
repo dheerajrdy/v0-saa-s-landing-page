@@ -50,10 +50,10 @@ export function SpectralVisualizer() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.6 }}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200"
                             >
-                                <CheckCircle className="h-5 w-5 text-emerald-500" />
-                                <span className="font-semibold text-emerald-700">PASS</span>
+                                <CheckCircle className="h-5 w-5 text-indigo-500" />
+                                <span className="font-semibold text-indigo-700">PASS</span>
                             </motion.div>
 
                             <p className="mt-4 text-sm text-gray-500">
@@ -89,7 +89,7 @@ export function SpectralVisualizer() {
                                                 key={i}
                                                 className={`w-1 rounded-full ${isGlitch
                                                         ? "bg-gradient-to-t from-rose-500 to-rose-400"
-                                                        : "bg-gradient-to-t from-emerald-400 to-teal-400"
+                                                        : "bg-gradient-to-t from-indigo-400 to-violet-400"
                                                     }`}
                                                 animate={{
                                                     height: [
@@ -156,9 +156,9 @@ export function SpectralVisualizer() {
                                 <span className="text-3xl font-mono text-gray-800">&quot;Hello&quot;</span>
                             </div>
 
-                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200">
-                                <CheckCircle className="h-4 w-4 text-emerald-500" />
-                                <span className="text-sm font-semibold text-emerald-700">PASS</span>
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-200">
+                                <CheckCircle className="h-4 w-4 text-indigo-500" />
+                                <span className="text-sm font-semibold text-indigo-700">PASS</span>
                             </div>
 
                             <p className="mt-3 text-xs text-gray-500">
@@ -187,7 +187,7 @@ export function SpectralVisualizer() {
                                                 key={i}
                                                 className={`w-1 rounded-full ${isGlitch
                                                         ? "bg-gradient-to-t from-rose-500 to-rose-400"
-                                                        : "bg-gradient-to-t from-emerald-400 to-teal-400"
+                                                        : "bg-gradient-to-t from-indigo-400 to-violet-400"
                                                     }`}
                                                 animate={{
                                                     height: [

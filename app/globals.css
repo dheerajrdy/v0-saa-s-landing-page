@@ -11,8 +11,8 @@
   --popover: #FFFFFF;
   --popover-foreground: #111827;
 
-  /* Primary - Emerald (Security) */
-  --primary: #059669;
+  /* Primary - Indigo */
+  --primary: #4F46E5;
   --primary-foreground: #FFFFFF;
 
   /* Secondary - Light gray */
@@ -23,8 +23,8 @@
   --muted: #F9FAFB;
   --muted-foreground: #6B7280;
 
-  /* Accent - Teal */
-  --accent: #10B981;
+  /* Accent - Violet */
+  --accent: #6366F1;
   --accent-foreground: #FFFFFF;
 
   /* Destructive */
@@ -34,12 +34,12 @@
   /* Borders & Inputs */
   --border: #E5E7EB;
   --input: #E5E7EB;
-  --ring: #059669;
+  --ring: #4F46E5;
 
   /* Charts */
-  --chart-1: #059669;
-  --chart-2: #10B981;
-  --chart-3: #34D399;
+  --chart-1: #4F46E5;
+  --chart-2: #6366F1;
+  --chart-3: #818CF8;
   --chart-4: #F59E0B;
   --chart-5: #8B5CF6;
 
@@ -57,12 +57,12 @@
   /* Sidebar (keeping for compatibility) */
   --sidebar: #FFFFFF;
   --sidebar-foreground: #111827;
-  --sidebar-primary: #059669;
+  --sidebar-primary: #4F46E5;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #F9FAFB;
   --sidebar-accent-foreground: #111827;
   --sidebar-border: #E5E7EB;
-  --sidebar-ring: #059669;
+  --sidebar-ring: #4F46E5;
 }
 
 @theme inline {
@@ -140,7 +140,7 @@
 @layer utilities {
   /* Gradient text */
   .text-gradient {
-    @apply bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-600 to-violet-500 bg-clip-text text-transparent;
   }
 
   /* Card hover effect */

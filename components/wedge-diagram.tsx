@@ -94,13 +94,13 @@ export function WedgeDiagram() {
 
                 {/* Safety checks */}
                 <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex gap-2 whitespace-nowrap">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] text-emerald-600">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] text-indigo-600">
                     <CheckCircle className="h-2.5 w-2.5" /> Injection
                   </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] text-emerald-600">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] text-indigo-600">
                     <CheckCircle className="h-2.5 w-2.5" /> Deepfake
                   </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] text-emerald-600">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] text-indigo-600">
                     <CheckCircle className="h-2.5 w-2.5" /> Policy
                   </span>
                 </div>
@@ -114,8 +114,8 @@ export function WedgeDiagram() {
                 transition={{ delay: 0.6 }}
                 className="flex-1 flex items-center"
               >
-                <div className="h-0.5 flex-1 bg-gradient-to-r from-indigo-400 to-emerald-400" />
-                <ArrowRight className="h-5 w-5 text-emerald-500 -ml-1" />
+                <div className="h-0.5 flex-1 bg-gradient-to-r from-indigo-400 to-violet-400" />
+                <ArrowRight className="h-5 w-5 text-indigo-500 -ml-1" />
               </motion.div>
 
               {/* AI Model */}
@@ -126,8 +126,8 @@ export function WedgeDiagram() {
                 transition={{ delay: 0.7 }}
                 className="flex flex-col items-center"
               >
-                <div className="h-20 w-20 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center mb-3">
-                  <Bot className="h-10 w-10 text-emerald-500" />
+                <div className="h-20 w-20 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center mb-3">
+                  <Bot className="h-10 w-10 text-indigo-500" />
                 </div>
                 <span className="text-sm font-medium text-gray-900">AI Model</span>
                 <span className="text-xs text-gray-500">OpenAI / Google</span>
@@ -170,13 +170,13 @@ export function WedgeDiagram() {
 
               {/* Arrow down */}
               <div className="flex justify-center">
-                <div className="h-8 w-0.5 bg-gradient-to-b from-indigo-400 to-emerald-400" />
+                <div className="h-8 w-0.5 bg-gradient-to-b from-indigo-400 to-violet-400" />
               </div>
 
               {/* AI Model */}
               <div className="flex items-center gap-4">
-                <div className="h-14 w-14 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center">
-                  <Bot className="h-7 w-7 text-emerald-500" />
+                <div className="h-14 w-14 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center">
+                  <Bot className="h-7 w-7 text-indigo-500" />
                 </div>
                 <div>
                   <span className="text-sm font-medium text-gray-900 block">AI Model</span>

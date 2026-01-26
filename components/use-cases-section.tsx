@@ -42,7 +42,7 @@ const useCases = [
         id: "healthcare",
         icon: Heart,
         title: "Healthcare Billing",
-        color: "emerald",
+        color: "blue",
         needs: [
             "HIPAA compliance for patient financial discussions",
             "Voice authentication to prevent billing fraud",
@@ -64,7 +64,7 @@ export function UseCasesSection() {
     const colorClasses = {
         indigo: { bg: "bg-indigo-50", border: "border-indigo-200", text: "text-indigo-600", iconBg: "bg-indigo-100" },
         violet: { bg: "bg-violet-50", border: "border-violet-200", text: "text-violet-600", iconBg: "bg-violet-100" },
-        emerald: { bg: "bg-emerald-50", border: "border-emerald-200", text: "text-emerald-600", iconBg: "bg-emerald-100" },
+        blue: { bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-600", iconBg: "bg-blue-100" },
     }
 
     const colors = colorClasses[activeCase.color as keyof typeof colorClasses]
@@ -139,13 +139,13 @@ export function UseCasesSection() {
                         {/* Proof Layer Features */}
                         <div>
                             <div className="inline-flex items-center gap-2 bg-white rounded-full px-3 py-1 text-sm font-medium text-gray-700 mb-4 border border-gray-200">
-                                <CheckCircle className="h-4 w-4 text-emerald-500" />
+                                <CheckCircle className="h-4 w-4 text-indigo-500" />
                                 Proof Layer Solution
                             </div>
                             <ul className="space-y-4">
                                 {activeCase.features.map((feature, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                                        <CheckCircle className="h-5 w-5 text-indigo-500 shrink-0 mt-0.5" />
                                         <span className="text-gray-700">{feature}</span>
                                     </li>
                                 ))}

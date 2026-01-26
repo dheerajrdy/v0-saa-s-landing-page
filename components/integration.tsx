@@ -97,8 +97,8 @@ export function Integration() {
                 >
                   {copied ? (
                     <>
-                      <Check className="h-4 w-4 text-emerald-500" />
-                      <span className="text-emerald-500">Copied!</span>
+                      <Check className="h-4 w-4 text-indigo-500" />
+                      <span className="text-indigo-500">Copied!</span>
                     </>
                   ) : (
                     <>
@@ -116,7 +116,7 @@ export function Integration() {
                     <span className="text-gray-500">&lt;</span>
                     <span className="text-indigo-400">Stream</span>
                     {" "}
-                    <span className="text-emerald-400">url</span>
+                    <span className="text-indigo-400">url</span>
                     <span className="text-gray-500">=</span>
                     <span className="text-amber-300">&quot;wss://prooflayer.com/v1&quot;</span>
                     {" "}

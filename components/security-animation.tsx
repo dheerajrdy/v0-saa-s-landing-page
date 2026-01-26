@@ -44,12 +44,12 @@ export function SecurityAnimation() {
 
   const getLineColor = (type: string) => {
     switch (type) {
-      case "command": return "text-emerald-400"
+      case "command": return "text-indigo-400"
       case "header": return "text-white font-semibold"
       case "divider": return "text-gray-600"
       case "pass": return "text-gray-300"
       case "warn": return "text-amber-400"
-      case "success": return "text-emerald-400 font-medium"
+      case "success": return "text-indigo-400 font-medium"
       case "info": return "text-gray-400"
       default: return "text-gray-500"
     }
@@ -63,7 +63,7 @@ export function SecurityAnimation() {
       return (
         <>
           <span className="text-gray-400">{parts[0]}</span>
-          <span className="text-emerald-400">PASS</span>
+          <span className="text-indigo-400">PASS</span>
         </>
       )
     }
@@ -91,7 +91,7 @@ export function SecurityAnimation() {
           <div className="flex gap-1.5">
             <div className="h-3 w-3 rounded-full bg-red-400" />
             <div className="h-3 w-3 rounded-full bg-amber-400" />
-            <div className="h-3 w-3 rounded-full bg-emerald-400" />
+            <div className="h-3 w-3 rounded-full bg-indigo-400" />
           </div>
           <span className="ml-2 text-xs text-gray-400 font-mono">ProofLayer Security Scanner</span>
         </div>
@@ -110,7 +110,7 @@ export function SecurityAnimation() {
             </motion.div>
           ))}
           {visibleLines < scanLines.length && isInView && (
-            <span className="inline-block h-4 w-1.5 animate-pulse bg-emerald-400" />
+            <span className="inline-block h-4 w-1.5 animate-pulse bg-indigo-400" />
           )}
         </div>
       </div>

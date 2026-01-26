@@ -18,7 +18,7 @@ export function Footer() {
                 className="rounded-lg"
               />
               <span className="text-lg font-semibold text-gray-900">
-                Proof<span className="text-emerald-600">Layer</span>
+                Proof<span className="text-indigo-600">Layer</span>
               </span>
             </div>
             <p className="mt-3 text-sm text-gray-500">Security for every AI agent.</p>
@@ -83,11 +83,11 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-5 text-xs text-gray-400">
               <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 rounded-full bg-emerald-500" />
+                <span className="h-1 w-1 rounded-full bg-indigo-500" />
                 OWASP Compliant
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 rounded-full bg-emerald-500" />
+                <span className="h-1 w-1 rounded-full bg-indigo-500" />
                 NIST Aligned
               </span>
             </div>

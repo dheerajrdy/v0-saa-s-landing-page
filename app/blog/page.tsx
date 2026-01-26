@@ -19,8 +19,8 @@ const categoryColors = {
     border: "border-indigo-100",
   },
   emerald: {
-    bg: "bg-emerald-50",
-    text: "text-emerald-600",
+    bg: "bg-indigo-50",
+    text: "text-indigo-600",
     border: "border-emerald-100",
   },
   rose: {
@@ -48,7 +48,7 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-flex items-center rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-600 mb-6">
+            <span className="inline-flex items-center rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-6">
               Blog
             </span>
             <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
@@ -79,12 +79,12 @@ export default function BlogPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 + 0.3 }}
-                    className="group relative rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-100 transition-all duration-300 hover:shadow-lg hover:ring-emerald-100 cursor-pointer"
+                    className="group relative rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-100 transition-all duration-300 hover:shadow-lg hover:ring-indigo-100 cursor-pointer"
                   >
                     {/* Featured badge */}
                     {post.featured && (
                       <div className="absolute -top-3 left-6">
-                        <span className="inline-flex items-center rounded-full bg-emerald-600 px-3 py-1 text-xs font-medium text-white shadow-sm">
+                        <span className="inline-flex items-center rounded-full bg-indigo-600 px-3 py-1 text-xs font-medium text-white shadow-sm">
                           Featured
                         </span>
                       </div>
@@ -98,7 +98,7 @@ export default function BlogPage() {
                         </span>
 
                         {/* Title */}
-                        <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                        <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
                           {post.title}
                         </h2>
                         <p className="text-lg text-gray-500 mt-1">{post.subtitle}</p>
@@ -122,8 +122,8 @@ export default function BlogPage() {
                       </div>
 
                       {/* Arrow */}
-                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-50 group-hover:bg-emerald-50 transition-colors shrink-0">
-                        <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-emerald-600 transition-colors" />
+                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-50 group-hover:bg-indigo-50 transition-colors shrink-0">
+                        <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-indigo-600 transition-colors" />
                       </div>
                     </div>
                   </motion.article>

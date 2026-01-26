@@ -22,7 +22,7 @@ const features = [
     icon: GitBranch,
     title: "Agent Workflow Testing",
     description: "Multi-step interaction simulation for complex agent behaviors and tool chains.",
-    color: "emerald",
+    color: "blue",
     size: "small",
   },
   {
@@ -61,11 +61,11 @@ const colorClasses = {
     ring: "ring-violet-100",
     gradient: "from-violet-50",
   },
-  emerald: {
-    iconBg: "bg-emerald-50",
-    iconColor: "text-emerald-500",
-    ring: "ring-emerald-100",
-    gradient: "from-emerald-50",
+  sky: {
+    iconBg: "bg-sky-50",
+    iconColor: "text-sky-500",
+    ring: "ring-sky-100",
+    gradient: "from-sky-50",
   },
   orange: {
     iconBg: "bg-orange-50",

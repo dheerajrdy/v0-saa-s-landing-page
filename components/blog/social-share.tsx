@@ -54,7 +54,7 @@ export function SocialShare({ title, url, variant = "horizontal" }: SocialShareP
         <Linkedin className="h-4 w-4" />
       </a>
       <button onClick={copyLink} className={buttonClass} aria-label="Copy link">
-        {copied ? <Check className="h-4 w-4 text-emerald-500" /> : <Link2 className="h-4 w-4" />}
+        {copied ? <Check className="h-4 w-4 text-indigo-500" /> : <Link2 className="h-4 w-4" />}
       </button>
     </div>
   )

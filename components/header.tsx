@@ -20,7 +20,7 @@ export function Header() {
             className="rounded-lg"
           />
           <span className="text-lg font-semibold tracking-tight text-gray-900">
-            Proof<span className="text-emerald-600">Layer</span>
+            Proof<span className="text-indigo-600">Layer</span>
           </span>
         </Link>
 
@@ -34,7 +34,7 @@ export function Header() {
           </Link>
           <Link
             href="/#waitlist"
-            className="rounded-full bg-emerald-600 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-emerald-700"
+            className="rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
           >
             Join Waitlist
           </Link>
@@ -70,7 +70,7 @@ export function Header() {
             </Link>
             <Link
               href="/#waitlist"
-              className="mt-2 rounded-full bg-emerald-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-emerald-700"
+              className="mt-2 rounded-full bg-indigo-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-indigo-700"
               onClick={() => setMobileMenuOpen(false)}
             >
               Join Waitlist

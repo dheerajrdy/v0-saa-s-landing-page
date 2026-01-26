@@ -46,8 +46,8 @@ export function SafetyPipelineDiagram() {
           className="p-6 border-b border-gray-100"
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-8 w-8 rounded-lg bg-emerald-100 flex items-center justify-center">
-              <Activity className="h-4 w-4 text-emerald-500" />
+            <div className="h-8 w-8 rounded-lg bg-indigo-100 flex items-center justify-center">
+              <Activity className="h-4 w-4 text-indigo-500" />
             </div>
             <div>
               <span className="text-sm font-semibold text-gray-900">Audio Stream</span>
@@ -65,7 +65,7 @@ export function SafetyPipelineDiagram() {
               {Array.from({ length: 40 }).map((_, i) => (
                 <motion.div
                   key={i}
-                  className="w-1 bg-gradient-to-t from-emerald-400 to-teal-400 rounded-full"
+                  className="w-1 bg-gradient-to-t from-indigo-400 to-violet-400 rounded-full"
                   animate={{
                     height: [
                       Math.random() * 20 + 10,
@@ -95,15 +95,15 @@ export function SafetyPipelineDiagram() {
         >
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-teal-100 flex items-center justify-center">
-                <Cpu className="h-4 w-4 text-teal-500" />
+              <div className="h-8 w-8 rounded-lg bg-violet-100 flex items-center justify-center">
+                <Cpu className="h-4 w-4 text-violet-500" />
               </div>
               <div>
                 <span className="text-sm font-semibold text-gray-900">Feature Extraction</span>
                 <span className="text-xs text-gray-500 ml-2">Stage 1</span>
               </div>
             </div>
-            <span className="text-xs font-mono text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
+            <span className="text-xs font-mono text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
               &lt;10ms
             </span>
           </div>
@@ -135,15 +135,15 @@ export function SafetyPipelineDiagram() {
         >
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-emerald-100 flex items-center justify-center">
-                <Shield className="h-4 w-4 text-emerald-500" />
+              <div className="h-8 w-8 rounded-lg bg-indigo-100 flex items-center justify-center">
+                <Shield className="h-4 w-4 text-indigo-500" />
               </div>
               <div>
                 <span className="text-sm font-semibold text-gray-900">Parallel Detection Models</span>
                 <span className="text-xs text-gray-500 ml-2">Stage 2</span>
               </div>
             </div>
-            <span className="text-xs font-mono text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
+            <span className="text-xs font-mono text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
               &lt;30ms
             </span>
           </div>
@@ -170,13 +170,13 @@ export function SafetyPipelineDiagram() {
                     <div className="text-xs text-gray-500">Score:</div>
                     <div className="flex items-center gap-2">
                       <span className="text-lg font-mono font-bold text-gray-900">{detector.score}</span>
-                      <CheckCircle className="h-4 w-4 text-emerald-500" />
+                      <CheckCircle className="h-4 w-4 text-indigo-500" />
                     </div>
                   </div>
                   {/* Progress bar */}
                   <div className="mt-2 h-1.5 bg-gray-100 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-emerald-400 rounded-full"
+                      className="h-full bg-indigo-400 rounded-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${parseFloat(detector.score) * 100}%` }}
                       viewport={{ once: true }}
@@ -199,15 +199,15 @@ export function SafetyPipelineDiagram() {
         >
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-emerald-100 flex items-center justify-center">
-                <CheckCircle className="h-4 w-4 text-emerald-500" />
+              <div className="h-8 w-8 rounded-lg bg-indigo-100 flex items-center justify-center">
+                <CheckCircle className="h-4 w-4 text-indigo-500" />
               </div>
               <div>
                 <span className="text-sm font-semibold text-gray-900">Decision & Enforcement</span>
                 <span className="text-xs text-gray-500 ml-2">Stage 3</span>
               </div>
             </div>
-            <span className="text-xs font-mono text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
+            <span className="text-xs font-mono text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
               &lt;5ms
             </span>
           </div>
@@ -219,10 +219,10 @@ export function SafetyPipelineDiagram() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8 }}
-              className="flex flex-col items-center p-4 rounded-xl bg-emerald-50 border-2 border-emerald-200 min-w-[100px]"
+              className="flex flex-col items-center p-4 rounded-xl bg-indigo-50 border-2 border-indigo-200 min-w-[100px]"
             >
-              <CheckCircle className="h-8 w-8 text-emerald-500 mb-2" />
-              <span className="text-sm font-semibold text-emerald-700">ALLOW</span>
+              <CheckCircle className="h-8 w-8 text-indigo-500 mb-2" />
+              <span className="text-sm font-semibold text-indigo-700">ALLOW</span>
             </motion.div>
 
             {/* Warn */}
@@ -289,8 +289,8 @@ export function SafetyPipelineDiagram() {
                   className="text-gray-300"
                 >
                   <td className="pr-4 py-1 text-gray-500">10:23:45</td>
-                  <td className="pr-4 py-1 text-emerald-400">abc123</td>
-                  <td className="pr-4 py-1 text-emerald-400">ALLOW</td>
+                  <td className="pr-4 py-1 text-indigo-400">abc123</td>
+                  <td className="pr-4 py-1 text-indigo-400">ALLOW</td>
                   <td className="pr-4 py-1 text-amber-400">0.98</td>
                   <td className="py-1 text-gray-400">policy_pass</td>
                 </motion.tr>

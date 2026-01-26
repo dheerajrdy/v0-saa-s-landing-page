@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts"
 
 const data = [
-    { name: "NeXt-TDNN", eer: 0.42, type: "SSL + TDNN", color: "#10b981" },
-    { name: "AASIST", eer: 0.83, type: "GNN", color: "#22c55e" },
-    { name: "VGG16+CQT", eer: 1.8, type: "CNN", color: "#84cc16" },
+    { name: "NeXt-TDNN", eer: 0.42, type: "SSL + TDNN", color: "#4F46E5" },
+    { name: "AASIST", eer: 0.83, type: "GNN", color: "#6366F1" },
+    { name: "VGG16+CQT", eer: 1.8, type: "CNN", color: "#818CF8" },
     { name: "RawNet2", eer: 2.5, type: "End-to-End", color: "#eab308" },
     { name: "ResNet+Mel", eer: 3.5, type: "CNN Baseline", color: "#f97316" },
 ]
@@ -82,7 +82,7 @@ export function EerComparisonChart() {
                 {/* Legend */}
                 <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
                     <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-full bg-emerald-500" />
+                        <span className="h-3 w-3 rounded-full bg-indigo-500" />
                         <span className="text-gray-600">SSL-based (State-of-the-Art)</span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -102,9 +102,9 @@ export function EerComparisonChart() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="mt-4 rounded-xl bg-emerald-50 border border-emerald-100 px-5 py-4"
+                className="mt-4 rounded-xl bg-indigo-50 border border-indigo-100 px-5 py-4"
             >
-                <p className="text-sm text-emerald-800">
+                <p className="text-sm text-indigo-800">
                     <strong>Key insight:</strong> Self-Supervised Learning (SSL) models like NeXt-TDNN achieve
                     8× lower error rates than traditional CNN baselines by learning robust speech representations
                     from massive unlabeled audio datasets.

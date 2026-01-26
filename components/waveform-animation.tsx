@@ -62,7 +62,7 @@ export function WaveformAnimation() {
       <div className="relative rounded-3xl border border-gray-200 bg-white p-8 shadow-xl shadow-gray-200/50 overflow-hidden">
         {/* Decorative gradient blobs */}
         <div className="absolute -top-20 -left-20 h-40 w-40 rounded-full bg-indigo-100 blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 h-40 w-40 rounded-full bg-emerald-100 blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 h-40 w-40 rounded-full bg-indigo-100 blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-32 w-32 rounded-full bg-violet-100 blur-2xl" />
 
         <div className="relative flex items-center justify-between gap-6">
@@ -196,10 +196,10 @@ export function WaveformAnimation() {
             </motion.div>
           </div>
 
-          {/* Output Wave (Right - soft emerald) */}
+          {/* Output Wave (Right - soft indigo) */}
           <div className="flex-1">
             <div className="mb-3 flex items-center justify-end gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-600">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-600">
                 Verified
                 <CheckCircle className="h-3 w-3" />
               </span>
@@ -207,8 +207,8 @@ export function WaveformAnimation() {
             <svg viewBox="0 0 200 80" className="w-full h-20">
               <defs>
                 <linearGradient id="outputGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#34D399" stopOpacity="0.6" />
-                  <stop offset="100%" stopColor="#6EE7B7" stopOpacity="0.8" />
+                  <stop offset="0%" stopColor="#818CF8" stopOpacity="0.6" />
+                  <stop offset="100%" stopColor="#A5B4FC" stopOpacity="0.8" />
                 </linearGradient>
               </defs>
               {/* Animated smooth wave */}
@@ -256,7 +256,7 @@ export function WaveformAnimation() {
           </div>
           <div className="text-center">
             <div className="text-xs text-gray-500 uppercase tracking-wider">Coverage</div>
-            <div className="mt-1 font-mono text-xl font-bold text-emerald-600">100%</div>
+            <div className="mt-1 font-mono text-xl font-bold text-indigo-600">100%</div>
           </div>
         </motion.div>
       </div>

@@ -152,4 +152,10 @@
   .section-white {
     @apply bg-white;
   }
+
+  /* Dot grid texture */
+  .bg-dot-pattern {
+    background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 }

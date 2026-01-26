@@ -316,10 +316,12 @@ export default function CodingAgentSecurityPost() {
           </p>
           <div className="mt-8 flex justify-center">
             <a
-              href="/#waitlist"
+              href="https://calendly.com/divyachitimalla/intro"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
             >
-              Get Early Access
+              Book a Call
             </a>
           </div>
         </div>

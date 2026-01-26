@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Shield, Mic, Code } from "lucide-react"
-import { WaitlistForm } from "@/components/waitlist-form"
+import { ArrowRight } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
 const services = [
@@ -58,7 +58,15 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-10 w-full max-w-md"
           >
-            <WaitlistForm variant="hero" />
+            <a
+              href="https://calendly.com/divyachitimalla/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
+            >
+              Book a Call
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </motion.div>
 
           {/* Service pills */}

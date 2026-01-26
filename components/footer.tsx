@@ -64,10 +64,12 @@ export function Footer() {
               <ul className="mt-3 space-y-2 text-sm">
                 <li>
                   <a
-                    href="mailto:hello@proof-layer.com"
+                    href="https://calendly.com/divyachitimalla/intro"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-500 hover:text-gray-900 transition-colors"
                   >
-                    hello@proof-layer.com
+                    Book a Call
                   </a>
                 </li>
               </ul>

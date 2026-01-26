@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { WaitlistForm } from "@/components/waitlist-form"
+import { ArrowRight } from "lucide-react"
 
 export function FinalCta() {
   return (
@@ -20,7 +20,15 @@ export function FinalCta() {
             Join the companies building secure AI. Get early access to ProofLayer.
           </p>
           <div className="mt-8">
-            <WaitlistForm variant="cta" />
+            <a
+              href="https://calendly.com/divyachitimalla/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
+            >
+              Book a Call
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </motion.div>
       </div>

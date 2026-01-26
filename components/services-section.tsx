@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Shield, Mic, Code, Check, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const services = [
   {
@@ -17,6 +18,7 @@ const services = [
       "Hallucination detection and grounding",
       "OWASP & NIST compliance mapping",
     ],
+    blogSlug: "/blog/detecting-deepfakes",
   },
   {
     icon: Mic,
@@ -31,6 +33,7 @@ const services = [
       "Voice biometric verification",
       "Works with OpenAI, Twilio, LiveKit",
     ],
+    blogSlug: "/blog/voice-ai-security",
   },
   {
     icon: Code,
@@ -45,6 +48,7 @@ const services = [
       "Insecure pattern identification",
       "Works with Cursor, Copilot, Claude Code",
     ],
+    blogSlug: "/blog/coding-agent-security",
   },
 ]
 
@@ -159,10 +163,10 @@ export function ServicesSection() {
                 </ul>
 
                 {/* Learn more link */}
-                <div className="mt-6 flex items-center gap-1.5 text-sm font-medium text-gray-400 group-hover:text-indigo-600 transition-colors">
+                <Link href={service.blogSlug} className="mt-6 flex items-center gap-1.5 text-sm font-medium text-gray-400 group-hover:text-indigo-600 transition-colors">
                   <span>Learn more</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </div>
+                </Link>
               </motion.div>
             )
           })}

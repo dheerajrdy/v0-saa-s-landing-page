@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import Link from "next/link"
 
 interface InlineCtaProps {
   variant?: "default" | "compact"
@@ -27,13 +26,15 @@ export function InlineCta({
           <h4 className="font-semibold text-gray-900 mb-1">{headline}</h4>
           <p className="text-sm text-gray-600">{subtext}</p>
         </div>
-        <Link
-          href="/#waitlist"
+        <a
+          href="https://calendly.com/divyachitimalla/intro"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-5 py-2.5 whitespace-nowrap transition-colors"
         >
-          Join Waitlist
+          Book a Call
           <ArrowRight className="h-3.5 w-3.5" />
-        </Link>
+        </a>
       </motion.div>
     )
   }
@@ -47,13 +48,15 @@ export function InlineCta({
     >
       <h4 className="text-xl font-semibold text-gray-900 mb-2">{headline}</h4>
       <p className="text-gray-600 mb-6">{subtext}</p>
-      <Link
-        href="/#waitlist"
+      <a
+        href="https://calendly.com/divyachitimalla/intro"
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center gap-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-6 py-3 transition-colors"
       >
-        Get Early Access
+        Book a Call
         <ArrowRight className="h-3.5 w-3.5" />
-      </Link>
+      </a>
     </motion.div>
   )
 }

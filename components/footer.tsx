@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-100 bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           {/* Brand */}
@@ -79,21 +79,9 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 border-t border-gray-100 pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-400">
-              &copy; {new Date().getFullYear()} ProofLayer. All rights reserved.
-            </p>
-            <div className="flex items-center gap-5 text-xs text-gray-400">
-              <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 rounded-full bg-indigo-500" />
-                OWASP Compliant
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 rounded-full bg-indigo-500" />
-                NIST Aligned
-              </span>
-            </div>
-          </div>
+          <p className="text-xs text-gray-300">
+            &copy; {new Date().getFullYear()} ProofLayer. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

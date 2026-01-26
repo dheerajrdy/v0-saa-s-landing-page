@@ -16,7 +16,6 @@ const services = [
       "50+ attack vectors tested automatically",
       "Bidirectional input & output guardrails",
       "Hallucination detection and grounding",
-      "OWASP & NIST compliance mapping",
     ],
     blogSlug: "/blog/detecting-deepfakes",
   },
@@ -31,7 +30,6 @@ const services = [
       "Deepfake and synthetic voice detection",
       "Audio-native prompt injection defense",
       "Voice biometric verification",
-      "Works with OpenAI, Twilio, LiveKit",
     ],
     blogSlug: "/blog/voice-ai-security",
   },
@@ -46,7 +44,6 @@ const services = [
       "Pre-execution code review for LLM outputs",
       "Supply chain risk detection",
       "Insecure pattern identification",
-      "Works with Cursor, Copilot, Claude Code",
     ],
     blogSlug: "/blog/coding-agent-security",
   },
@@ -54,34 +51,28 @@ const services = [
 
 const accentClasses = {
   rose: {
-    border: "border-t-rose-500",
     badgeBg: "bg-rose-50",
     badgeText: "text-rose-600",
     iconBg: "bg-rose-50",
     iconColor: "text-rose-500",
-    hoverRing: "hover:ring-rose-100",
   },
   amber: {
-    border: "border-t-amber-500",
     badgeBg: "bg-amber-50",
     badgeText: "text-amber-600",
     iconBg: "bg-amber-50",
     iconColor: "text-amber-500",
-    hoverRing: "hover:ring-amber-100",
   },
   violet: {
-    border: "border-t-violet-500",
     badgeBg: "bg-violet-50",
     badgeText: "text-violet-600",
     iconBg: "bg-violet-50",
     iconColor: "text-violet-500",
-    hoverRing: "hover:ring-violet-100",
   },
 }
 
 export function ServicesSection() {
   return (
-    <section id="services" className="scroll-mt-24 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+    <section id="services" className="scroll-mt-24 px-4 py-28 sm:px-6 lg:px-8 lg:py-40">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -91,22 +82,22 @@ export function ServicesSection() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <span className="text-xs font-medium uppercase tracking-widest text-indigo-600">
+          <span className="text-xs font-medium uppercase tracking-[0.2em] text-indigo-600/80">
             Three Pillars
           </span>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tighter text-gray-900 sm:text-4xl lg:text-5xl">
             Comprehensive security.
             <br />
             Every modality.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-400">
             Purpose-built security for text agents, voice agents, and coding agents.
             Test before deployment, protect at runtime.
           </p>
         </motion.div>
 
         {/* Service cards - 3 column grid */}
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const colors = accentClasses[service.accentColor as keyof typeof accentClasses]
             const Icon = service.icon
@@ -118,7 +109,7 @@ export function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group relative flex flex-col rounded-2xl border border-gray-100 border-t-4 ${colors.border} bg-white p-8 ring-1 ring-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${colors.hoverRing}`}
+                className="group relative flex flex-col rounded-2xl border border-gray-100/80 bg-white p-10 transition-all duration-300 hover:shadow-lg"
               >
                 {/* Icon */}
                 <div className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl ${colors.iconBg}`}>
@@ -141,7 +132,7 @@ export function ServicesSection() {
                 </p>
 
                 {/* Divider */}
-                <div className="my-6 h-px bg-gray-100" />
+                <div className="my-8 h-px bg-gray-100/60" />
 
                 {/* Features */}
                 <ul className="space-y-3">
@@ -163,7 +154,7 @@ export function ServicesSection() {
                 </ul>
 
                 {/* Learn more link */}
-                <Link href={service.blogSlug} className="mt-6 flex items-center gap-1.5 text-sm font-medium text-gray-400 group-hover:text-indigo-600 transition-colors">
+                <Link href={service.blogSlug} className="mt-8 flex items-center gap-1.5 text-sm font-medium text-indigo-600 transition-colors">
                   <span>Learn more</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>

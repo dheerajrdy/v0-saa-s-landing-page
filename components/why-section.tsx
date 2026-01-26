@@ -22,7 +22,7 @@ const stats = [
 
 export function WhySection() {
   return (
-    <section className="bg-gray-50 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+    <section className="px-4 py-28 sm:px-6 lg:px-8 lg:py-40">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -32,22 +32,22 @@ export function WhySection() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <span className="text-xs font-medium uppercase tracking-widest text-indigo-600">
+          <span className="text-xs font-medium uppercase tracking-[0.2em] text-indigo-600/80">
             The Problem
           </span>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tighter text-gray-900 sm:text-4xl lg:text-5xl">
             AI agents are powerful.
             <br />
             And dangerously exposed.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-400">
             Every AI agent you deploy — text, voice, or code — is a new attack surface.
             Without purpose-built security, you&apos;re shipping vulnerabilities to production.
           </p>
         </motion.div>
 
         {/* Stat cards */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.number}
@@ -55,11 +55,11 @@ export function WhySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rounded-2xl border border-gray-100 bg-white p-8"
+              className="p-6 text-center lg:text-left"
             >
-              <span className="text-4xl font-bold text-gray-900">{stat.number}</span>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">{stat.text}</p>
-              <p className="mt-4 text-xs text-gray-400">{stat.source}</p>
+              <span className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl">{stat.number}</span>
+              <p className="mt-4 text-base leading-relaxed text-gray-500">{stat.text}</p>
+              <p className="mt-5 text-xs font-medium uppercase tracking-wider text-gray-300">{stat.source}</p>
             </motion.div>
           ))}
         </div>

@@ -51,7 +51,7 @@
   --shadow-y: 4px;
   --shadow-blur: 12px;
   --shadow-spread: -2px;
-  --shadow-opacity: 0.06;
+  --shadow-opacity: 0.04;
   --shadow-color: #000000;
 
   /* Sidebar (keeping for compatibility) */
@@ -148,22 +148,8 @@
     @apply transition-all duration-300 ease-out hover:shadow-md;
   }
 
-  /* Button hover */
-  .btn-hover {
-    @apply transition-all duration-200 ease-out;
-  }
-  .btn-hover:hover {
-    transform: scale(1.02);
-  }
-  .btn-hover:active {
-    transform: scale(0.98);
-  }
-
   /* Section backgrounds */
   .section-white {
     @apply bg-white;
-  }
-  .section-alt {
-    @apply bg-gray-50;
   }
 }

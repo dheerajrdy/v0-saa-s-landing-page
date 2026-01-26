@@ -1,38 +1,20 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Mic, Code } from "lucide-react"
 import { ArrowRight } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
-const services = [
-  { icon: Shield, label: "AI Red Teaming", color: "text-rose-500 bg-rose-50" },
-  { icon: Mic, label: "Voice Security", color: "text-amber-500 bg-amber-50" },
-  { icon: Code, label: "Code Security", color: "text-violet-500 bg-violet-50" },
-]
-
 export function Hero() {
   return (
-    <section className="relative px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-44 lg:pb-32">
+    <section className="relative px-4 pt-36 pb-24 sm:px-6 lg:px-8 lg:pt-48 lg:pb-40">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center text-center">
-          {/* Status badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm text-indigo-700"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
-            Now accepting early access partners
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="max-w-4xl text-5xl font-semibold leading-[1.1] tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
+            className="max-w-3xl text-5xl font-extrabold leading-[1.1] tracking-tighter text-gray-900 sm:text-7xl lg:text-8xl"
           >
             Security for{" "}
             <span className="text-indigo-600">every</span>
@@ -45,48 +27,35 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-500 sm:text-xl"
+            className="mt-6 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl"
           >
-            Red teaming, runtime guardrails, and code security for text agents,
-            voice agents, and coding agents. One platform.
+            Red teaming, guardrails, and code security.
+            One platform for every AI agent.
           </motion.p>
 
-          {/* Waitlist Form */}
+          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-10 w-full max-w-md"
+            className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6"
           >
             <a
               href="https://calendly.com/divyachitimalla/intro"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
+              className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-gray-800"
             >
               Book a Call
               <ArrowRight className="h-4 w-4" />
             </a>
-          </motion.div>
-
-          {/* Service pills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 flex flex-wrap justify-center gap-3"
-          >
-            {services.map((service) => (
-              <div
-                key={service.label}
-                className="inline-flex items-center gap-2.5 rounded-xl border border-gray-100 bg-white px-5 py-3 shadow-sm"
-              >
-                <div className={`rounded-lg p-1.5 ${service.color}`}>
-                  <service.icon className="h-4 w-4" />
-                </div>
-                <span className="text-sm font-medium text-gray-700">{service.label}</span>
-              </div>
-            ))}
+            <a
+              href="#services"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+            >
+              Learn more
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </motion.div>
 
           {/* Hero Visual */}
@@ -94,7 +63,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-16 w-full"
+            className="mt-20 w-full lg:mt-24"
           >
             <SecurityAnimation />
           </motion.div>

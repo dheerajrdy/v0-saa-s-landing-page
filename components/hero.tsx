@@ -16,10 +16,10 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="max-w-5xl text-[52px] font-extrabold leading-[1.0] tracking-tighter text-gray-900 sm:text-[80px] lg:text-[96px] xl:text-[112px]"
           >
-            Security for{" "}
-            <span className="text-indigo-600">every</span>
+            Ultra secure{" "}
+            <span className="text-indigo-600">voice AI</span>
             <br />
-            AI agent.
+            for healthcare.
           </motion.h1>
 
           {/* Subtitle */}
@@ -29,8 +29,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed"
           >
-            Red teaming, guardrails, and code security.
-            One platform for every AI agent.
+            Red teaming, guardrails, and security for voice AI agents.
+            Purpose-built for healthcare.
           </motion.p>
 
           {/* CTAs */}

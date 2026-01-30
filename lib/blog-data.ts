@@ -21,6 +21,17 @@ export interface Author {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "perfect-deepfake-detection",
+    title: "Achieving Perfect Deepfake Detection: Voice-to-Voice Guardrails at Scale",
+    subtitle: "How we achieved 100% accuracy in deepfake voice detection",
+    excerpt: "Our research demonstrates that direct audio analysis can achieve perfect deepfake detection (100% F1) while maintaining real-time performance. Learn how audio-first guardrails outperform traditional text-based approaches.",
+    category: "Technical Research",
+    categoryColor: "violet",
+    readTime: "12 min read",
+    date: "January 30, 2026",
+    featured: true,
+  },
+  {
     slug: "coding-agent-security",
     title: "The Growing Attack Surface: Security Incidents in AI Coding Agents",
     subtitle: "Why AI-Generated Code Is the Next Big Security Challenge",

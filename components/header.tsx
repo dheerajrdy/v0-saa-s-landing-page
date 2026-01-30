@@ -26,6 +26,14 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-10 md:flex">
+          <a
+            href="https://dashboard.proof-layer.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium text-white transition-all hover:bg-indigo-700 hover:scale-[1.02]"
+          >
+            Try Now
+          </a>
           <Link href="/#services" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
             Services
           </Link>
@@ -56,6 +64,15 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="bg-white/95 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-1 px-4 py-6">
+            <a
+              href="https://dashboard.proof-layer.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl px-4 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Try Now
+            </a>
             <Link
               href="/#services"
               className="rounded-xl px-4 py-3 text-base font-medium text-gray-400 hover:bg-gray-50 hover:text-gray-900"

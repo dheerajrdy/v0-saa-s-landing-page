@@ -130,9 +130,9 @@ export function Features() {
             Platform Capabilities
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Complete security{" "}
+            Everything you need to{" "}
             <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">
-              for AI agents.
+              secure AI agents.
             </span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">

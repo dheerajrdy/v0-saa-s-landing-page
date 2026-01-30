@@ -96,7 +96,7 @@ export function Hero() {
             className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed"
           >
             Pre-deployment testing. Runtime guardrails.
-            One platform for every AI agent.
+            One&nbsp;platform for every AI agent.
           </motion.p>
 
           {/* CTAs */}

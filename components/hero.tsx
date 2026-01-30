@@ -1,10 +1,71 @@
 "use client"
 
+import { useState, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, ShieldCheck } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
+const ROTATING_WORDS = ["healthcare.", "finance.", "enterprise."]
+const TYPING_SPEED = 80
+const DELETING_SPEED = 50
+const PAUSE_AFTER_TYPED = 2000
+const PAUSE_AFTER_DELETED = 400
+
+function useTypewriter(words: string[]) {
+  const [wordIndex, setWordIndex] = useState(0)
+  const [displayText, setDisplayText] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  const tick = useCallback(() => {
+    const currentWord = words[wordIndex]
+
+    if (!isDeleting) {
+      // Typing
+      const next = currentWord.slice(0, displayText.length + 1)
+      setDisplayText(next)
+
+      if (next === currentWord) {
+        // Finished typing — pause then start deleting
+        setTimeout(() => setIsDeleting(true), PAUSE_AFTER_TYPED)
+        return
+      }
+    } else {
+      // Deleting
+      const next = currentWord.slice(0, displayText.length - 1)
+      setDisplayText(next)
+
+      if (next === "") {
+        setIsDeleting(false)
+        setWordIndex((prev) => (prev + 1) % words.length)
+        // Brief pause before typing next word
+        setTimeout(() => {}, PAUSE_AFTER_DELETED)
+        return
+      }
+    }
+  }, [displayText, isDeleting, wordIndex, words])
+
+  useEffect(() => {
+    const speed = isDeleting ? DELETING_SPEED : TYPING_SPEED
+    // After finishing typing, the pause is handled in tick()
+    if (!isDeleting && displayText === words[wordIndex]) return
+    const timeout = setTimeout(tick, speed)
+    return () => clearTimeout(timeout)
+  }, [tick, displayText, isDeleting, wordIndex, words])
+
+  // Kick off after delete-pause
+  useEffect(() => {
+    if (!isDeleting && displayText === "") {
+      const timeout = setTimeout(tick, PAUSE_AFTER_DELETED)
+      return () => clearTimeout(timeout)
+    }
+  }, [isDeleting, displayText, tick])
+
+  return displayText
+}
+
 export function Hero() {
+  const typedText = useTypewriter(ROTATING_WORDS)
+
   return (
     <section className="relative px-4 pt-44 pb-32 sm:px-6 lg:px-8 lg:pt-56 lg:pb-48">
       <div className="mx-auto max-w-7xl">
@@ -19,7 +80,14 @@ export function Hero() {
             Ultra secure{" "}
             <span className="text-indigo-600 whitespace-nowrap">voice AI</span>
             <br />
-            for healthcare.
+            for{" "}
+            <span className="inline-flex">
+              <span className="text-indigo-600">{typedText}</span>
+              <span
+                className="ml-[2px] inline-block w-[3px] sm:w-[4px] lg:w-[5px] self-stretch bg-indigo-600 animate-blink"
+                aria-hidden="true"
+              />
+            </span>
           </motion.h1>
 
           {/* Subtitle */}

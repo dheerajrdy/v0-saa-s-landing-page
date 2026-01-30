@@ -86,9 +86,9 @@ export function ServicesSection() {
             Three Pillars
           </span>
           <h2 className="mt-5 text-4xl font-extrabold tracking-tighter text-gray-900 sm:text-5xl lg:text-[64px] lg:leading-[1.05]">
-            Comprehensive security.
+            Test before you ship.
             <br />
-            Every modality.
+            Protect at runtime.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
             Purpose-built security for text agents, voice agents, and coding agents.

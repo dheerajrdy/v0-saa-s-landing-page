@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, ShieldCheck } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
-const ROTATING_WORDS = ["healthcare.", "finance.", "enterprise."]
+const ROTATING_WORDS = ["text agents.", "voice agents.", "code agents."]
 const TYPING_SPEED = 80
 const DELETING_SPEED = 50
 const PAUSE_AFTER_TYPED = 2000
@@ -77,10 +77,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="max-w-5xl text-[52px] font-extrabold leading-[1.0] tracking-tighter text-gray-900 sm:text-[80px] lg:text-[96px] xl:text-[112px]"
           >
-            Ultra secure{" "}
-            <span className="text-indigo-600 whitespace-nowrap">voice AI</span>
+            Security for{" "}
             <br />
-            for{" "}
             <span className="inline-flex">
               <span className="text-indigo-600">{typedText}</span>
               <span
@@ -97,7 +95,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed"
           >
-            Red teaming, guardrails, and code security.
+            Pre-deployment testing. Runtime guardrails.
             One platform for every AI agent.
           </motion.p>
 

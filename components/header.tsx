@@ -27,7 +27,7 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-10 md:flex">
           <a
-            href="https://dashboard.proof-layer.com/"
+            href="https://dashboard.proof-layer.com/dashboard"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium text-white transition-all hover:bg-indigo-700 hover:scale-[1.02]"
@@ -65,7 +65,7 @@ export function Header() {
         <div className="bg-white/95 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-1 px-4 py-6">
             <a
-              href="https://dashboard.proof-layer.com/"
+              href="https://dashboard.proof-layer.com/dashboard"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-xl px-4 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"

@@ -17,7 +17,7 @@ export function Footer() {
                 height={40}
                 className="rounded-lg"
               />
-              <span className="text-xl font-semibold text-gray-900">
+              <span className="text-xl font-extrabold tracking-tighter text-gray-900">
                 Proof<span className="text-indigo-600">Layer</span>
               </span>
             </div>

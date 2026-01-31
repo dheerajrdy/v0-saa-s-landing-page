@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, ShieldCheck } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
-const ROTATING_WORDS = ["chat agents.", "voice agents.", "code agents."]
+const ROTATING_WORDS = ["chat agents.", "voice agents.", "coding agents."]
 const TYPING_SPEED = 80
 const DELETING_SPEED = 50
 const PAUSE_AFTER_TYPED = 2000

@@ -46,7 +46,7 @@ export default function VoiceAISecurityPost() {
         title="The Anatomy of Voice AI Security"
         subtitle="Why Text-Based Guardrails Aren't Enough"
         category="Engineering"
-        categoryColor="violet"
+        categoryColor="rose"
         readTime="8 min read"
         date="January 18, 2026"
       />
@@ -62,7 +62,7 @@ export default function VoiceAISecurityPost() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="prose-section"
+                className="prose-section mb-16"
               >
                 <p className="text-xl text-gray-600 leading-relaxed mb-8 border-l-4 border-indigo-500 pl-6 italic">
                   Voice AI is experiencing explosive growth. From customer service bots to healthcare agents,
@@ -90,8 +90,9 @@ export default function VoiceAISecurityPost() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                className="mb-16"
               >
-                <h2 id="threat-landscape" className="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                <h2 id="threat-landscape" className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mt-16 mb-6 scroll-mt-24">
                   The Voice AI Threat Landscape
                 </h2>
 
@@ -112,7 +113,7 @@ export default function VoiceAISecurityPost() {
                   Similar to SQL injection in web applications, voice injection attacks embed malicious
                   commands within seemingly normal audio. An attacker might speak a phrase that sounds
                   innocuous to human listeners but contains hidden instructions that manipulate the AI agent&apos;s
-                  behavior. These attacks can bypass transcription-based filters because the malicious
+                  behavior. For example, an attacker could embed ultrasonic commands inaudible to human operators but picked up by the agent&apos;s microphone, or craft adversarial audio that transcribes to benign text while carrying malicious intent at the acoustic level. These attacks can bypass transcription-based filters because the malicious
                   content is encoded in audio characteristics, not just words.
                 </p>
 
@@ -146,8 +147,9 @@ export default function VoiceAISecurityPost() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                className="mb-16"
               >
-                <h2 id="text-guardrails-fail" className="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                <h2 id="text-guardrails-fail" className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mt-16 mb-6 scroll-mt-24">
                   Why Text-Based Guardrails Fail
                 </h2>
 
@@ -155,7 +157,7 @@ export default function VoiceAISecurityPost() {
                   The fundamental problem is this: <strong>audio carries information that text cannot capture</strong>.
                 </p>
 
-                <div className="rounded-xl bg-indigo-50 border border-indigo-100 p-6 my-8">
+                <div className="rounded-2xl bg-indigo-50/50 border border-indigo-200/80 p-6 shadow-sm my-8">
                   <h4 className="font-semibold text-indigo-900 mb-4">What Gets Lost in Transcription:</h4>
                   <ul className="space-y-3 text-indigo-800">
                     <li className="flex items-start gap-3">
@@ -196,8 +198,9 @@ export default function VoiceAISecurityPost() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                className="mb-16"
               >
-                <h2 id="prooflayer-architecture" className="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                <h2 id="prooflayer-architecture" className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mt-16 mb-6 scroll-mt-24">
                   The ProofLayer Architecture
                 </h2>
 
@@ -214,28 +217,28 @@ export default function VoiceAISecurityPost() {
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4 my-8">
-                  <div className="rounded-xl bg-white border border-gray-200 p-5">
+                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-2">Zero Code Changes</h4>
                     <p className="text-sm text-gray-600">
                       Point your existing WebSocket connection at ProofLayer. That&apos;s it. No SDK
                       integration, no application rewrites.
                     </p>
                   </div>
-                  <div className="rounded-xl bg-white border border-gray-200 p-5">
+                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-2">Provider Agnostic</h4>
                     <p className="text-sm text-gray-600">
                       Works with any voice provider (Twilio, LiveKit) and any AI model (OpenAI, Google).
                       Switch providers without changing your security layer.
                     </p>
                   </div>
-                  <div className="rounded-xl bg-white border border-gray-200 p-5">
+                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-2">Real-Time Processing</h4>
                     <p className="text-sm text-gray-600">
                       All analysis happens in-stream with under 50ms of added latency. Users never
                       notice. Conversations flow naturally.
                     </p>
                   </div>
-                  <div className="rounded-xl bg-white border border-gray-200 p-5">
+                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-2">Complete Audit Trail</h4>
                     <p className="text-sm text-gray-600">
                       Every interaction is logged with full context&mdash;what was detected, what action
@@ -257,8 +260,9 @@ export default function VoiceAISecurityPost() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                className="mb-16"
               >
-                <h2 id="safety-pipeline" className="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                <h2 id="safety-pipeline" className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mt-16 mb-6 scroll-mt-24">
                   Inside the Safety Pipeline
                 </h2>
 
@@ -307,8 +311,9 @@ export default function VoiceAISecurityPost() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                className="mb-16"
               >
-                <h2 id="integration" className="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                <h2 id="integration" className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mt-16 mb-6 scroll-mt-24">
                   Integration: One Line
                 </h2>
 
@@ -317,7 +322,7 @@ export default function VoiceAISecurityPost() {
                   using WebSocket-based voice streaming, you can add ProofLayer in literally one line:
                 </p>
 
-                <div className="rounded-xl border border-gray-200 bg-gray-50 overflow-hidden shadow-lg my-8">
+                <div className="rounded-2xl border border-gray-100/80 bg-white overflow-hidden shadow-lg my-8">
                   {/* Terminal header */}
                   <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-white">
                     <div className="flex items-center gap-2">
@@ -383,7 +388,7 @@ export default function VoiceAISecurityPost() {
                   ].map((provider, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-center p-4 rounded-xl bg-white border border-gray-200 hover:border-gray-300 transition-colors"
+                      className="flex flex-col items-center p-4 rounded-2xl bg-white border border-gray-100/80 shadow-sm hover:shadow-md transition-all duration-300"
                     >
                       <span className="text-sm font-medium text-gray-900">{provider.name}</span>
                       <span className="text-xs text-gray-500">{provider.desc}</span>
@@ -399,7 +404,7 @@ export default function VoiceAISecurityPost() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 id="future" className="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                <h2 id="future" className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mt-16 mb-6 scroll-mt-24">
                   The Future of Voice AI Security
                 </h2>
 
@@ -421,6 +426,10 @@ export default function VoiceAISecurityPost() {
                   should be invisible to users but comprehensive in its protection. We believe compliance
                   shouldn&apos;t require an army of engineers. And we believe that protecting voice AI
                   shouldn&apos;t require sacrificing performance.
+                </p>
+
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  The enterprises deploying voice AI today face a choice: retrofit text-based security tools that were never designed for audio, or adopt purpose-built audio-native security from the start. The incidents we&apos;ve documented across deepfake fraud, voice injection, and prompt hijacking all share one common thread&mdash;they exploit the gap between what text-based tools can see and what actually happens at the audio level.
                 </p>
 
                 <p className="text-xl font-medium text-gray-900 mb-8">

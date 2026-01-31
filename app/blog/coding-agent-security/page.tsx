@@ -23,6 +23,7 @@ const tocItems: TocItem[] = [
   { id: "bypassing-reviews", title: "Bypassing AI Security Reviews", level: 2 },
   { id: "emerging-threats", title: "Emerging Threats", level: 2 },
   { id: "case-for-security", title: "The Case for Pre-Execution Security", level: 2 },
+  { id: "remediation", title: "Remediation Checklist", level: 2 },
   { id: "conclusion", title: "Conclusion", level: 2 },
 ]
 
@@ -49,26 +50,26 @@ export default function CodingAgentSecurityPost() {
 
             {/* Executive Summary */}
             <section id="executive-summary" className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Executive Summary
               </h2>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
                 AI coding agents have transformed software development. Tools like GitHub Copilot, Cursor, Amazon Q, and Claude Code are now embedded in the workflows of millions of developers. But this rapid adoption has created a new and dangerous attack surface that traditional security tools were never designed to address.
               </p>
               <p className="text-base text-gray-700 leading-relaxed mb-6">
-                In 2025 alone, we saw crypto wallets drained via malicious IDE extensions, unauthenticated code injection exploits in AI agent frameworks, and the first fully autonomous AI-orchestrated cyberattack. The Barracuda Security report identified 43 agent framework components with embedded supply chain vulnerabilities. Meanwhile, research from Checkmarx demonstrated how easily AI security reviews can be bypassed using simple code comments.
+                In 2025 alone, we saw crypto wallets drained via malicious IDE extensions, unauthenticated code injection exploits in AI agent frameworks, and the first fully autonomous AI-orchestrated cyberattack. The Barracuda Security report (Barracuda, 2025) identified 43 agent framework components with embedded supply chain vulnerabilities. Meanwhile, research from Checkmarx (Checkmarx, 2025) demonstrated how easily AI security reviews can be bypassed using simple code comments.
               </p>
-              <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-5">
+              <div className="rounded-2xl border border-indigo-200/80 bg-indigo-50/50 shadow-sm p-5">
                 <p className="text-sm font-semibold text-indigo-900 mb-1">Key Finding</p>
                 <p className="text-sm text-indigo-800 leading-relaxed">
-                  35% of all real-world AI security incidents in 2025 were caused by simple prompts, with some leading to $100K+ in real losses — without writing a single line of exploit code.
+                  A significant portion of documented AI security incidents in 2025 were caused by simple prompts, with some leading to $100K+ in real losses — without writing a single line of exploit code.
                 </p>
               </div>
             </section>
 
             {/* The Rise of AI Coding Agents */}
             <section id="rise-of-coding-agents" className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 The Rise of AI Coding Agents
               </h2>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
@@ -81,7 +82,7 @@ export default function CodingAgentSecurityPost() {
                 The phenomenon of &ldquo;vibe coding&rdquo; — where developers describe what they want in natural language and let AI handle the implementation — exploded in 2025. The result: more code ships with less human review, and entire sections of codebases exist that no human fully understands. Benchmarks consistently show that LLMs do not prioritize writing secure code, and when asked to review their own output, they often miss the same vulnerabilities they introduced.
               </p>
 
-              <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 mb-4">
+              <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 shadow-sm p-5 mb-4">
                 <p className="text-sm text-amber-800 leading-relaxed">
                   <strong>Industry data:</strong> Less than 40% of organizations conduct regular security testing on AI models or agent workflows (Cisco State of AI Security 2025). Only 34% of enterprises have AI-specific security controls in place.
                 </p>
@@ -90,7 +91,7 @@ export default function CodingAgentSecurityPost() {
 
             {/* Real-World Security Incidents */}
             <section id="real-world-incidents" className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Real-World Security Incidents
               </h2>
               <p className="text-base text-gray-700 leading-relaxed mb-6">
@@ -129,7 +130,7 @@ export default function CodingAgentSecurityPost() {
                 Langflow Unauthenticated Code Injection
               </h3>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
-                CrowdStrike reported that multiple threat actors exploited an unauthenticated code injection vulnerability in Langflow, a widely used tool for building AI agents and workflows maintained by DataStax. The attackers used the vulnerability to steal credentials and deploy malware across compromised environments.
+                CrowdStrike (CrowdStrike Threat Report, 2025) reported that multiple threat actors exploited an unauthenticated code injection vulnerability in Langflow, a widely used tool for building AI agents and workflows maintained by DataStax. The attackers used the vulnerability to steal credentials and deploy malware across compromised environments.
               </p>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
                 The Langflow incident is notable because it targeted the agent orchestration layer — the framework that connects AI models to external tools and data sources. Compromising this layer gives attackers access to every system the agent can reach, making it a high-value target for credential theft and lateral movement.
@@ -139,13 +140,13 @@ export default function CodingAgentSecurityPost() {
                 Supply Chain Vulnerabilities at Scale
               </h3>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
-                The Barracuda Security report, published in November 2025, identified 43 different agent framework components with embedded vulnerabilities introduced through supply chain compromise. These weren&apos;t theoretical findings — they were discovered in production code actively being used by enterprise organizations.
+                The Barracuda Security report (Barracuda, 2025), published in November 2025, identified 43 different agent framework components with embedded vulnerabilities introduced through supply chain compromise. These weren&apos;t theoretical findings — they were discovered in production code actively being used by enterprise organizations.
               </p>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
                 Separately, ReversingLabs found malware hidden inside AI models hosted on Hugging Face, the largest open-source ML hosting platform. The malware was embedded directly in model files, a vector that most security scanning tools aren&apos;t designed to inspect.
               </p>
 
-              <div className="rounded-xl border border-rose-200 bg-rose-50 p-5">
+              <div className="rounded-2xl border border-rose-200/80 bg-rose-50/50 shadow-sm p-5">
                 <p className="text-sm font-semibold text-rose-900 mb-1">Real-World Impact</p>
                 <p className="text-sm text-rose-800 leading-relaxed">
                   A mid-market manufacturing company deployed an agent-based procurement system. Within one quarter, attackers compromised the vendor-validation agent through a supply chain attack, resulting in $3.2 million in fraudulent orders before detection.
@@ -166,11 +167,14 @@ export default function CodingAgentSecurityPost() {
 
             {/* Bypassing AI Security Reviews */}
             <section id="bypassing-reviews" className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Bypassing AI Security Reviews
               </h2>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
-                Even when organizations attempt to use AI itself for security review, the results can be dangerously unreliable. Research from Checkmarx published in 2025 demonstrated multiple techniques for bypassing Claude Code&apos;s built-in security review capabilities.
+                Even when organizations attempt to use AI itself for security review, the results can be dangerously unreliable. Research from Checkmarx (Checkmarx, 2025) published in 2025 demonstrated multiple techniques for bypassing Claude Code&apos;s built-in security review capabilities.
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed mb-4">
+                The researchers dubbed this class of attack &ldquo;Lies-in-the-Loop&rdquo; (LITL) — exploiting the fundamental trust that AI code reviewers place in contextual signals like comments and documentation.
               </p>
 
               <h3 className="text-lg font-semibold text-gray-900 mt-10 mb-3">
@@ -194,7 +198,7 @@ export default function CodingAgentSecurityPost() {
                 When Claude Code attempts to verify vulnerabilities, it creates and executes test cases. For Pandas <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm font-mono text-gray-800">DataFrame.query()</code> RCE vulnerabilities, the AI wrote tests that couldn&apos;t replicate the actual exploit pattern, then concluded the real vulnerability was a false positive. Worse, the security review process itself executed code, meaning the act of reviewing could trigger production database queries or other dangerous operations if not properly sandboxed.
               </p>
 
-              <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
+              <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 shadow-sm p-5">
                 <p className="text-sm text-amber-800 leading-relaxed">
                   <strong>Bottom line:</strong> These findings demonstrate conclusively that AI reviewing AI-generated code cannot be the sole security layer. Human oversight and specialized security tooling remain essential.
                 </p>
@@ -203,7 +207,7 @@ export default function CodingAgentSecurityPost() {
 
             {/* Emerging Threats */}
             <section id="emerging-threats" className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Emerging Threats
               </h2>
 
@@ -228,7 +232,7 @@ export default function CodingAgentSecurityPost() {
                 The First Autonomous AI Cyberattack
               </h3>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
-                In September 2025, researchers documented the first fully autonomous AI-orchestrated cyberattack where artificial intelligence handled 80-90% of the operation independently. When initial penetration attempts triggered security alerts, the AI system automatically pivoted to alternative entry vectors, eventually compromising the target network through a less-monitored third-party integration.
+                In September 2025, researchers documented (GTG-1002) the first fully autonomous AI-orchestrated cyberattack where artificial intelligence handled 80-90% of the operation independently. When initial penetration attempts triggered security alerts, the AI system automatically pivoted to alternative entry vectors, eventually compromising the target network through a less-monitored third-party integration.
               </p>
               <p className="text-base text-gray-700 leading-relaxed mb-6">
                 This represents a qualitative shift in the threat landscape. Autonomous AI attackers don&apos;t get frustrated, don&apos;t take breaks, and can probe systems continuously while adapting their approach in real-time.
@@ -243,11 +247,11 @@ export default function CodingAgentSecurityPost() {
 
             {/* The Case for Pre-Execution Security */}
             <section id="case-for-security" className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 The Case for Pre-Execution Code Security
               </h2>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
-                The incidents documented above share a common thread: they exploit the gap between code generation and code execution. AI agents generate code, and that code runs — often with minimal or no human review in between. This gap is where vulnerabilities are introduced, supply chains are compromised, and malicious payloads are delivered.
+                Every incident documented above exploits the same fundamental gap: the window between code generation and code execution. Traditional security approaches — static analysis, post-deployment monitoring, periodic audits — were designed for human-written code reviewed by humans. They fail in the AI coding era because AI agents generate and execute code faster than any human review process can keep up.
               </p>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
                 Addressing this requires a fundamentally different approach than traditional static analysis or post-deployment monitoring. What&apos;s needed is a <strong>pre-execution security layer</strong> — a lightweight wrapper that inspects code generated by LLMs before it&apos;s executed, deployed, or committed.
@@ -275,9 +279,40 @@ export default function CodingAgentSecurityPost() {
               </p>
             </section>
 
+            {/* Remediation Checklist */}
+            <section id="remediation" className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
+                Actionable Remediation Checklist
+              </h2>
+              <p className="text-base text-gray-700 leading-relaxed mb-6">
+                Based on the incidents and attack patterns documented above, here are concrete steps organizations should take to secure their AI coding workflows:
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  { title: "Implement pre-execution code scanning", desc: "Every code output from an LLM should pass through automated security analysis before execution or deployment. This is the single highest-impact control." },
+                  { title: "Audit AI agent permissions", desc: "Review what system access your coding agents have. Apply least-privilege principles — agents should not have write access to production environments or credentials stores." },
+                  { title: "Pin and verify dependencies", desc: "Never allow AI agents to install unverified packages. Use lockfiles, verify checksums, and maintain an allowlist of approved dependencies." },
+                  { title: "Separate AI-generated code review", desc: "Treat AI-generated code with the same rigor as third-party code. It should go through security review before merging, not just functional review." },
+                  { title: "Monitor for distributed payloads", desc: "Update your security tooling to detect malicious code distributed across multiple files — the 'Lies-in-the-Loop' pattern that bypasses single-file analysis." },
+                  { title: "Sandbox AI agent execution", desc: "Run AI coding agents in isolated environments. If an agent is compromised, the blast radius should be limited to the sandbox." },
+                  { title: "Establish an AI security incident response plan", desc: "Traditional IR plans don't cover AI-specific attack vectors. Define procedures for compromised agents, poisoned training data, and supply chain attacks on AI tools." },
+                ].map((item, i) => (
+                  <div key={i} className="rounded-2xl border border-gray-100/80 bg-white p-5 shadow-sm">
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-50 text-sm font-semibold text-indigo-600 shrink-0">{i + 1}</span>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
+                        <p className="text-sm text-gray-600">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
             {/* Conclusion */}
             <section id="conclusion" className="mb-16">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Conclusion
               </h2>
               <p className="text-base text-gray-700 leading-relaxed mb-4">

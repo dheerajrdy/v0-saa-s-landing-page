@@ -25,7 +25,7 @@ export function ReadingProgressBar() {
       animate={{ opacity: 1 }}
     >
       <motion.div
-        className="h-full bg-indigo-500"
+        className="h-full bg-gradient-to-r from-indigo-600 to-violet-500"
         style={{ width: `${progress}%` }}
         transition={{ duration: 0.1 }}
       />

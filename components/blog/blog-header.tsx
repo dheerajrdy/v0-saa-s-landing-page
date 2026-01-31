@@ -50,8 +50,11 @@ export function BlogHeader({
   const colors = categoryColors[categoryColor]
 
   return (
-    <header className="relative px-4 pt-32 pb-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl">
+    <header className="relative px-4 pt-44 pb-16 sm:px-6 lg:px-8 lg:pt-48 lg:pb-20 overflow-hidden">
+      {/* Decorative blob */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -z-10 h-[600px] w-[800px] rounded-full bg-indigo-500/[0.04] blur-[100px]" />
+
+      <div className="mx-auto max-w-4xl">
         {/* Back link */}
         <motion.div
           initial={{ opacity: 0, x: -10 }}
@@ -78,17 +81,17 @@ export function BlogHeader({
           </span>
 
           {/* Title */}
-          <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="text-4xl font-extrabold tracking-tighter text-gray-900 sm:text-5xl lg:text-6xl">
             {title}
           </h1>
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="mt-4 text-xl text-gray-500">{subtitle}</p>
+            <p className="mt-6 text-xl text-gray-500 lg:text-2xl">{subtitle}</p>
           )}
 
           {/* Meta info with social share */}
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-6 pb-8 border-b border-gray-100">
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
               <span className="flex items-center gap-1.5">
                 <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xs font-medium">

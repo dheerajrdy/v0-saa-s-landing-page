@@ -17,7 +17,7 @@ const services = [
       "Bidirectional input & output guardrails",
       "Hallucination detection and grounding",
     ],
-    blogSlug: "/blog/detecting-deepfakes",
+    blogSlug: "/blog/deepfake-detection",
   },
   {
     icon: Mic,

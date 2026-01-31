@@ -22,7 +22,7 @@ Package manager is **pnpm** (pnpm-lock.yaml).
 - `app/layout.tsx` — Root layout with metadata, fonts (Inter, JetBrains Mono), ThemeProvider, Vercel Analytics
 - `app/page.tsx` — Landing page composed of section components (Hero, Features, Pricing, etc.)
 - `app/blog/page.tsx` — Blog listing
-- `app/blog/[slug]/page.tsx` — Individual blog posts (e.g., `detecting-deepfakes/`, `voice-ai-security/`)
+- `app/blog/[slug]/page.tsx` — Individual blog posts (e.g., `deepfake-detection/`, `coding-agent-security/`, `voice-ai-security/`)
 
 ### Component Organization
 

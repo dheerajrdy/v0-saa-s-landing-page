@@ -40,7 +40,7 @@ export function AuthorCard({ author, variant = "full" }: AuthorCardProps) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="border-t border-gray-200 pt-8 mt-12"
+      className="mt-12 rounded-2xl border border-gray-100/80 bg-white p-6 shadow-sm"
     >
       <div className="flex items-start gap-4">
         <div className="h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xl font-medium overflow-hidden shrink-0">

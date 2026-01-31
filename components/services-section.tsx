@@ -37,7 +37,7 @@ const services = [
     icon: Code,
     badge: "Code Security",
     accentColor: "violet",
-    title: "Code Agent Security",
+    title: "Coding Agent Security",
     description:
       "Pre-execution code review for LLM outputs. Catch injection vulnerabilities, supply chain risks, and insecure patterns before they ship.",
     features: [

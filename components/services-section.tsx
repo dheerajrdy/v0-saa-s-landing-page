@@ -12,11 +12,13 @@ const services = [
     title: "Chat Agent Security",
     description:
       "Automated red teaming and runtime guardrails for chat-based AI agents. Find prompt injection, jailbreaks, and data exfiltration before attackers do.",
+    differentiator: "Goes beyond keyword blocking — behavioral analysis at inference time.",
     features: [
       "50+ attack vectors tested automatically",
       "Bidirectional input & output guardrails",
       "Hallucination detection and grounding",
     ],
+    linkText: "How we detect prompt injection",
     blogSlug: "/blog/deepfake-detection",
   },
   {
@@ -26,11 +28,13 @@ const services = [
     title: "Voice Agent Security",
     description:
       "Audio-native security for speech-to-speech agents. Detect deepfakes, voice injection, and synthetic speech threats in real-time.",
+    differentiator: "Audio-native detection. No transcription. No latency penalty.",
     features: [
       "Deepfake and synthetic voice detection",
       "Audio-native prompt injection defense",
       "Voice biometric verification",
     ],
+    linkText: "How we detect deepfakes",
     blogSlug: "/blog/voice-ai-security",
   },
   {
@@ -40,11 +44,13 @@ const services = [
     title: "Coding Agent Security",
     description:
       "Pre-execution code review for LLM outputs. Catch injection vulnerabilities, supply chain risks, and insecure patterns before they ship.",
+    differentiator: "Catches what static analysis misses — LLM-specific vulnerability patterns.",
     features: [
       "Pre-execution code review for LLM outputs",
       "Supply chain risk detection",
       "Insecure pattern identification",
     ],
+    linkText: "How we secure coding agents",
     blogSlug: "/blog/coding-agent-security",
   },
 ]
@@ -55,18 +61,21 @@ const accentClasses = {
     badgeText: "text-rose-600",
     iconBg: "bg-rose-50",
     iconColor: "text-rose-500",
+    borderColor: "border-l-rose-400",
   },
   amber: {
     badgeBg: "bg-amber-50",
     badgeText: "text-amber-600",
     iconBg: "bg-amber-50",
     iconColor: "text-amber-500",
+    borderColor: "border-l-amber-400",
   },
   violet: {
     badgeBg: "bg-violet-50",
     badgeText: "text-violet-600",
     iconBg: "bg-violet-50",
     iconColor: "text-violet-500",
+    borderColor: "border-l-violet-400",
   },
 }
 
@@ -127,12 +136,17 @@ export function ServicesSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-4 text-base leading-relaxed text-gray-500 flex-grow lg:text-lg">
+                <p className="mt-4 text-base leading-relaxed text-gray-500 lg:text-lg">
                   {service.description}
                 </p>
 
+                {/* Differentiator */}
+                <div className={`mt-6 rounded-r-lg border-l-[3px] ${colors.borderColor} bg-gray-50/80 px-4 py-3`}>
+                  <p className="text-sm font-medium text-gray-800">{service.differentiator}</p>
+                </div>
+
                 {/* Divider */}
-                <div className="my-8 h-px bg-gray-100/60" />
+                <div className="my-8 h-px bg-gray-100/60 flex-grow" />
 
                 {/* Features */}
                 <ul className="space-y-4">
@@ -155,7 +169,7 @@ export function ServicesSection() {
 
                 {/* Learn more link */}
                 <Link href={service.blogSlug} className="mt-10 flex items-center gap-2 text-base font-medium text-indigo-600 transition-colors">
-                  <span>Learn more</span>
+                  <span>{service.linkText}</span>
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </motion.div>

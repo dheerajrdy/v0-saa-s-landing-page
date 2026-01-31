@@ -22,6 +22,7 @@ export function Header() {
           <span className="text-xl font-extrabold tracking-tighter text-gray-900">
             Proof<span className="text-indigo-600">Layer</span>
           </span>
+          <span className="hidden text-xs font-medium text-gray-400 sm:inline">AI Agent Security</span>
         </Link>
 
         {/* Desktop Nav */}

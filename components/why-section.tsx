@@ -2,16 +2,17 @@
 
 import { motion } from "framer-motion"
 
+const featuredStat = {
+  number: "3 sec",
+  text: "of audio is enough to clone any voice with high fidelity",
+  source: "MIT Technology Review",
+}
+
 const stats = [
   {
     number: "60%",
     text: "of LLM applications are vulnerable to prompt injection attacks",
     source: "OWASP 2025",
-  },
-  {
-    number: "3 sec",
-    text: "of audio is enough to clone any voice with high fidelity",
-    source: "MIT Technology Review",
   },
   {
     number: "43",
@@ -47,14 +48,28 @@ export function WhySection() {
         </motion.div>
 
         {/* Stat cards */}
-        <div className="mt-24 grid gap-10 sm:grid-cols-2 lg:mt-28 lg:grid-cols-3 lg:gap-16">
+        <div className="mt-24 grid gap-10 lg:mt-28 lg:grid-cols-3 lg:gap-12">
+          {/* Featured stat */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl border border-rose-100/80 bg-rose-50/40 p-8 text-center lg:p-10 lg:text-left"
+          >
+            <span className="text-7xl font-extrabold tracking-tight text-gray-900 sm:text-8xl lg:text-[96px]">{featuredStat.number}</span>
+            <p className="mt-5 text-lg leading-relaxed text-gray-600 lg:text-xl">{featuredStat.text}</p>
+            <p className="mt-6 text-sm font-medium uppercase tracking-wider text-gray-400">{featuredStat.source}</p>
+          </motion.div>
+
+          {/* Supporting stats */}
           {stats.map((stat, index) => (
             <motion.div
               key={stat.number}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
               className="p-4 text-center lg:p-6 lg:text-left"
             >
               <span className="text-6xl font-extrabold tracking-tight text-gray-900 sm:text-7xl lg:text-8xl">{stat.number}</span>

@@ -14,14 +14,14 @@ export function FinalCta() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl font-extrabold tracking-tighter text-gray-900 sm:text-6xl lg:text-[72px] lg:leading-[1.05]">
-            Secure your AI agents
+            Launching an AI agent?
             <br />
-            before launch.
+            Secure it first.
           </h2>
           <p className="mt-8 text-xl text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed">
-            Join the companies building secure AI. Get early access to ProofLayer.
+            Get a security assessment before you ship to production.
           </p>
-          <div className="mt-12 flex flex-col items-center gap-5">
+          <div className="mt-12 flex flex-col items-center gap-5 sm:flex-row sm:justify-center sm:gap-6">
             <a
               href="https://calendly.com/divyachitimalla/intro"
               target="_blank"

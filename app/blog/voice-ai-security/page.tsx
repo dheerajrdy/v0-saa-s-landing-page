@@ -7,15 +7,8 @@ import { BlogHeader } from "@/components/blog/blog-header"
 import { ThreatFlowDiagram } from "@/components/blog/threat-flow-diagram"
 import { ArchitectureDiagram } from "@/components/blog/architecture-diagram"
 import { SafetyPipelineDiagram } from "@/components/blog/safety-pipeline-diagram"
-import { FinalCta } from "@/components/final-cta"
 import { ReadingProgressBar } from "@/components/blog/reading-progress-bar"
 import { TableOfContents, type TocItem } from "@/components/blog/table-of-contents"
-import { InlineCta } from "@/components/blog/inline-cta"
-import { AuthorCard } from "@/components/blog/author-card"
-import { RelatedPosts } from "@/components/blog/related-posts"
-import { Copy, Check } from "lucide-react"
-import { useState } from "react"
-import { authors } from "@/lib/blog-data"
 
 const tocItems: TocItem[] = [
   { id: "threat-landscape", title: "The Voice AI Threat Landscape", level: 2 },
@@ -27,16 +20,6 @@ const tocItems: TocItem[] = [
 ]
 
 export default function VoiceAISecurityPost() {
-  const [copied, setCopied] = useState(false)
-
-  const codeSnippet = `<Stream url="wss://prooflayer.com/v1" />`
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(codeSnippet)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <Header />
@@ -47,7 +30,7 @@ export default function VoiceAISecurityPost() {
         subtitle="Why Text-Based Guardrails Aren't Enough"
         category="Engineering"
         categoryColor="rose"
-        readTime="8 min read"
+        readTime="5 min read"
         date="January 18, 2026"
       />
 
@@ -154,35 +137,13 @@ export default function VoiceAISecurityPost() {
                 </h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  The fundamental problem is this: <strong>audio carries information that text cannot capture</strong>.
-                </p>
-
-                <div className="rounded-2xl bg-indigo-50/50 border border-indigo-200/80 p-6 shadow-sm my-8">
-                  <h4 className="font-semibold text-indigo-900 mb-4">What Gets Lost in Transcription:</h4>
-                  <ul className="space-y-3 text-indigo-800">
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
-                      <span><strong>Prosodic features:</strong> Pitch, rhythm, and stress patterns that can indicate deception or manipulation</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
-                      <span><strong>Spectral artifacts:</strong> The telltale signatures of AI-generated or manipulated audio</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
-                      <span><strong>Temporal patterns:</strong> Timing and pause structures that reveal hidden content</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 mt-2.5 shrink-0" />
-                      <span><strong>Voice biometrics:</strong> The unique characteristics that verify speaker identity</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  When you transcribe audio to text and then analyze the text, you&apos;ve already lost the
-                  battle. The critical signals that would have revealed an attack are gone. You&apos;re
-                  essentially trying to detect visual deepfakes by only looking at the color palette.
+                  Audio carries information that text cannot capture: prosodic features, spectral artifacts,
+                  temporal patterns, and voice biometrics. When you transcribe audio to text and then analyze
+                  the text, those critical signals are gone. For a deeper look at how spectral forensics
+                  detects these signals, see our{" "}
+                  <a href="/blog/deepfake-detection" className="text-indigo-600 hover:text-indigo-700 underline">
+                    deepfake detection deep dive
+                  </a>.
                 </p>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -213,45 +174,11 @@ export default function VoiceAISecurityPost() {
                 <ArchitectureDiagram />
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  This architecture has several key advantages:
+                  Key advantages: zero code changes (just point your WebSocket at ProofLayer), provider-agnostic
+                  compatibility (Twilio, LiveKit, OpenAI, Google), real-time processing under 50ms added latency,
+                  and a complete audit trail for SOC2/HIPAA compliance.
                 </p>
 
-                <div className="grid sm:grid-cols-2 gap-4 my-8">
-                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                    <h4 className="font-semibold text-gray-900 mb-2">Zero Code Changes</h4>
-                    <p className="text-sm text-gray-600">
-                      Point your existing WebSocket connection at ProofLayer. That&apos;s it. No SDK
-                      integration, no application rewrites.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                    <h4 className="font-semibold text-gray-900 mb-2">Provider Agnostic</h4>
-                    <p className="text-sm text-gray-600">
-                      Works with any voice provider (Twilio, LiveKit) and any AI model (OpenAI, Google).
-                      Switch providers without changing your security layer.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                    <h4 className="font-semibold text-gray-900 mb-2">Real-Time Processing</h4>
-                    <p className="text-sm text-gray-600">
-                      All analysis happens in-stream with under 50ms of added latency. Users never
-                      notice. Conversations flow naturally.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-white border border-gray-100/80 p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                    <h4 className="font-semibold text-gray-900 mb-2">Complete Audit Trail</h4>
-                    <p className="text-sm text-gray-600">
-                      Every interaction is logged with full context&mdash;what was detected, what action
-                      was taken, and why. SOC2 and HIPAA ready out of the box.
-                    </p>
-                  </div>
-                </div>
-
-                <InlineCta
-                  variant="compact"
-                  headline="See it in action"
-                  subtext="Try ProofLayer with your existing voice stack."
-                />
               </motion.div>
 
               {/* Section: Inside the Safety Pipeline */}
@@ -273,36 +200,24 @@ export default function VoiceAISecurityPost() {
 
                 <SafetyPipelineDiagram />
 
-                <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Stage 1: Feature Extraction</h3>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  The raw audio stream is analyzed to extract multiple feature sets simultaneously:
-                  spectral characteristics (frequency patterns), prosodic features (pitch and rhythm),
-                  semantic embeddings (content meaning), and temporal patterns (timing structures).
-                  This multi-dimensional analysis captures information that would be lost in simple
-                  transcription.
-                </p>
-
-                <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Stage 2: Parallel Detection Models</h3>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Three specialized models run in parallel on the extracted features. The <strong>Injection
-                    Detector</strong> identifies malicious commands embedded in audio. The <strong>Deepfake
-                      Detector</strong> verifies voice authenticity. The <strong>Policy Validator</strong> ensures
-                  requests comply with your defined guardrails. Each model produces a confidence score.
-                </p>
-
-                <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Stage 3: Decision & Enforcement</h3>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Based on the combined model outputs, ProofLayer makes a real-time decision: allow the
-                  request to proceed, flag it for review, or block it entirely. These thresholds are
-                  configurable&mdash;you control the sensitivity based on your risk tolerance.
-                </p>
-
-                <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Stage 4: Audit Logging</h3>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Every decision is logged with full context: timestamp, session ID, the action taken,
-                  confidence scores, and the reasoning. This creates a complete audit trail for compliance
-                  purposes and helps you understand how your safety policies are performing in production.
-                </p>
+                <ol className="space-y-4 mb-6 list-none">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-50 text-sm font-semibold text-indigo-600 shrink-0">1</span>
+                    <span className="text-lg text-gray-700"><strong>Feature Extraction:</strong> Spectral characteristics, prosodic features, semantic embeddings, and temporal patterns are extracted simultaneously from the raw audio stream.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-50 text-sm font-semibold text-indigo-600 shrink-0">2</span>
+                    <span className="text-lg text-gray-700"><strong>Parallel Detection:</strong> Three specialized models run concurrently&mdash;injection detection, deepfake detection, and policy validation&mdash;each producing a confidence score.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-50 text-sm font-semibold text-indigo-600 shrink-0">3</span>
+                    <span className="text-lg text-gray-700"><strong>Decision &amp; Enforcement:</strong> Based on combined model outputs, requests are allowed, flagged, or blocked in real-time with configurable thresholds.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-50 text-sm font-semibold text-indigo-600 shrink-0">4</span>
+                    <span className="text-lg text-gray-700"><strong>Audit Logging:</strong> Every decision is logged with timestamp, session ID, confidence scores, and reasoning for compliance purposes.</span>
+                  </li>
+                </ol>
               </motion.div>
 
               {/* Section: Integration */}
@@ -322,79 +237,13 @@ export default function VoiceAISecurityPost() {
                   using WebSocket-based voice streaming, you can add ProofLayer in literally one line:
                 </p>
 
-                <div className="rounded-2xl border border-gray-100/80 bg-white overflow-hidden shadow-lg my-8">
-                  {/* Terminal header */}
-                  <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-white">
-                    <div className="flex items-center gap-2">
-                      <div className="flex gap-1.5">
-                        <div className="h-3 w-3 rounded-full bg-red-400" />
-                        <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                        <div className="h-3 w-3 rounded-full bg-green-400" />
-                      </div>
-                      <span className="text-xs text-gray-500 font-mono ml-2">config.xml</span>
-                    </div>
-                    <button
-                      onClick={handleCopy}
-                      className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700 transition-colors"
-                    >
-                      {copied ? (
-                        <>
-                          <Check className="h-4 w-4 text-indigo-500" />
-                          <span className="text-indigo-500">Copied!</span>
-                        </>
-                      ) : (
-                        <>
-                          <Copy className="h-4 w-4" />
-                          <span>Copy</span>
-                        </>
-                      )}
-                    </button>
-                  </div>
-
-                  {/* Code content */}
-                  <div className="p-6 bg-gray-900">
-                    <pre className="text-sm font-mono overflow-x-auto">
-                      <code>
-                        <span className="text-gray-500">&lt;</span>
-                        <span className="text-indigo-400">Stream</span>
-                        {" "}
-                        <span className="text-indigo-400">url</span>
-                        <span className="text-gray-500">=</span>
-                        <span className="text-amber-300">&quot;wss://prooflayer.com/v1&quot;</span>
-                        {" "}
-                        <span className="text-gray-500">/&gt;</span>
-                      </code>
-                    </pre>
-                  </div>
-
-                  {/* Bottom caption */}
-                  <div className="px-6 py-4 bg-white border-t border-gray-200">
-                    <p className="text-sm text-gray-600">
-                      That&apos;s it. One line to protect every voice interaction.
-                    </p>
-                  </div>
-                </div>
+                <pre className="bg-gray-950 text-gray-100 p-6 rounded-xl text-sm mb-8 shadow-lg font-mono overflow-x-auto">
+{`<Stream url="wss://prooflayer.com/v1" />`}
+                </pre>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  ProofLayer works with all major voice providers:
+                  ProofLayer works with Twilio Media Streams, OpenAI Realtime API, Google Gemini Audio, and LiveKit WebRTC.
                 </p>
-
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
-                  {[
-                    { name: "Twilio", desc: "Media Streams" },
-                    { name: "OpenAI", desc: "Realtime API" },
-                    { name: "Google", desc: "Gemini Audio" },
-                    { name: "LiveKit", desc: "WebRTC" },
-                  ].map((provider, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center p-4 rounded-2xl bg-white border border-gray-100/80 shadow-sm hover:shadow-md transition-all duration-300"
-                    >
-                      <span className="text-sm font-medium text-gray-900">{provider.name}</span>
-                      <span className="text-xs text-gray-500">{provider.desc}</span>
-                    </div>
-                  ))}
-                </div>
               </motion.div>
 
               {/* Conclusion */}
@@ -415,12 +264,6 @@ export default function VoiceAISecurityPost() {
                   real, and the attack surface is expanding.
                 </p>
 
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Traditional text-based security tools weren&apos;t designed for this world. They can&apos;t
-                  detect deepfakes. They can&apos;t identify audio-level attacks. They can&apos;t verify speaker
-                  identity. They&apos;re playing defense with one hand tied behind their back.
-                </p>
-
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   ProofLayer was built from the ground up for the audio-native era. We believe security
                   should be invisible to users but comprehensive in its protection. We believe compliance
@@ -428,16 +271,10 @@ export default function VoiceAISecurityPost() {
                   shouldn&apos;t require sacrificing performance.
                 </p>
 
-                <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  The enterprises deploying voice AI today face a choice: retrofit text-based security tools that were never designed for audio, or adopt purpose-built audio-native security from the start. The incidents we&apos;ve documented across deepfake fraud, voice injection, and prompt hijacking all share one common thread&mdash;they exploit the gap between what text-based tools can see and what actually happens at the audio level.
-                </p>
-
                 <p className="text-xl font-medium text-gray-900 mb-8">
                   Diligence, automated. That&apos;s the future of voice AI security.
                 </p>
 
-                <AuthorCard author={authors.engineering} />
-                <RelatedPosts currentSlug="voice-ai-security" />
               </motion.div>
             </div>
 
@@ -449,7 +286,6 @@ export default function VoiceAISecurityPost() {
         </div>
       </article>
 
-      <FinalCta />
       <Footer />
     </main>
   )

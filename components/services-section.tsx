@@ -9,9 +9,9 @@ const services = [
     icon: Shield,
     badge: "AI Red Teaming",
     accentColor: "rose",
-    title: "Text Agent Security",
+    title: "Chat Agent Security",
     description:
-      "Automated red teaming and runtime guardrails for text-based AI agents. Find prompt injection, jailbreaks, and data exfiltration before attackers do.",
+      "Automated red teaming and runtime guardrails for chat-based AI agents. Find prompt injection, jailbreaks, and data exfiltration before attackers do.",
     features: [
       "50+ attack vectors tested automatically",
       "Bidirectional input & output guardrails",
@@ -91,7 +91,7 @@ export function ServicesSection() {
             Protect at runtime.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            Purpose-built security for text agents, voice agents, and coding agents.
+            Purpose-built security for chat agents, voice agents, and coding agents.
             Test before deployment, protect at runtime.
           </p>
         </motion.div>

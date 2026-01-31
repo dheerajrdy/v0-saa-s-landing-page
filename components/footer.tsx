@@ -43,37 +43,20 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex gap-16">
-            <div>
-              <h4 className="text-sm font-medium uppercase tracking-wider text-gray-400">Product</h4>
-              <ul className="mt-4 space-y-3 text-base">
-                <li>
-                  <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <Link href="/blog" className="text-gray-500 hover:text-gray-900 transition-colors">
-                    Blog
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-medium uppercase tracking-wider text-gray-400">Contact</h4>
-              <ul className="mt-4 space-y-3 text-base">
-                <li>
-                  <a
-                    href="https://calendly.com/divyachitimalla/intro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-gray-900 transition-colors"
-                  >
-                    Book a Call
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h4 className="text-sm font-medium uppercase tracking-wider text-gray-400">Product</h4>
+            <ul className="mt-4 space-y-3 text-base">
+              <li>
+                <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors">
+                  Services
+                </a>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-500 hover:text-gray-900 transition-colors">
+                  Blog
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

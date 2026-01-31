@@ -40,14 +40,6 @@ export function Header() {
           <Link href="/blog" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
             Blog
           </Link>
-          <a
-            href="https://calendly.com/divyachitimalla/intro"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-gray-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-gray-800 hover:scale-[1.02]"
-          >
-            Book a Call
-          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -87,15 +79,6 @@ export function Header() {
             >
               Blog
             </Link>
-            <a
-              href="https://calendly.com/divyachitimalla/intro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 rounded-full bg-gray-900 px-6 py-3 text-center text-base font-medium text-white hover:bg-gray-800"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Book a Call
-            </a>
           </nav>
         </div>
       )}

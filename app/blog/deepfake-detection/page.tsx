@@ -10,13 +10,8 @@ import { DeepfakePipelineDiagram } from "@/components/blog/deepfake-pipeline-dia
 import { ProsodicMetricsViz } from "@/components/blog/prosodic-metrics-viz"
 import { EerComparisonChart } from "@/components/blog/eer-comparison-chart"
 import { AdversarialRobustnessChart } from "@/components/blog/adversarial-robustness-chart"
-import { FinalCta } from "@/components/final-cta"
 import { ReadingProgressBar } from "@/components/blog/reading-progress-bar"
 import { TableOfContents, type TocItem } from "@/components/blog/table-of-contents"
-import { InlineCta } from "@/components/blog/inline-cta"
-import { AuthorCard } from "@/components/blog/author-card"
-import { RelatedPosts } from "@/components/blog/related-posts"
-import { authors } from "@/lib/blog-data"
 
 const tocItems: TocItem[] = [
   { id: "crisis", title: "The Voice AI Security Crisis", level: 2 },
@@ -29,7 +24,6 @@ const tocItems: TocItem[] = [
   { id: "production", title: "Production Deployment & Latency", level: 2 },
   { id: "adversarial", title: "Adversarial Robustness", level: 2 },
   { id: "limitations", title: "Limitations & Ongoing Work", level: 2 },
-  { id: "whats-next", title: "What\u2019s Next", level: 2 },
 ]
 
 export default function DeepfakeDetectionPost() {
@@ -43,7 +37,7 @@ export default function DeepfakeDetectionPost() {
         subtitle="How audio-first guardrails outperform text-based approaches for voice security"
         category="Technical Research"
         categoryColor="violet"
-        readTime="18 min read"
+        readTime="12 min read"
         date="January 30, 2026"
       />
 
@@ -181,10 +175,6 @@ export default function DeepfakeDetectionPost() {
                   You&apos;re analyzing the wrong layer of abstraction.
                 </p>
 
-                <InlineCta
-                  headline="Don't let deepfakes bypass your security"
-                  subtext="ProofLayer detects synthetic audio in real-time, analyzing the waveform — not just the words."
-                />
               </motion.div>
 
               {/* Section 3: The Science of Spectral Forensics */}
@@ -227,17 +217,8 @@ export default function DeepfakeDetectionPost() {
                   Most generative models use mel-spectrograms as an intermediate representation. This
                   perceptual scale explicitly discards fine-grained phase information and compresses
                   high-frequency detail. When the vocoder reconstructs the waveform, it must <em>invent</em> the
-                  missing details.
+                  missing details. This produces a characteristic &quot;smearing&quot; of high-frequency textures&mdash;fricatives like s, f, and sh that should have sharp spectral energy extending into ultrasonic ranges instead appear smoothed or patchy. The texture is mathematically <em>too clean</em>.
                 </p>
-
-                <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 p-6 shadow-sm my-8">
-                  <h4 className="font-semibold text-amber-900 mb-3">The &quot;Smear&quot; Effect</h4>
-                  <p className="text-amber-800">
-                    Deepfakes exhibit &quot;smearing&quot; or blurring of high-frequency textures. In organic speech,
-                    fricatives (s, f, sh) have sharp spectral energy extending into ultrasonic ranges.
-                    In deepfakes, these appear smoothed or patchy&mdash;the texture is mathematically <em>too clean</em>.
-                  </p>
-                </div>
 
                 <h3 className="text-xl font-semibold text-gray-900 mt-10 mb-4">
                   Phase Discontinuity
@@ -264,15 +245,7 @@ export default function DeepfakeDetectionPost() {
 
                 <ProsodicMetricsViz />
 
-                <div className="rounded-2xl border border-indigo-200/80 bg-indigo-50/50 p-6 shadow-sm my-8">
-                  <h4 className="font-semibold text-indigo-900 mb-3">Explainability Advantage</h4>
-                  <p className="text-indigo-800">
-                    Prosodic analysis offers <strong>explainability</strong>. By integrating attention mechanisms
-                    that focus on prosodic features, forensic systems can state: &quot;This audio is fake because
-                    the pitch micro-tremors are statistically absent&quot;&mdash;rather than simply &quot;the neural
-                    network says it&apos;s fake.&quot;
-                  </p>
-                </div>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">Prosodic analysis also offers <strong>explainability</strong>&mdash;forensic systems can state &quot;this audio is fake because the pitch micro-tremors are statistically absent&quot; rather than simply &quot;the neural network says it&apos;s fake.&quot;</p>
               </motion.div>
 
               {/* Section 4: Our Approach */}
@@ -454,57 +427,6 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                   </div>
                 </div>
 
-                {/* Training Table */}
-                <div className="rounded-2xl border border-gray-100/80 overflow-hidden mb-6 shadow-sm">
-                  <div className="bg-gray-50 px-4 py-3 border-b border-gray-100">
-                    <h4 className="font-semibold text-gray-900">Training Progression (ASVspoof)</h4>
-                    <p className="text-sm text-gray-600 mt-1">Validation accuracy reached 100% by epoch 1</p>
-                  </div>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead className="bg-gray-50 border-b border-gray-100">
-                        <tr>
-                          <th className="px-4 py-3 text-left font-medium text-gray-900">Epoch</th>
-                          <th className="px-4 py-3 text-right font-medium text-gray-900">Train Loss</th>
-                          <th className="px-4 py-3 text-right font-medium text-gray-900">Val Loss</th>
-                          <th className="px-4 py-3 text-right font-medium text-gray-900">Val Accuracy</th>
-                          <th className="px-4 py-3 text-right font-medium text-gray-900">Val F1</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-gray-100">
-                        <tr className="bg-white hover:bg-gray-50">
-                          <td className="px-4 py-3 text-gray-900 font-medium">1</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.146</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.002</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                        </tr>
-                        <tr className="bg-gray-50 hover:bg-gray-100">
-                          <td className="px-4 py-3 text-gray-900 font-medium">2</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.030</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.000</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                        </tr>
-                        <tr className="bg-white hover:bg-gray-50">
-                          <td className="px-4 py-3 text-gray-900 font-medium">3</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.011</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.000</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                        </tr>
-                        <tr className="bg-gray-50 hover:bg-gray-100">
-                          <td className="px-4 py-3 text-gray-900 font-medium">4</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.003</td>
-                          <td className="px-4 py-3 text-right text-gray-700">0.000</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-violet-600">100.0%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
                 <div className="rounded-2xl border border-violet-200/80 bg-violet-50/50 p-6 shadow-sm">
                   <h4 className="font-semibold text-violet-900 mb-3">Methodology Context</h4>
                   <p className="text-violet-800">
@@ -556,52 +478,6 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                   </div>
                 </div>
 
-                {/* Nemotron Training Table */}
-                <div className="rounded-2xl border border-gray-100/80 overflow-hidden mb-6 shadow-sm">
-                  <div className="bg-gray-50 px-4 py-3 border-b border-gray-100">
-                    <h4 className="font-semibold text-gray-900">Training Progression (Nemotron)</h4>
-                    <p className="text-sm text-gray-600 mt-1">Steady improvement over 7 epochs</p>
-                  </div>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead className="bg-gray-50 border-b border-gray-100">
-                        <tr>
-                          <th className="px-4 py-3 text-left font-medium text-gray-900">Epoch</th>
-                          <th className="px-4 py-3 text-right font-medium text-gray-900">Train Acc</th>
-                          <th className="px-4 py-3 text-right font-medium text-gray-900">Val Acc</th>
-                          <th className="px-4 py-3 text-right font-medium text-gray-900">Val F1</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-gray-100">
-                        <tr className="bg-white hover:bg-gray-50">
-                          <td className="px-4 py-3 text-gray-900 font-medium">1</td>
-                          <td className="px-4 py-3 text-right text-gray-700">53.5%</td>
-                          <td className="px-4 py-3 text-right text-gray-700">66.7%</td>
-                          <td className="px-4 py-3 text-right text-gray-700">66.7%</td>
-                        </tr>
-                        <tr className="bg-gray-50 hover:bg-gray-100">
-                          <td className="px-4 py-3 text-gray-900 font-medium">4</td>
-                          <td className="px-4 py-3 text-right text-gray-700">66.4%</td>
-                          <td className="px-4 py-3 text-right text-gray-700">76.6%</td>
-                          <td className="px-4 py-3 text-right text-gray-700">77.0%</td>
-                        </tr>
-                        <tr className="bg-white hover:bg-gray-50">
-                          <td className="px-4 py-3 text-gray-900 font-medium">6</td>
-                          <td className="px-4 py-3 text-right text-gray-700">78.0%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-emerald-600">78.6%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-emerald-600">78.8%</td>
-                        </tr>
-                        <tr className="bg-gray-50 hover:bg-gray-100">
-                          <td className="px-4 py-3 text-gray-900 font-medium">7</td>
-                          <td className="px-4 py-3 text-right text-gray-700">80.2%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-emerald-600">78.6%</td>
-                          <td className="px-4 py-3 text-right font-semibold text-emerald-600">78.8%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
                 <div className="rounded-2xl border border-emerald-200/80 bg-emerald-50/50 p-6 shadow-sm">
                   <h4 className="font-semibold text-emerald-900 mb-3">Production Recommendation</h4>
                   <p className="text-emerald-800">
@@ -613,11 +489,6 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                   </p>
                 </div>
               </motion.div>
-
-              <InlineCta
-                headline="Want to integrate voice guardrails into your application?"
-                subtext="ProofLayer provides enterprise-grade voice AI security with real-time deepfake detection APIs."
-              />
 
               {/* Section 8: Production Deployment & Latency */}
               <motion.div
@@ -658,40 +529,9 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Infrastructure Design
-                </h3>
-
-                <div className="grid sm:grid-cols-2 gap-4 my-8">
-                  <div className="rounded-2xl border border-gray-100/80 bg-white p-5 shadow-sm">
-                    <h4 className="font-semibold text-gray-900 mb-2">WebSocket Transport</h4>
-                    <p className="text-sm text-gray-600">
-                      Bi-directional, full-duplex streaming. The client streams audio chunks
-                      while the server returns probability scores in near real-time.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-gray-100/80 bg-white p-5 shadow-sm">
-                    <h4 className="font-semibold text-gray-900 mb-2">Async Processing</h4>
-                    <p className="text-sm text-gray-600">
-                      Non-blocking inference pipeline. While one chunk is on GPU,
-                      the next is buffering from the network socket.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-gray-100/80 bg-white p-5 shadow-sm">
-                    <h4 className="font-semibold text-gray-900 mb-2">Chunking Strategy</h4>
-                    <p className="text-sm text-gray-600">
-                      Trade-off between latency and accuracy: smaller chunks (100ms) mean lower latency
-                      but less context; larger chunks (4s) mean higher accuracy but noticeable lag.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-gray-100/80 bg-white p-5 shadow-sm">
-                    <h4 className="font-semibold text-gray-900 mb-2">Stateless Serving</h4>
-                    <p className="text-sm text-gray-600">
-                      Model size ~400MB (WavLM + classification head). Standard PyTorch/ONNX deployment,
-                      no external dependencies, easy horizontal scaling.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  The system uses WebSocket transport for bi-directional streaming, async processing to pipeline chunks through GPU inference, and stateless serving (~400MB model) for easy horizontal scaling. Chunk sizes trade off latency vs. context&mdash;100ms chunks minimize delay while 4s chunks maximize accuracy.
+                </p>
               </motion.div>
 
               {/* Section 9: Adversarial Robustness */}
@@ -745,11 +585,6 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                   fundamentally different mathematical models simultaneously.
                 </p>
 
-                <InlineCta
-                  variant="compact"
-                  headline="Stay ahead of adversarial attacks"
-                  subtext="ProofLayer continuously updates detection models to counter emerging threats."
-                />
               </motion.div>
 
               {/* Section 10: Limitations & Ongoing Work */}
@@ -769,38 +604,20 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                   decisions. Here&apos;s what you should know:
                 </p>
 
-                <div className="space-y-6 mb-8">
-                  <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 p-6 shadow-sm">
-                    <h4 className="font-semibold text-amber-900 mb-3">Benchmark Age</h4>
-                    <p className="text-amber-800">
-                      ASVspoof 2019 LA is the most widely-used benchmark for anti-spoofing research, but it
-                      was created in 2019. The attack algorithms it contains (primarily TTS and voice conversion
-                      from that era) do not represent the latest generation of synthesizers like VALL-E, XTTS, or
-                      diffusion-based vocoders. Achieving 100% on this benchmark is a strong signal but not
-                      a guarantee of perfect performance against all modern attacks.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 p-6 shadow-sm">
-                    <h4 className="font-semibold text-amber-900 mb-3">Generalization Gap</h4>
-                    <p className="text-amber-800">
-                      Detection models trained on one set of attack algorithms may not generalize perfectly to
-                      unseen synthesizers. This is an active area of research across the field. Our approach
-                      mitigates this through WavLM&apos;s broad pre-training, but ongoing evaluation against
-                      new attack types is required.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 p-6 shadow-sm">
-                    <h4 className="font-semibold text-amber-900 mb-3">Content Safety Ceiling</h4>
-                    <p className="text-amber-800">
-                      The 78.8% F1 on content safety reflects the inherent difficulty of classifying nuanced
-                      safety categories from audio alone without semantic text analysis. Some categories
-                      (e.g., subtle hate speech) are genuinely harder to detect from acoustic features. A
-                      hybrid audio+text approach is recommended for production safety classification.
-                    </p>
-                  </div>
-                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
+                    <span className="text-lg text-gray-700"><strong>Benchmark age:</strong> ASVspoof 2019 LA predates modern synthesizers (VALL-E, XTTS, diffusion vocoders). 100% F1 on this benchmark is a strong signal, not a guarantee against all modern attacks.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
+                    <span className="text-lg text-gray-700"><strong>Generalization gap:</strong> Models trained on one set of attacks may not generalize perfectly to unseen synthesizers. WavLM&apos;s broad pre-training mitigates this, but ongoing evaluation is required.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500 mt-2.5 shrink-0" />
+                    <span className="text-lg text-gray-700"><strong>Content safety ceiling:</strong> 78.8% F1 reflects the inherent difficulty of audio-only safety classification. A hybrid audio+text approach is recommended for production.</span>
+                  </li>
+                </ul>
 
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Ongoing Work
@@ -836,53 +653,6 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                     </div>
                   </div>
                 </div>
-              </motion.div>
-
-              {/* Section 11: What's Next */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="mb-16"
-              >
-                <h2 id="whats-next" className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mt-16 mb-6 scroll-mt-24">
-                  What&apos;s Next
-                </h2>
-
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  The &quot;Spectral Lie&quot; is a moving target. As detection models become adept at identifying
-                  checkerboard artifacts and phase discontinuities, generative models evolve. Diffusion-based
-                  vocoders and end-to-end differentiable signal processing are already reducing these artifacts.
-                </p>
-
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  However, the fundamental principle remains: <strong>synthesis is approximation</strong>.
-                  No model can perfectly replicate the infinite complexity of organic physics without
-                  introducing statistical anomalies.
-                </p>
-
-                <div className="rounded-2xl bg-gray-950 text-white p-6 shadow-lg my-8">
-                  <h4 className="font-semibold mb-4">The Defense of the Future</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
-                      <span><strong>Multi-Modal Fusion:</strong> Combining spectral, prosodic, and visual cues to create defenses no single attack can bypass</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
-                      <span><strong>Adversarial Robustness:</strong> Moving beyond &quot;clean&quot; accuracy to &quot;attack-resistant&quot; accuracy via SASV</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
-                      <span><strong>Explainability:</strong> Providing forensic evidence beyond &quot;computer says fake&quot;</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
-                      <span><strong>Hybrid Pipelines:</strong> Audio-first detection paired with targeted text analysis for complete coverage</span>
-                    </li>
-                  </ul>
-                </div>
 
                 <div className="rounded-2xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-200/80 p-8 shadow-sm">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -910,6 +680,10 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                       <span className="h-1.5 w-1.5 rounded-full bg-violet-500 mt-2.5 shrink-0" />
                       <p className="text-gray-700"><strong>Honest benchmarking matters</strong>&mdash;100% on ASVspoof 2019 is a strong starting point, not an endpoint</p>
                     </div>
+                    <div className="flex items-start gap-3">
+                      <span className="h-1.5 w-1.5 rounded-full bg-violet-500 mt-2.5 shrink-0" />
+                      <p className="text-gray-700"><strong>Multi-modal fusion is the future</strong>&mdash;combining spectral, prosodic, and visual cues for defenses no single attack can bypass</p>
+                    </div>
                   </div>
 
                   <p className="text-xl font-semibold text-gray-900">
@@ -918,9 +692,6 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
                 </div>
               </motion.div>
 
-              {/* Author & Related */}
-              <AuthorCard author={authors.research} />
-              <RelatedPosts currentSlug="deepfake-detection" />
             </div>
 
             {/* Sidebar TOC */}
@@ -931,7 +702,6 @@ Binary Classification (Real/Fake or Safe/Unsafe)`}
         </div>
       </article>
 
-      <FinalCta />
       <Footer />
     </main>
   )

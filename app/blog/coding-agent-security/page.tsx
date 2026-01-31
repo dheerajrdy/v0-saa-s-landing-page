@@ -5,16 +5,11 @@ import { Footer } from "@/components/footer"
 import { BlogHeader } from "@/components/blog/blog-header"
 import { ReadingProgressBar } from "@/components/blog/reading-progress-bar"
 import { TableOfContents, type TocItem } from "@/components/blog/table-of-contents"
-import { AuthorCard } from "@/components/blog/author-card"
-import { RelatedPosts } from "@/components/blog/related-posts"
-import { InlineCta } from "@/components/blog/inline-cta"
 import { IncidentTimeline } from "@/components/blog/incident-timeline"
 import { AttackVectorDiagram } from "@/components/blog/attack-vector-diagram"
-import { authors } from "@/lib/blog-data"
 
 const tocItems: TocItem[] = [
   { id: "executive-summary", title: "Executive Summary", level: 2 },
-  { id: "rise-of-coding-agents", title: "The Rise of AI Coding Agents", level: 2 },
   { id: "real-world-incidents", title: "Real-World Security Incidents", level: 2 },
   { id: "amazon-q", title: "Amazon Q Developer Exploit", level: 3 },
   { id: "cursor-typosquatting", title: "Cursor Typosquatting Attack", level: 3 },
@@ -38,7 +33,7 @@ export default function CodingAgentSecurityPost() {
         subtitle="Why AI-Generated Code Is the Next Big Security Challenge"
         category="Security Analysis"
         categoryColor="indigo"
-        readTime="12 min read"
+        readTime="10 min read"
         date="January 26, 2026"
         author="ProofLayer Research Team"
       />
@@ -56,35 +51,13 @@ export default function CodingAgentSecurityPost() {
               <p className="text-base text-gray-700 leading-relaxed mb-4">
                 AI coding agents have transformed software development. Tools like GitHub Copilot, Cursor, Amazon Q, and Claude Code are now embedded in the workflows of millions of developers. But this rapid adoption has created a new and dangerous attack surface that traditional security tools were never designed to address.
               </p>
-              <p className="text-base text-gray-700 leading-relaxed mb-6">
-                In 2025 alone, we saw crypto wallets drained via malicious IDE extensions, unauthenticated code injection exploits in AI agent frameworks, and the first fully autonomous AI-orchestrated cyberattack. The Barracuda Security report (Barracuda, 2025) identified 43 agent framework components with embedded supply chain vulnerabilities. Meanwhile, research from Checkmarx (Checkmarx, 2025) demonstrated how easily AI security reviews can be bypassed using simple code comments.
+              <p className="text-base text-gray-700 leading-relaxed mb-4">
+                In 2025 alone, we saw crypto wallets drained via malicious IDE extensions, unauthenticated code injection exploits in AI agent frameworks, and the first fully autonomous AI-orchestrated cyberattack. Meanwhile, &ldquo;vibe coding&rdquo;&mdash;where developers describe what they want and let AI handle implementation&mdash;means more code ships with less human review. Benchmarks consistently show LLMs don&apos;t prioritize writing secure code, and less than 40% of organizations conduct regular security testing on AI agent workflows.
               </p>
               <div className="rounded-2xl border border-indigo-200/80 bg-indigo-50/50 shadow-sm p-5">
                 <p className="text-sm font-semibold text-indigo-900 mb-1">Key Finding</p>
                 <p className="text-sm text-indigo-800 leading-relaxed">
                   A significant portion of documented AI security incidents in 2025 were caused by simple prompts, with some leading to $100K+ in real losses — without writing a single line of exploit code.
-                </p>
-              </div>
-            </section>
-
-            {/* The Rise of AI Coding Agents */}
-            <section id="rise-of-coding-agents" className="mb-16">
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6">
-                The Rise of AI Coding Agents
-              </h2>
-              <p className="text-base text-gray-700 leading-relaxed mb-4">
-                The speed at which AI coding tools have been adopted is unprecedented. What began as autocomplete suggestions has evolved into autonomous agents that can read codebases, execute commands, install dependencies, and deploy applications — all with minimal human oversight.
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed mb-4">
-                This evolution brings extraordinary productivity gains. Developers report writing code 2-5x faster with AI assistance. But it also introduces a fundamental security tension: <strong>AI coding tools optimize for functionality, not security.</strong> The ultimate goal of these tools is to build applications that work, not applications that are safe.
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed mb-4">
-                The phenomenon of &ldquo;vibe coding&rdquo; — where developers describe what they want in natural language and let AI handle the implementation — exploded in 2025. The result: more code ships with less human review, and entire sections of codebases exist that no human fully understands. Benchmarks consistently show that LLMs do not prioritize writing secure code, and when asked to review their own output, they often miss the same vulnerabilities they introduced.
-              </p>
-
-              <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 shadow-sm p-5 mb-4">
-                <p className="text-sm text-amber-800 leading-relaxed">
-                  <strong>Industry data:</strong> Less than 40% of organizations conduct regular security testing on AI models or agent workflows (Cisco State of AI Security 2025). Only 34% of enterprises have AI-specific security controls in place.
                 </p>
               </div>
             </section>
@@ -106,9 +79,6 @@ export default function CodingAgentSecurityPost() {
               <p className="text-base text-gray-700 leading-relaxed mb-4">
                 In July 2025, Amazon disclosed an attempt to exploit two open-source repositories used in the Amazon Q Developer extension for VS Code. The attacker used prompt injection to plant malicious code designed to wipe users&apos; local files and disrupt AWS infrastructure. The compromised extension passed verification and remained publicly available for two days before Amazon mitigated the threat.
               </p>
-              <p className="text-base text-gray-700 leading-relaxed mb-4">
-                According to Amazon&apos;s security bulletin, &ldquo;no customer resources were impacted,&rdquo; but the incident exposed a critical vulnerability in how AI coding tool extensions are validated and distributed. The attacker later stated their motivation was to expose what they called Amazon&apos;s &ldquo;security theater&rdquo; — suggesting the company&apos;s verification processes were insufficient to catch intentional attacks.
-              </p>
 
               <h3 id="cursor-typosquatting" className="text-xl font-semibold tracking-tight text-gray-900 mt-12 mb-4">
                 Cursor Typosquatting Attack
@@ -120,20 +90,11 @@ export default function CodingAgentSecurityPost() {
                 This incident highlights a particularly insidious attack vector: AI agents that autonomously resolve and install packages can be tricked into pulling malicious dependencies without developer awareness. The traditional human review step — scanning a package name before confirming install — is bypassed entirely when an AI agent handles dependency management.
               </p>
 
-              <InlineCta
-                variant="compact"
-                headline="Worried about code agent vulnerabilities?"
-                subtext="ProofLayer's Coding Security Agent catches these attacks before execution."
-              />
-
               <h3 id="langflow-injection" className="text-xl font-semibold tracking-tight text-gray-900 mt-12 mb-4">
                 Langflow Unauthenticated Code Injection
               </h3>
               <p className="text-base text-gray-700 leading-relaxed mb-4">
                 CrowdStrike (CrowdStrike Threat Report, 2025) reported that multiple threat actors exploited an unauthenticated code injection vulnerability in Langflow, a widely used tool for building AI agents and workflows maintained by DataStax. The attackers used the vulnerability to steal credentials and deploy malware across compromised environments.
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed mb-4">
-                The Langflow incident is notable because it targeted the agent orchestration layer — the framework that connects AI models to external tools and data sources. Compromising this layer gives attackers access to every system the agent can reach, making it a high-value target for credential theft and lateral movement.
               </p>
 
               <h3 id="supply-chain" className="text-xl font-semibold tracking-tight text-gray-900 mt-12 mb-4">
@@ -238,11 +199,6 @@ export default function CodingAgentSecurityPost() {
                 This represents a qualitative shift in the threat landscape. Autonomous AI attackers don&apos;t get frustrated, don&apos;t take breaks, and can probe systems continuously while adapting their approach in real-time.
               </p>
 
-              <InlineCta
-                variant="compact"
-                headline="Stay ahead of emerging AI threats"
-                subtext="Get early access to ProofLayer's security platform."
-              />
             </section>
 
             {/* The Case for Pre-Execution Security */}
@@ -333,34 +289,7 @@ export default function CodingAgentSecurityPost() {
           </aside>
         </div>
 
-        {/* Author Card */}
-        <div className="mx-auto max-w-3xl">
-          <AuthorCard author={authors.research} />
-          <RelatedPosts currentSlug="coding-agent-security" />
-        </div>
       </div>
-
-      {/* Final CTA */}
-      <section className="px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-gray-900">
-            Secure your AI agents before launch.
-          </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Join the companies building secure AI. Get early access to ProofLayer.
-          </p>
-          <div className="mt-8 flex justify-center">
-            <a
-              href="https://calendly.com/divyachitimalla/intro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
-            >
-              Book a Call
-            </a>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

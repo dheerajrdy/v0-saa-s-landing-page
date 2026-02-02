@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, ShieldCheck } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
 const ROTATING_WORDS = ["chat agents.", "voice agents.", "coding agents."]
@@ -122,23 +122,6 @@ export function Hero() {
               Learn more
               <ArrowRight className="h-5 w-5" />
             </a>
-          </motion.div>
-
-          {/* Compliance Badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-10 flex items-center gap-4"
-          >
-            <div className="flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-4 py-2 text-sm font-medium text-gray-600 backdrop-blur-sm">
-              <ShieldCheck className="h-4 w-4 text-emerald-500" />
-              HIPAA Compliant
-            </div>
-            <div className="flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-4 py-2 text-sm font-medium text-gray-600 backdrop-blur-sm">
-              <ShieldCheck className="h-4 w-4 text-emerald-500" />
-              SOC 2 Type II
-            </div>
           </motion.div>
 
           {/* Scanner Install Badge */}

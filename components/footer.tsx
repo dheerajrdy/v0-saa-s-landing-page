@@ -1,4 +1,4 @@
-import { Twitter, Linkedin } from "lucide-react"
+import { Twitter, Linkedin, ShieldCheck } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -61,10 +61,20 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 border-t border-gray-100 pt-10">
+        <div className="mt-16 border-t border-gray-100 pt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-gray-300">
             &copy; {new Date().getFullYear()} ProofLayer. All rights reserved.
           </p>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5 text-xs text-gray-400">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+              HIPAA Compliant
+            </div>
+            <div className="flex items-center gap-1.5 text-xs text-gray-400">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+              SOC 2 Type II
+            </div>
+          </div>
         </div>
       </div>
     </footer>

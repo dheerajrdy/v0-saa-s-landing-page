@@ -116,22 +116,6 @@ export function Hero() {
               <ArrowRight className="h-5 w-5" />
             </a>
             <a
-              href="#services"
-              className="inline-flex items-center gap-2 text-base font-medium text-gray-500 transition-colors hover:text-gray-900"
-            >
-              Learn more
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </motion.div>
-
-          {/* Scanner Install Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.55 }}
-            className="mt-5"
-          >
-            <a
               href="https://www.npmjs.com/package/agent-security-scanner-mcp"
               target="_blank"
               rel="noopener noreferrer"

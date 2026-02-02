@@ -141,6 +141,24 @@ export function Hero() {
             </div>
           </motion.div>
 
+          {/* Scanner Install Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.55 }}
+            className="mt-5"
+          >
+            <a
+              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full border border-indigo-200 bg-indigo-50/80 px-5 py-2.5 text-sm backdrop-blur-sm transition-all hover:bg-indigo-100/80 hover:border-indigo-300"
+            >
+              <code className="font-mono text-sm text-indigo-700">npx agent-security-scanner-mcp</code>
+              <span className="font-medium text-indigo-600">Try Free →</span>
+            </a>
+          </motion.div>
+
           {/* Hero Visual */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}

@@ -39,6 +39,15 @@ export function FinalCta() {
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>
+          <a
+            href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-700"
+          >
+            Or try the free Security Scanner
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </motion.div>
       </div>
     </section>

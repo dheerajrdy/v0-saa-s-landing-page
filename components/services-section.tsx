@@ -52,6 +52,8 @@ const services = [
     ],
     linkText: "How we secure coding agents",
     blogSlug: "/blog/coding-agent-security",
+    ctaText: "Try Free Scanner",
+    ctaLink: "https://www.npmjs.com/package/agent-security-scanner-mcp",
   },
 ]
 
@@ -167,8 +169,21 @@ export function ServicesSection() {
                   ))}
                 </ul>
 
+                {/* Scanner CTA (coding card only) */}
+                {service.ctaLink && service.ctaText && (
+                  <a
+                    href={service.ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-indigo-50 px-5 py-2.5 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-100"
+                  >
+                    {service.ctaText}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                )}
+
                 {/* Learn more link */}
-                <Link href={service.blogSlug} className="mt-10 flex items-center gap-2 text-base font-medium text-indigo-600 transition-colors">
+                <Link href={service.blogSlug} className={`${service.ctaLink ? "mt-4" : "mt-10"} flex items-center gap-2 text-base font-medium text-indigo-600 transition-colors`}>
                   <span>{service.linkText}</span>
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>

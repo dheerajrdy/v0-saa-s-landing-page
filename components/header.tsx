@@ -38,6 +38,14 @@ export function Header() {
           <Link href="/#services" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
             Services
           </Link>
+          <a
+            href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900"
+          >
+            Security Scanner
+          </a>
           <Link href="/blog" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
             Blog
           </Link>
@@ -73,6 +81,15 @@ export function Header() {
             >
               Services
             </Link>
+            <a
+              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-400 hover:bg-gray-50 hover:text-gray-900"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Security Scanner
+            </a>
             <Link
               href="/blog"
               className="rounded-xl px-4 py-3 text-base font-medium text-gray-400 hover:bg-gray-50 hover:text-gray-900"

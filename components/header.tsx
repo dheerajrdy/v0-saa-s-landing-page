@@ -26,29 +26,30 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-10 md:flex">
-          <a
-            href="https://dashboard.proof-layer.com/dashboard"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium text-white transition-all hover:bg-indigo-700 hover:scale-[1.02]"
-          >
-            Try Now
-          </a>
-          <Link href="/#services" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
+        <nav className="hidden items-center gap-6 md:flex">
+          <Link href="/#services" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
             Services
           </Link>
+          <Link href="/blog" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
+            Blog
+          </Link>
+          <div className="mx-1 h-5 border-l border-gray-200" />
           <a
             href="https://www.npmjs.com/package/agent-security-scanner-mcp"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border-2 border-indigo-600 px-5 py-2 text-sm font-medium text-indigo-600 transition-all hover:bg-indigo-600 hover:text-white hover:scale-[1.02]"
+            className="rounded-full bg-indigo-50 px-5 py-2 text-sm font-medium text-indigo-600 transition-all hover:bg-indigo-100"
           >
             Security Scanner
           </a>
-          <Link href="/blog" className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-900">
-            Blog
-          </Link>
+          <a
+            href="https://dashboard.proof-layer.com/dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium text-white shadow-sm transition-all hover:bg-indigo-700 hover:shadow-md"
+          >
+            Try Now
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -65,38 +66,39 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="bg-white/95 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-1 px-4 py-6">
-            <a
-              href="https://dashboard.proof-layer.com/dashboard"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl px-4 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Try Now
-            </a>
             <Link
               href="/#services"
-              className="rounded-xl px-4 py-3 text-base font-medium text-gray-400 hover:bg-gray-50 hover:text-gray-900"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               onClick={() => setMobileMenuOpen(false)}
             >
               Services
             </Link>
-            <a
-              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl border-2 border-indigo-600 px-4 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Security Scanner
-            </a>
             <Link
               href="/blog"
-              className="rounded-xl px-4 py-3 text-base font-medium text-gray-400 hover:bg-gray-50 hover:text-gray-900"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog
             </Link>
+            <div className="my-2 border-t border-gray-100" />
+            <a
+              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl bg-indigo-50 px-4 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Security Scanner
+            </a>
+            <a
+              href="https://dashboard.proof-layer.com/dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl bg-indigo-600 px-4 py-3 text-base font-medium text-white hover:bg-indigo-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Try Now
+            </a>
           </nav>
         </div>
       )}

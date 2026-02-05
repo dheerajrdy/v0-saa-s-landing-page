@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, ShieldCheck } from "lucide-react"
+import { Linkedin, ShieldCheck } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -22,17 +22,9 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 text-base text-gray-500">Security for every AI agent.</p>
-            <div className="mt-6 flex gap-4">
+            <div className="mt-6">
               <a
-                href="https://twitter.com/prooflayer"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 transition-colors hover:text-gray-600"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com/company/prooflayer"
+                href="https://www.linkedin.com/company/proof-layer/about/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 transition-colors hover:text-gray-600"

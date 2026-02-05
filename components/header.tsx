@@ -43,13 +43,13 @@ export function Header() {
             <span className="font-semibold text-gray-900 truncate max-w-[180px]">agent-security-scanner</span>
             <span className="h-3.5 w-px bg-gray-300" />
             <span className="flex items-center gap-1 text-xs text-gray-500">
-              <Download className="h-3 w-3" /> 233/wk
+              <Download className="h-3 w-3" /> 1.4k/mo
             </span>
             <span className="flex items-center gap-1 text-xs text-gray-500">
               <Scale className="h-3 w-3" /> MIT
             </span>
             <span className="flex items-center gap-1 text-xs text-gray-500">
-              <GitBranch className="h-3 w-3" /> 4 ver.
+              <GitBranch className="h-3 w-3" /> 17 ver.
             </span>
             <ArrowRight className="h-3.5 w-3.5 text-indigo-500" />
           </a>
@@ -94,9 +94,9 @@ export function Header() {
             >
               <span className="text-base font-medium text-indigo-600">Security Scanner</span>
               <span className="mt-1 flex items-center gap-3 text-xs text-gray-500">
-                <span className="flex items-center gap-1"><Download className="h-3 w-3" /> 233/wk</span>
+                <span className="flex items-center gap-1"><Download className="h-3 w-3" /> 1.4k/mo</span>
                 <span className="flex items-center gap-1"><Scale className="h-3 w-3" /> MIT</span>
-                <span className="flex items-center gap-1"><GitBranch className="h-3 w-3" /> 4 ver.</span>
+                <span className="flex items-center gap-1"><GitBranch className="h-3 w-3" /> 17 ver.</span>
               </span>
             </a>
             <a

@@ -9,9 +9,9 @@ const stats = [
     source: "OWASP 2025",
   },
   {
-    number: "3 sec",
-    text: "of audio is enough to clone any voice with high fidelity",
-    source: "MIT Technology Review",
+    number: "36%",
+    text: "of AI-generated code contains security vulnerabilities that pass standard linters",
+    source: "Stanford Research 2025",
   },
   {
     number: "43",
@@ -41,7 +41,7 @@ export function WhySection() {
             And dangerously exposed.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            Every AI agent you deploy — text, voice, or code — is a new attack surface.
+            Every coding agent and search pipeline you deploy is a new attack surface.
             Without purpose-built security, you&apos;re shipping vulnerabilities to production.
           </p>
         </motion.div>

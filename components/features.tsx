@@ -1,13 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Target, ShieldCheck, GitBranch, Mic, FileText, Globe, Search } from "lucide-react"
+import { Code, ShieldCheck, GitBranch, Package, FileText, Globe, Search } from "lucide-react"
 
 const features = [
   {
-    icon: Target,
-    title: "Automated Red Teaming",
-    description: "Context-aware attack generation covering 50+ vulnerability types including prompt injection, jailbreaks, and data exfiltration.",
+    icon: Code,
+    title: "Code Vulnerability Scanning",
+    description: "Pre-execution review of AI-generated code. Catch injection vulnerabilities, insecure patterns, and LLM-specific risks before they ship.",
     color: "rose",
     size: "large",
   },
@@ -26,17 +26,17 @@ const features = [
     size: "small",
   },
   {
+    icon: Package,
+    title: "Package Hallucination Detection",
+    description: "Detect when AI agents recommend non-existent packages — a growing supply chain attack vector.",
+    color: "indigo",
+    size: "small",
+  },
+  {
     icon: GitBranch,
     title: "Agent Workflow Testing",
     description: "Multi-step interaction simulation for complex agent behaviors and tool chains.",
     color: "blue",
-    size: "small",
-  },
-  {
-    icon: Mic,
-    title: "Voice Agent Security",
-    description: "Audio-native testing for voice AI. Detect deepfakes, injection attacks, and synthetic speech.",
-    color: "indigo",
     size: "small",
   },
   {
@@ -49,7 +49,7 @@ const features = [
   {
     icon: Globe,
     title: "CI/CD Integration",
-    description: "GitHub Actions, GitLab CI, Jenkins support. Test agents in your deployment pipeline.",
+    description: "GitHub Actions, GitLab CI, Jenkins support. Scan agent outputs in your deployment pipeline.",
     color: "blue",
     size: "small",
   },

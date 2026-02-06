@@ -4,13 +4,13 @@ import { motion } from "framer-motion"
 import { Check, Minus } from "lucide-react"
 
 const capabilities = [
-  { feature: "Chat agent red teaming", prooflayer: true, generic: true, diy: false },
-  { feature: "Voice agent security", prooflayer: true, generic: false, diy: false },
-  { feature: "Coding agent scanning", prooflayer: true, generic: false, diy: false },
-  { feature: "Search guardrails", prooflayer: true, generic: false, diy: false },
-  { feature: "Runtime guardrails", prooflayer: true, generic: true, diy: false },
+  { feature: "AI-generated code scanning", prooflayer: true, generic: false, diy: false },
   { feature: "Package hallucination detection", prooflayer: true, generic: false, diy: false },
-  { feature: "Audio-native deepfake detection", prooflayer: true, generic: false, diy: false },
+  { feature: "Search guardrails (inbound + outbound)", prooflayer: true, generic: false, diy: false },
+  { feature: "Indirect prompt injection detection", prooflayer: true, generic: true, diy: false },
+  { feature: "Runtime guardrails", prooflayer: true, generic: true, diy: false },
+  { feature: "Supply chain risk analysis", prooflayer: true, generic: false, diy: false },
+  { feature: "CI/CD pipeline integration", prooflayer: true, generic: false, diy: false },
   { feature: "Under 5 min integration", prooflayer: true, generic: false, diy: false },
   { feature: "SOC 2 / HIPAA compliance", prooflayer: true, generic: true, diy: false },
   { feature: "Open-source scanner", prooflayer: true, generic: false, diy: true },
@@ -44,8 +44,8 @@ export function WhyProofLayer() {
             Not retrofitted.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            Generic LLM security tools only cover text. ProofLayer secures every modality —
-            text, voice, code, and search — in a single platform.
+            Generic LLM security tools don&apos;t understand code or search. ProofLayer is built
+            from the ground up for coding agents and agent search pipelines.
           </p>
         </motion.div>
 

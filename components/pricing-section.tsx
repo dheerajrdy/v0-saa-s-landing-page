@@ -9,12 +9,12 @@ const tiers = [
         name: "Developer",
         price: "Free",
         description: "For individual developers and small teams",
-        tests: "1,000 tests",
+        tests: "1,000 scans",
         support: "Community",
         cta: "Start Free",
         ctaHref: "https://dashboard.proof-layer.com/dashboard",
         features: {
-            redTeaming: true,
+            codeScanning: true,
             guardrails: true,
             searchGuardrails: false,
             cicd: true,
@@ -26,13 +26,13 @@ const tiers = [
         name: "Team",
         price: "Custom",
         description: "For growing teams testing multiple agents",
-        tests: "10,000 tests",
+        tests: "10,000 scans",
         support: "Email",
         popular: true,
         cta: "Book a Demo",
         ctaHref: "https://calendly.com/divyachitimalla/intro",
         features: {
-            redTeaming: true,
+            codeScanning: true,
             guardrails: true,
             searchGuardrails: true,
             cicd: true,
@@ -49,7 +49,7 @@ const tiers = [
         cta: "Contact Sales",
         ctaHref: "https://calendly.com/divyachitimalla/intro",
         features: {
-            redTeaming: true,
+            codeScanning: true,
             guardrails: true,
             searchGuardrails: true,
             cicd: true,
@@ -125,7 +125,7 @@ export function PricingSection() {
 
                             <div className="space-y-4">
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                    <span className="text-sm text-gray-500">Security Tests</span>
+                                    <span className="text-sm text-gray-500">Security Scans</span>
                                     <span className="font-semibold text-gray-900">{tier.tests}</span>
                                 </div>
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
@@ -133,8 +133,8 @@ export function PricingSection() {
                                     <span className="font-semibold text-gray-900">{tier.support}</span>
                                 </div>
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                    <span className="text-sm text-gray-500">Red Teaming</span>
-                                    {tier.features.redTeaming ? (
+                                    <span className="text-sm text-gray-500">Code Scanning</span>
+                                    {tier.features.codeScanning ? (
                                         <Check className="h-4 w-4 text-indigo-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />

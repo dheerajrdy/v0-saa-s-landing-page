@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, ShieldCheck } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
-const ROTATING_WORDS = ["chat agents.", "voice agents.", "coding agents."]
+const ROTATING_WORDS = ["coding agents.", "agent search.", "AI agents."]
 const TYPING_SPEED = 80
 const DELETING_SPEED = 50
 const PAUSE_AFTER_TYPED = 2000
@@ -95,8 +95,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed"
           >
-            Pre-deployment testing. Runtime guardrails.
-            One&nbsp;platform for every AI agent.
+            Secure AI-generated code and agent search pipelines.
+            Pre-deployment scanning. Runtime&nbsp;guardrails.
           </motion.p>
 
           {/* Compliance badges */}

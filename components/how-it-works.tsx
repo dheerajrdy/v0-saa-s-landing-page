@@ -14,9 +14,9 @@ const steps = [
   {
     number: "02",
     icon: Monitor,
-    title: "Red Team",
+    title: "Scan",
     description:
-      "Automated attack simulation runs 50+ vectors against your agent. Get a full vulnerability report.",
+      "Automated scanning analyzes AI-generated code and search pipelines for vulnerabilities. Get a full security report.",
   },
   {
     number: "03",

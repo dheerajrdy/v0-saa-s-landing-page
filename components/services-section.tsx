@@ -1,42 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Mic, Code, Search, Check, ArrowRight } from "lucide-react"
+import { Code, Search, Check, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const services = [
-  {
-    icon: Shield,
-    badge: "AI Red Teaming",
-    accentColor: "rose",
-    title: "Chat Agent Security",
-    description:
-      "Automated red teaming and runtime guardrails for chat-based AI agents. Find prompt injection, jailbreaks, and data exfiltration before attackers do.",
-    differentiator: "Goes beyond keyword blocking — behavioral analysis at inference time.",
-    features: [
-      "50+ attack vectors tested automatically",
-      "Bidirectional input & output guardrails",
-      "Hallucination detection and grounding",
-    ],
-    linkText: "How we secure chat agents",
-    blogSlug: "/blog/coding-agent-security",
-  },
-  {
-    icon: Mic,
-    badge: "Voice Security",
-    accentColor: "amber",
-    title: "Voice Agent Security",
-    description:
-      "Audio-native security for speech-to-speech agents. Detect deepfakes, voice injection, and synthetic speech threats in real-time.",
-    differentiator: "Audio-native detection. No transcription. No latency penalty.",
-    features: [
-      "Deepfake and synthetic voice detection",
-      "Audio-native prompt injection defense",
-      "Voice biometric verification",
-    ],
-    linkText: "How we detect deepfakes",
-    blogSlug: "/blog/voice-ai-security",
-  },
   {
     icon: Code,
     badge: "Code Security",
@@ -46,9 +14,10 @@ const services = [
       "Pre-execution code review for LLM outputs. Catch injection vulnerabilities, supply chain risks, and insecure patterns before they ship.",
     differentiator: "Catches what static analysis misses — LLM-specific vulnerability patterns.",
     features: [
-      "Pre-execution code review for LLM outputs",
-      "Supply chain risk detection",
-      "Insecure pattern identification",
+      "Pre-execution code review for AI-generated code",
+      "Package hallucination and supply chain risk detection",
+      "Insecure pattern identification across languages",
+      "Runtime guardrails for code execution sandboxes",
     ],
     linkText: "How we secure coding agents",
     blogSlug: "/blog/coding-agent-security",
@@ -65,6 +34,7 @@ const services = [
       "Outbound query leak prevention (secrets, PII, internal context)",
       "Inbound result scanning for prompt injection",
       "Malicious URL and typosquat detection",
+      "Content integrity verification for RAG pipelines",
     ],
     linkText: "Learn about search guardrails",
     blogSlug: "/blog/coding-agent-security",
@@ -72,20 +42,6 @@ const services = [
 ]
 
 const accentClasses = {
-  rose: {
-    badgeBg: "bg-rose-50",
-    badgeText: "text-rose-600",
-    iconBg: "bg-rose-50",
-    iconColor: "text-rose-500",
-    borderColor: "border-l-rose-400",
-  },
-  amber: {
-    badgeBg: "bg-amber-50",
-    badgeText: "text-amber-600",
-    iconBg: "bg-amber-50",
-    iconColor: "text-amber-500",
-    borderColor: "border-l-amber-400",
-  },
   violet: {
     badgeBg: "bg-violet-50",
     badgeText: "text-violet-600",
@@ -115,16 +71,16 @@ export function ServicesSection() {
           className="text-center"
         >
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-indigo-600/80">
-            Four Pillars
+            Two Pillars
           </span>
           <h2 className="mt-5 text-4xl font-extrabold tracking-tighter text-gray-900 sm:text-5xl lg:text-[64px] lg:leading-[1.05]">
-            Test before you ship.
+            Scan before you ship.
             <br />
-            Protect at runtime.
+            Guard at runtime.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            Purpose-built security for chat agents, voice agents, coding agents, and agent search.
-            Test before deployment, protect at runtime.
+            Purpose-built security for coding agents and agent search pipelines.
+            Scan AI-generated code, guard what agents consume from the web.
           </p>
         </motion.div>
 

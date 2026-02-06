@@ -27,6 +27,12 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 md:flex">
+          <a href="#features" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
+            Features
+          </a>
+          <a href="#pricing" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
+            Pricing
+          </a>
           <Link href="/blog" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
             Blog
           </Link>
@@ -77,6 +83,20 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="bg-white/95 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-1 px-4 py-6">
+            <a
+              href="#features"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a
+              href="#pricing"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Pricing
+            </a>
             <Link
               href="/blog"
               className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"

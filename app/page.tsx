@@ -1,8 +1,12 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { TrustBar } from "@/components/trust-bar"
 import { WhySection } from "@/components/why-section"
 import { HowItWorks } from "@/components/how-it-works"
+import { Features } from "@/components/features"
 import { ServicesSection } from "@/components/services-section"
+import { WhyProofLayer } from "@/components/why-prooflayer"
+import { PricingSection } from "@/components/pricing-section"
 import { FinalCta } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
 
@@ -17,9 +21,13 @@ export default function Home() {
       <div className="relative">
         <Header />
         <Hero />
+        <TrustBar />
         <WhySection />
         <HowItWorks />
+        <Features />
         <ServicesSection />
+        <WhyProofLayer />
+        <PricingSection />
         <FinalCta />
         <Footer />
       </div>

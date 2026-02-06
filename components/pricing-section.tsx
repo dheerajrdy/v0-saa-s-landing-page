@@ -7,12 +7,16 @@ import { Button } from "@/components/ui/button"
 const tiers = [
     {
         name: "Developer",
+        price: "Free",
         description: "For individual developers and small teams",
         tests: "1,000 tests",
         support: "Community",
+        cta: "Start Free",
+        ctaHref: "https://dashboard.proof-layer.com/dashboard",
         features: {
             redTeaming: true,
             guardrails: true,
+            searchGuardrails: false,
             cicd: true,
             sso: false,
             dedicatedSupport: false,
@@ -20,13 +24,17 @@ const tiers = [
     },
     {
         name: "Team",
+        price: "Custom",
         description: "For growing teams testing multiple agents",
         tests: "10,000 tests",
         support: "Email",
         popular: true,
+        cta: "Book a Demo",
+        ctaHref: "https://calendly.com/divyachitimalla/intro",
         features: {
             redTeaming: true,
             guardrails: true,
+            searchGuardrails: true,
             cicd: true,
             sso: true,
             dedicatedSupport: false,
@@ -34,12 +42,16 @@ const tiers = [
     },
     {
         name: "Enterprise",
+        price: "Custom",
         description: "For organizations with compliance requirements",
         tests: "Unlimited",
         support: "Priority",
+        cta: "Contact Sales",
+        ctaHref: "https://calendly.com/divyachitimalla/intro",
         features: {
             redTeaming: true,
             guardrails: true,
+            searchGuardrails: true,
             cicd: true,
             sso: true,
             dedicatedSupport: true,
@@ -93,9 +105,25 @@ export function PricingSection() {
                             <div className="text-center mb-6">
                                 <h3 className="text-xl font-bold text-gray-900">{tier.name}</h3>
                                 <p className="text-sm text-gray-500 mt-1">{tier.description}</p>
+                                <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900">
+                                    {tier.price}
+                                </p>
                             </div>
 
-                            <div className="space-y-4 mb-8">
+                            <a
+                                href={tier.ctaHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`block w-full rounded-full py-3 text-center text-sm font-medium transition-all mb-8 ${
+                                    tier.popular
+                                        ? "bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm"
+                                        : "border border-gray-200 text-gray-700 hover:bg-gray-50"
+                                }`}
+                            >
+                                {tier.cta}
+                            </a>
+
+                            <div className="space-y-4">
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                                     <span className="text-sm text-gray-500">Security Tests</span>
                                     <span className="font-semibold text-gray-900">{tier.tests}</span>
@@ -115,6 +143,14 @@ export function PricingSection() {
                                 <div className="flex justify-between items-center py-2 border-b border-gray-100">
                                     <span className="text-sm text-gray-500">Guardrails</span>
                                     {tier.features.guardrails ? (
+                                        <Check className="h-4 w-4 text-indigo-500" />
+                                    ) : (
+                                        <Minus className="h-4 w-4 text-gray-300" />
+                                    )}
+                                </div>
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-sm text-gray-500">Search Guardrails</span>
+                                    {tier.features.searchGuardrails ? (
                                         <Check className="h-4 w-4 text-indigo-500" />
                                     ) : (
                                         <Minus className="h-4 w-4 text-gray-300" />

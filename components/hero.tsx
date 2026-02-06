@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ShieldCheck } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 
 const ROTATING_WORDS = ["chat agents.", "voice agents.", "coding agents."]
@@ -99,22 +99,60 @@ export function Hero() {
             One&nbsp;platform for every AI agent.
           </motion.p>
 
+          {/* Compliance badges */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="mt-8 flex items-center gap-4"
+          >
+            <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
+              SOC 2 Type II
+            </div>
+            <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
+              HIPAA Compliant
+            </div>
+            <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
+              OWASP Top 10
+            </div>
+          </motion.div>
+
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-12 flex flex-col items-center gap-5 sm:flex-row sm:gap-6"
+            className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:gap-6"
           >
             <a
-              href="https://calendly.com/divyachitimalla/intro"
+              href="https://dashboard.proof-layer.com/dashboard"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-full bg-gray-900 px-10 py-4 text-base font-medium text-white transition-all hover:bg-gray-800 hover:scale-[1.02]"
             >
-              Book a Call
+              Start Free
               <ArrowRight className="h-5 w-5" />
             </a>
+            <a
+              href="https://calendly.com/divyachitimalla/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-full border border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-700 transition-all hover:bg-gray-50 hover:border-gray-300"
+            >
+              Book a Demo
+            </a>
+          </motion.div>
+
+          {/* NPM package */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-6"
+          >
             <a
               href="https://www.npmjs.com/package/agent-security-scanner-mcp"
               target="_blank"

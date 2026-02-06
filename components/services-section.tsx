@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Mic, Code, Check, ArrowRight } from "lucide-react"
+import { Shield, Mic, Code, Search, Check, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const services = [
@@ -18,8 +18,8 @@ const services = [
       "Bidirectional input & output guardrails",
       "Hallucination detection and grounding",
     ],
-    linkText: "How we detect prompt injection",
-    blogSlug: "/blog/deepfake-detection",
+    linkText: "How we secure chat agents",
+    blogSlug: "/blog/coding-agent-security",
   },
   {
     icon: Mic,
@@ -53,6 +53,22 @@ const services = [
     linkText: "How we secure coding agents",
     blogSlug: "/blog/coding-agent-security",
   },
+  {
+    icon: Search,
+    badge: "Search Guardrails",
+    accentColor: "blue",
+    title: "Agent Search Security",
+    description:
+      "Guard the search I/O channel for AI agents. Prevent data leakage in outbound queries and detect indirect prompt injection in fetched web content.",
+    differentiator: "First-of-its-kind search guardrails — securing what agents consume from the web.",
+    features: [
+      "Outbound query leak prevention (secrets, PII, internal context)",
+      "Inbound result scanning for prompt injection",
+      "Malicious URL and typosquat detection",
+    ],
+    linkText: "Learn about search guardrails",
+    blogSlug: "/blog/coding-agent-security",
+  },
 ]
 
 const accentClasses = {
@@ -77,6 +93,13 @@ const accentClasses = {
     iconColor: "text-violet-500",
     borderColor: "border-l-violet-400",
   },
+  blue: {
+    badgeBg: "bg-blue-50",
+    badgeText: "text-blue-600",
+    iconBg: "bg-blue-50",
+    iconColor: "text-blue-500",
+    borderColor: "border-l-blue-400",
+  },
 }
 
 export function ServicesSection() {
@@ -92,7 +115,7 @@ export function ServicesSection() {
           className="text-center"
         >
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-indigo-600/80">
-            Three Pillars
+            Four Pillars
           </span>
           <h2 className="mt-5 text-4xl font-extrabold tracking-tighter text-gray-900 sm:text-5xl lg:text-[64px] lg:leading-[1.05]">
             Test before you ship.
@@ -100,13 +123,13 @@ export function ServicesSection() {
             Protect at runtime.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            Purpose-built security for chat agents, voice agents, and coding agents.
+            Purpose-built security for chat agents, voice agents, coding agents, and agent search.
             Test before deployment, protect at runtime.
           </p>
         </motion.div>
 
         {/* Service cards - 3 column grid */}
-        <div className="mt-24 grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <div className="mt-24 grid gap-8 md:grid-cols-2 lg:gap-10">
           {services.map((service, index) => {
             const colors = accentClasses[service.accentColor as keyof typeof accentClasses]
             const Icon = service.icon

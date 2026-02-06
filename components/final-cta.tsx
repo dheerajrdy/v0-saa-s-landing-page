@@ -23,20 +23,21 @@ export function FinalCta() {
           </p>
           <div className="mt-12 flex flex-col items-center gap-5 sm:flex-row sm:justify-center sm:gap-6">
             <a
-              href="https://calendly.com/divyachitimalla/intro"
+              href="https://dashboard.proof-layer.com/dashboard"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-full bg-gray-900 px-10 py-4 text-base font-medium text-white transition-all hover:bg-gray-800 hover:scale-[1.02]"
             >
-              Book a Call
+              Start Free
               <ArrowRight className="h-5 w-5" />
             </a>
             <a
-              href="#services"
-              className="inline-flex items-center gap-2 text-base font-medium text-gray-500 transition-colors hover:text-gray-900"
+              href="https://calendly.com/divyachitimalla/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-full border border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-700 transition-all hover:bg-gray-50 hover:border-gray-300"
             >
-              Explore our services
-              <ArrowRight className="h-5 w-5" />
+              Book a Demo
             </a>
           </div>
         </motion.div>

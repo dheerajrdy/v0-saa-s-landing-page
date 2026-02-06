@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Target, ShieldCheck, GitBranch, Mic, FileText, Globe } from "lucide-react"
+import { Target, ShieldCheck, GitBranch, Mic, FileText, Globe, Search } from "lucide-react"
 
 const features = [
   {
@@ -16,6 +16,13 @@ const features = [
     title: "Bidirectional Guardrails",
     description: "Input AND output protection. Validate prompts before execution and responses before delivery.",
     color: "violet",
+    size: "small",
+  },
+  {
+    icon: Search,
+    title: "Search Guardrails",
+    description: "Scan outbound queries for data leakage. Validate inbound results for indirect prompt injection and malicious content.",
+    color: "blue",
     size: "small",
   },
   {
@@ -37,14 +44,14 @@ const features = [
     title: "Compliance Ready",
     description: "OWASP, NIST, MITRE ATLAS mapping. SOC2 audit logs built-in from day one.",
     color: "orange",
-    size: "small",
+    size: "large",
   },
   {
     icon: Globe,
     title: "CI/CD Integration",
     description: "GitHub Actions, GitLab CI, Jenkins support. Test agents in your deployment pipeline.",
     color: "blue",
-    size: "large",
+    size: "small",
   },
 ]
 

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, Download, GitBranch, ArrowRight } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -22,7 +22,6 @@ export function Header() {
           <span className="text-xl font-extrabold tracking-tighter text-gray-900">
             Proof<span className="text-indigo-600">Layer</span>
           </span>
-          <span className="hidden text-xs font-medium text-gray-400 sm:inline">AI Agent Security</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -36,34 +35,7 @@ export function Header() {
           <Link href="/blog" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
             Blog
           </Link>
-          <a
-            href="https://www.npmjs.com/package/agent-security-scanner-mcp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
-          >
-            Docs
-          </a>
           <div className="mx-1 h-5 border-l border-gray-200" />
-          <a
-            href="https://www.npmjs.com/package/agent-security-scanner-mcp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2.5 rounded-full bg-indigo-50 px-4 py-2 text-sm transition-all hover:bg-indigo-100"
-          >
-            <svg className="h-3.5 w-6 shrink-0" viewBox="0 0 780 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M240 250h90V0h-90v250zm-60 0h60V0h-60v250zM0 250h180V0H0v250zm600 0h180V0H600v250zm-180 0h60V0h-60v250zm60 0h90V0h-90v250z" fill="#CB3837"/>
-            </svg>
-            <span className="font-semibold text-gray-900 truncate max-w-[180px]">agent-security-scanner</span>
-            <span className="h-3.5 w-px bg-gray-300" />
-            <span className="flex items-center gap-1 text-xs text-gray-500">
-              <Download className="h-3 w-3" /> 1.4k/mo
-            </span>
-            <span className="flex items-center gap-1 text-xs text-gray-500">
-              <GitBranch className="h-3 w-3" /> 21 ver.
-            </span>
-            <ArrowRight className="h-3.5 w-3.5 text-indigo-500" />
-          </a>
           <a
             href="https://www.npmjs.com/package/agent-security-scanner-mcp"
             target="_blank"
@@ -109,29 +81,7 @@ export function Header() {
             >
               Blog
             </Link>
-            <a
-              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Docs
-            </a>
             <div className="my-2 border-t border-gray-100" />
-            <a
-              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl bg-indigo-50 px-4 py-3 hover:bg-indigo-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="text-base font-medium text-indigo-600">Security Scanner</span>
-              <span className="mt-1 flex items-center gap-3 text-xs text-gray-500">
-                <span className="flex items-center gap-1"><Download className="h-3 w-3" /> 1.4k/mo</span>
-                <span className="flex items-center gap-1"><GitBranch className="h-3 w-3" /> 21 ver.</span>
-              </span>
-            </a>
             <a
               href="https://www.npmjs.com/package/agent-security-scanner-mcp"
               target="_blank"

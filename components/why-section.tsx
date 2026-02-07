@@ -41,7 +41,6 @@ export function WhySection() {
             than anyone can review it.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            Every AI coding agent you deploy is a new attack surface.
             Without purpose-built security, vulnerable code ships to production.
           </p>
         </motion.div>
@@ -64,21 +63,6 @@ export function WhySection() {
           ))}
         </div>
 
-        {/* Contrast line */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mx-auto mt-16 max-w-3xl border-t border-gray-100 pt-12 text-center"
-        >
-          <p className="text-lg leading-relaxed text-gray-400">
-            <span className="font-semibold text-gray-600">Snyk</span> and{" "}
-            <span className="font-semibold text-gray-600">Semgrep</span> scan code after it&apos;s committed.
-            By then, the vulnerable code has shipped.
-            They were built for human developers, not autonomous agents.
-          </p>
-        </motion.div>
       </div>
     </section>
   )

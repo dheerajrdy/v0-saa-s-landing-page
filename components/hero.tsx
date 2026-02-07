@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, ShieldCheck, Copy, Check } from "lucide-react"
+import { ArrowRight, ShieldCheck, Copy, Check, Calendar } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 import { useState } from "react"
 
@@ -37,9 +37,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed"
           >
-            62% of AI-generated code has security vulnerabilities. Agent Security Scanner
-            is the first security layer that runs inside Cursor, Claude Code, and Copilot —
-            catching vulnerabilities, hallucinated packages, and prompt injection in real-time.
+            62% of AI-generated code has vulnerabilities. We catch them before they ship — inside Cursor, Claude Code, and Copilot.
           </motion.p>
 
           {/* Capability badges */}
@@ -76,7 +74,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-full bg-gray-900 px-10 py-4 text-base font-medium text-white transition-all hover:bg-gray-800 hover:scale-[1.02]"
             >
-              Install Free
+              Get Started
               <ArrowRight className="h-5 w-5" />
             </a>
             <a
@@ -84,6 +82,15 @@ export function Hero() {
               className="inline-flex items-center gap-2.5 rounded-full border border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-700 transition-all hover:bg-gray-50 hover:border-gray-300"
             >
               See Demo
+            </a>
+            <a
+              href="https://calendly.com/divyachitimalla/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-base font-medium text-indigo-600 transition-colors hover:text-indigo-700"
+            >
+              <Calendar className="h-4 w-4" />
+              Book a Demo
             </a>
           </motion.div>
 

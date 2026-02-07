@@ -46,8 +46,7 @@ export function WhyProofLayer() {
             Not retrofitted.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            See how ProofLayer compares to traditional security tools
-            that were designed for human-written code.
+            How we compare to tools built for human-written code.
           </p>
         </motion.div>
 

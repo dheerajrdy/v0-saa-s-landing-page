@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, Copy, Check } from "lucide-react"
+import { Copy, Check, Calendar } from "lucide-react"
 
 export function FinalCta() {
   const [copied, setCopied] = useState(false)
@@ -51,13 +51,13 @@ export function FinalCta() {
 
           <div className="mt-8">
             <a
-              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+              href="https://calendly.com/divyachitimalla/intro"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-full bg-gray-900 px-10 py-4 text-base font-medium text-white transition-all hover:bg-gray-800 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 text-base font-medium text-indigo-600 transition-colors hover:text-indigo-700"
             >
-              Install Free
-              <ArrowRight className="h-5 w-5" />
+              <Calendar className="h-4 w-4" />
+              Book a Demo
             </a>
           </div>
         </motion.div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, Download, Scale, GitBranch, ArrowRight } from "lucide-react"
+import { Menu, X, Download, GitBranch, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -30,12 +30,20 @@ export function Header() {
           <a href="#features" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
             Features
           </a>
-          <a href="#pricing" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
-            Pricing
+          <a href="#demo" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
+            How It Works
           </a>
           <Link href="/blog" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
             Blog
           </Link>
+          <a
+            href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+          >
+            Docs
+          </a>
           <div className="mx-1 h-5 border-l border-gray-200" />
           <a
             href="https://www.npmjs.com/package/agent-security-scanner-mcp"
@@ -52,20 +60,17 @@ export function Header() {
               <Download className="h-3 w-3" /> 1.4k/mo
             </span>
             <span className="flex items-center gap-1 text-xs text-gray-500">
-              <Scale className="h-3 w-3" /> MIT
-            </span>
-            <span className="flex items-center gap-1 text-xs text-gray-500">
-              <GitBranch className="h-3 w-3" /> 17 ver.
+              <GitBranch className="h-3 w-3" /> 21 ver.
             </span>
             <ArrowRight className="h-3.5 w-3.5 text-indigo-500" />
           </a>
           <a
-            href="https://dashboard.proof-layer.com/dashboard"
+            href="https://www.npmjs.com/package/agent-security-scanner-mcp"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-indigo-600 px-5 py-2 text-sm font-medium text-white shadow-sm transition-all hover:bg-indigo-700 hover:shadow-md"
           >
-            Try Now
+            Install Free
           </a>
         </nav>
 
@@ -91,11 +96,11 @@ export function Header() {
               Features
             </a>
             <a
-              href="#pricing"
+              href="#demo"
               className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Pricing
+              How It Works
             </a>
             <Link
               href="/blog"
@@ -104,6 +109,15 @@ export function Header() {
             >
               Blog
             </Link>
+            <a
+              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Docs
+            </a>
             <div className="my-2 border-t border-gray-100" />
             <a
               href="https://www.npmjs.com/package/agent-security-scanner-mcp"
@@ -115,18 +129,17 @@ export function Header() {
               <span className="text-base font-medium text-indigo-600">Security Scanner</span>
               <span className="mt-1 flex items-center gap-3 text-xs text-gray-500">
                 <span className="flex items-center gap-1"><Download className="h-3 w-3" /> 1.4k/mo</span>
-                <span className="flex items-center gap-1"><Scale className="h-3 w-3" /> MIT</span>
-                <span className="flex items-center gap-1"><GitBranch className="h-3 w-3" /> 17 ver.</span>
+                <span className="flex items-center gap-1"><GitBranch className="h-3 w-3" /> 21 ver.</span>
               </span>
             </a>
             <a
-              href="https://dashboard.proof-layer.com/dashboard"
+              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-xl bg-indigo-600 px-4 py-3 text-base font-medium text-white hover:bg-indigo-700"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Try Now
+              Install Free
             </a>
           </nav>
         </div>

@@ -19,21 +19,34 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "ProofLayer — Security for Every AI Agent",
+  title: "ProofLayer — AI Coding Agent Security Scanner",
   description:
-    "Pre-deployment testing and runtime guardrails for chat agents, voice agents, and coding agents. One platform to secure every AI agent.",
-  keywords: ["AI agent security", "red teaming", "prompt injection", "AI guardrails", "voice AI security", "coding agent security", "LLM security", "AI code review", "code generation security", "OWASP", "NIST"],
+    "Catch vulnerabilities, hallucinated packages, and prompt injection in AI-generated code. Works with Cursor, Claude Code, and Copilot. Free open-source scanner.",
+  keywords: [
+    "AI coding agent security",
+    "AI code scanner",
+    "AI-generated code vulnerabilities",
+    "package hallucination detection",
+    "prompt injection firewall",
+    "Cursor security",
+    "Claude Code security",
+    "Copilot security scanner",
+    "MCP security",
+    "OWASP AI",
+    "CWE",
+    "code vulnerability scanner",
+  ],
   authors: [{ name: "ProofLayer" }],
   openGraph: {
-    title: "ProofLayer — Security for Every AI Agent",
-    description: "Pre-deployment testing and runtime guardrails for chat agents, voice agents, and coding agents.",
+    title: "ProofLayer — AI Coding Agent Security Scanner",
+    description: "62% of AI-generated code has vulnerabilities. Catch them before they ship.",
     type: "website",
     siteName: "ProofLayer",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ProofLayer — Security for Every AI Agent",
-    description: "Pre-deployment testing and runtime guardrails for chat agents, voice agents, and coding agents.",
+    title: "ProofLayer — AI Coding Agent Security Scanner",
+    description: "62% of AI-generated code has vulnerabilities. Catch them before they ship.",
   },
   icons: {
     icon: [

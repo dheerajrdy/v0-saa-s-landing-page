@@ -4,19 +4,19 @@ import { motion } from "framer-motion"
 
 const stats = [
   {
-    number: "60%",
-    text: "of LLM applications are vulnerable to prompt injection attacks",
-    source: "OWASP 2025",
+    number: "41%",
+    text: "of all new code is now AI-generated",
+    source: "GitHub 2025",
   },
   {
-    number: "36%",
-    text: "of AI-generated code contains security vulnerabilities that pass standard linters",
-    source: "Stanford Research 2025",
+    number: "62%",
+    text: "of AI-generated code has security vulnerabilities",
+    source: "Stanford Research",
   },
   {
-    number: "43",
-    text: "agent framework components found with known supply chain vulnerabilities",
-    source: "Barracuda Security 2025",
+    number: "10,000+",
+    text: "new security findings from AI-generated code every month",
+    source: "Industry Data",
   },
 ]
 
@@ -36,13 +36,13 @@ export function WhySection() {
             The Problem
           </span>
           <h2 className="mt-5 text-4xl font-extrabold tracking-tighter text-gray-900 sm:text-5xl lg:text-[64px] lg:leading-[1.05]">
-            AI agents are powerful.
+            AI is writing code faster
             <br />
-            And dangerously exposed.
+            than anyone can review it.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 lg:text-2xl lg:leading-relaxed">
-            Every coding agent and search pipeline you deploy is a new attack surface.
-            Without purpose-built security, you&apos;re shipping vulnerabilities to production.
+            Every AI coding agent you deploy is a new attack surface.
+            Without purpose-built security, vulnerable code ships to production.
           </p>
         </motion.div>
 
@@ -63,6 +63,22 @@ export function WhySection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Contrast line */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mx-auto mt-16 max-w-3xl border-t border-gray-100 pt-12 text-center"
+        >
+          <p className="text-lg leading-relaxed text-gray-400">
+            <span className="font-semibold text-gray-600">Snyk</span> and{" "}
+            <span className="font-semibold text-gray-600">Semgrep</span> scan code after it&apos;s committed.
+            By then, the vulnerable code has shipped.
+            They were built for human developers, not autonomous agents.
+          </p>
+        </motion.div>
       </div>
     </section>
   )

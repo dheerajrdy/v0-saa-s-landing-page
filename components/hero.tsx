@@ -1,70 +1,18 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, ShieldCheck } from "lucide-react"
+import { ArrowRight, ShieldCheck, Copy, Check } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
-
-const ROTATING_WORDS = ["coding agents.", "agent search.", "AI agents."]
-const TYPING_SPEED = 80
-const DELETING_SPEED = 50
-const PAUSE_AFTER_TYPED = 2000
-const PAUSE_AFTER_DELETED = 400
-
-function useTypewriter(words: string[]) {
-  const [wordIndex, setWordIndex] = useState(0)
-  const [displayText, setDisplayText] = useState("")
-  const [isDeleting, setIsDeleting] = useState(false)
-
-  const tick = useCallback(() => {
-    const currentWord = words[wordIndex]
-
-    if (!isDeleting) {
-      // Typing
-      const next = currentWord.slice(0, displayText.length + 1)
-      setDisplayText(next)
-
-      if (next === currentWord) {
-        // Finished typing — pause then start deleting
-        setTimeout(() => setIsDeleting(true), PAUSE_AFTER_TYPED)
-        return
-      }
-    } else {
-      // Deleting
-      const next = currentWord.slice(0, displayText.length - 1)
-      setDisplayText(next)
-
-      if (next === "") {
-        setIsDeleting(false)
-        setWordIndex((prev) => (prev + 1) % words.length)
-        // Brief pause before typing next word
-        setTimeout(() => {}, PAUSE_AFTER_DELETED)
-        return
-      }
-    }
-  }, [displayText, isDeleting, wordIndex, words])
-
-  useEffect(() => {
-    const speed = isDeleting ? DELETING_SPEED : TYPING_SPEED
-    // After finishing typing, the pause is handled in tick()
-    if (!isDeleting && displayText === words[wordIndex]) return
-    const timeout = setTimeout(tick, speed)
-    return () => clearTimeout(timeout)
-  }, [tick, displayText, isDeleting, wordIndex, words])
-
-  // Kick off after delete-pause
-  useEffect(() => {
-    if (!isDeleting && displayText === "") {
-      const timeout = setTimeout(tick, PAUSE_AFTER_DELETED)
-      return () => clearTimeout(timeout)
-    }
-  }, [isDeleting, displayText, tick])
-
-  return displayText
-}
+import { useState } from "react"
 
 export function Hero() {
-  const typedText = useTypewriter(ROTATING_WORDS)
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("npx agent-security-scanner-mcp init")
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <section className="relative px-4 pt-44 pb-32 sm:px-6 lg:px-8 lg:pt-56 lg:pb-48">
@@ -75,17 +23,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-5xl text-[52px] font-extrabold leading-[1.0] tracking-tighter text-gray-900 sm:text-[80px] lg:text-[96px] xl:text-[112px]"
+            className="max-w-5xl text-[52px] font-extrabold leading-[1.0] tracking-tighter text-gray-900 sm:text-[80px] lg:text-[96px]"
           >
-            Security for{" "}
+            AI agents write the code.
             <br />
-            <span className="inline-flex">
-              <span className="text-indigo-600">{typedText}</span>
-              <span
-                className="ml-[2px] inline-block w-[3px] sm:w-[4px] lg:w-[5px] self-stretch bg-indigo-600 animate-blink"
-                aria-hidden="true"
-              />
-            </span>
+            <span className="text-indigo-600">We make sure it&apos;s safe.</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -95,28 +37,29 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed"
           >
-            Secure AI-generated code and agent search pipelines.
-            Pre-deployment scanning. Runtime&nbsp;guardrails.
+            62% of AI-generated code has security vulnerabilities. Agent Security Scanner
+            is the first security layer that runs inside Cursor, Claude Code, and Copilot —
+            catching vulnerabilities, hallucinated packages, and prompt injection in real-time.
           </motion.p>
 
-          {/* Compliance badges */}
+          {/* Capability badges */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-8 flex items-center gap-4"
+            className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
             <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
-              SOC 2 Type II
+              359 Security Rules
             </div>
             <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
-              HIPAA Compliant
+              4.3M Packages Verified
             </div>
             <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
-              OWASP Top 10
+              12 Languages
             </div>
           </motion.div>
 
@@ -128,40 +71,40 @@ export function Hero() {
             className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:gap-6"
           >
             <a
-              href="https://dashboard.proof-layer.com/dashboard"
+              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-full bg-gray-900 px-10 py-4 text-base font-medium text-white transition-all hover:bg-gray-800 hover:scale-[1.02]"
             >
-              Start Free
+              Install Free
               <ArrowRight className="h-5 w-5" />
             </a>
             <a
-              href="https://calendly.com/divyachitimalla/intro"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#demo"
               className="inline-flex items-center gap-2.5 rounded-full border border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-700 transition-all hover:bg-gray-50 hover:border-gray-300"
             >
-              Book a Demo
+              See Demo
             </a>
           </motion.div>
 
-          {/* NPM package */}
+          {/* NPM install command */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-6"
           >
-            <a
-              href="https://www.npmjs.com/package/agent-security-scanner-mcp"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={handleCopy}
               className="inline-flex items-center gap-3 rounded-full border border-indigo-200 bg-indigo-50/80 px-5 py-2.5 text-sm backdrop-blur-sm transition-all hover:bg-indigo-100/80 hover:border-indigo-300"
             >
-              <code className="font-mono text-sm text-indigo-700">npx agent-security-scanner-mcp</code>
-              <span className="font-medium text-indigo-600">Try Free →</span>
-            </a>
+              <code className="font-mono text-sm text-indigo-700">npx agent-security-scanner-mcp init</code>
+              {copied ? (
+                <Check className="h-4 w-4 text-emerald-500" />
+              ) : (
+                <Copy className="h-4 w-4 text-indigo-400" />
+              )}
+            </button>
           </motion.div>
 
           {/* Hero Visual */}

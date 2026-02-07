@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, ShieldCheck } from "lucide-react"
+import { Twitter, Linkedin, Github, ShieldCheck } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -21,7 +21,7 @@ export function Footer() {
                 Proof<span className="text-indigo-600">Layer</span>
               </span>
             </div>
-            <p className="mt-4 text-base text-gray-500">Security for every AI agent.</p>
+            <p className="mt-4 text-base text-gray-500">Security for AI coding agents.</p>
             <div className="mt-6 flex gap-4">
               <a
                 href="https://twitter.com/prooflayer"
@@ -39,6 +39,14 @@ export function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
+              <a
+                href="https://github.com/prooflayer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 transition-colors hover:text-gray-600"
+              >
+                <Github className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -47,14 +55,39 @@ export function Footer() {
             <h4 className="text-sm font-medium uppercase tracking-wider text-gray-400">Product</h4>
             <ul className="mt-4 space-y-3 text-base">
               <li>
-                <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors">
-                  Services
+                <a href="#features" className="text-gray-500 hover:text-gray-900 transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#demo" className="text-gray-500 hover:text-gray-900 transition-colors">
+                  How It Works
                 </a>
               </li>
               <li>
                 <Link href="/blog" className="text-gray-500 hover:text-gray-900 transition-colors">
                   Blog
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/prooflayer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-gray-900 transition-colors"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-gray-900 transition-colors"
+                >
+                  npm
+                </a>
               </li>
             </ul>
           </div>
@@ -68,11 +101,15 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1.5 text-xs text-gray-400">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
-              HIPAA Compliant
+              OWASP Top 10
             </div>
             <div className="flex items-center gap-1.5 text-xs text-gray-400">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
-              SOC 2 Type II
+              CWE Mapped
+            </div>
+            <div className="flex items-center gap-1.5 text-xs text-gray-400">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+              MITRE ATLAS
             </div>
           </div>
         </div>

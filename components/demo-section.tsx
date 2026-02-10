@@ -26,17 +26,20 @@ const capabilities = [
   {
     icon: Shield,
     title: "Code Vulnerability Scanning",
-    description: "359 rules, 12 languages",
+    description: "359 rules",
+    metric: "359 rules",
   },
   {
     icon: Package,
     title: "Package Hallucination Detection",
-    description: "4.3M packages verified",
+    description: "4.3M packages",
+    metric: "4.3M packages",
   },
   {
     icon: Fingerprint,
     title: "Prompt Injection Firewall",
-    description: "80%+ detection rate",
+    description: "80%+ detection",
+    metric: "80%+ detection",
   },
 ]
 
@@ -84,26 +87,38 @@ export function DemoSection() {
           onMouseLeave={() => setIsHovering(false)}
         >
           <div className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-2xl">
-            {/* Tab bar */}
-            <div className="flex border-b border-gray-100">
-              {tabs.map((tab, index) => {
-                const Icon = tab.icon
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(index)}
-                    className={`flex flex-1 items-center justify-center gap-2 px-4 py-3.5 text-sm font-medium transition-all ${
-                      activeTab === index
-                        ? "border-b-2 border-indigo-600 bg-white text-gray-900"
-                        : "text-gray-400 hover:text-gray-600"
-                    }`}
-                  >
-                    <Icon className="h-4 w-4" />
-                    <span className="hidden sm:inline">{tab.label}</span>
-                    <span className="sm:hidden">{tab.label.split(" ").pop()}</span>
-                  </button>
-                )
-              })}
+            {/* Window chrome + Tab bar */}
+            <div className="border-b border-gray-100">
+              {/* Window dots and path */}
+              <div className="flex items-center gap-2 px-4 pt-3 pb-0">
+                <div className="flex items-center gap-1.5">
+                  <div className="h-3 w-3 rounded-full bg-red-400" />
+                  <div className="h-3 w-3 rounded-full bg-amber-400" />
+                  <div className="h-3 w-3 rounded-full bg-indigo-400" />
+                </div>
+                <span className="ml-2 font-mono text-xs text-gray-400">~/project/src</span>
+              </div>
+              {/* Tabs */}
+              <div className="flex mt-2">
+                {tabs.map((tab, index) => {
+                  const Icon = tab.icon
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(index)}
+                      className={`flex flex-1 items-center justify-center gap-2 px-4 py-3.5 text-sm font-medium transition-all ${
+                        activeTab === index
+                          ? "border-b-2 border-indigo-600 bg-white text-gray-900"
+                          : "text-gray-400 hover:text-gray-600"
+                      }`}
+                    >
+                      <Icon className="h-4 w-4" />
+                      <span className="hidden sm:inline">{tab.label}</span>
+                      <span className="sm:hidden">{tab.label.split(" ").pop()}</span>
+                    </button>
+                  )
+                })}
+              </div>
             </div>
 
             {/* Terminal body */}
@@ -253,16 +268,29 @@ export function DemoSection() {
             </div>
           </div>
 
-          {/* Progress dots */}
+          {/* Progress bar */}
           <div className="mt-4 flex justify-center gap-2">
             {tabs.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`h-1.5 rounded-full transition-all ${
-                  activeTab === index ? "w-8 bg-indigo-600" : "w-1.5 bg-gray-200"
-                }`}
-              />
+                className="relative h-1.5 overflow-hidden rounded-full bg-gray-200"
+                style={{ width: activeTab === index ? 32 : 6 }}
+              >
+                {activeTab === index && !isHovering && (
+                  <motion.div
+                    key={`progress-${activeTab}`}
+                    className="absolute inset-0 rounded-full bg-indigo-600"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 4, ease: "linear" }}
+                    style={{ transformOrigin: "left" }}
+                  />
+                )}
+                {activeTab === index && isHovering && (
+                  <div className="absolute inset-0 rounded-full bg-indigo-600" />
+                )}
+              </button>
             ))}
           </div>
         </motion.div>
@@ -284,7 +312,7 @@ export function DemoSection() {
                   <Icon className="h-5 w-5 text-indigo-600" />
                 </div>
                 <h3 className="mt-4 text-sm font-semibold text-gray-900">{cap.title}</h3>
-                <p className="mt-1 text-sm text-gray-500">{cap.description}</p>
+                <p className="mt-1 font-mono text-sm text-indigo-600">{cap.metric}</p>
               </motion.div>
             )
           })}

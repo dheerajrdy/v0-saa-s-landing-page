@@ -1,11 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, ShieldCheck, Copy, Check, Calendar } from "lucide-react"
+import { ArrowRight, ShieldCheck, Copy, Check, Calendar, ExternalLink, Download } from "lucide-react"
 import { SecurityAnimation } from "@/components/security-animation"
 import { useState } from "react"
+import type { NpmStats } from "@/lib/npm-stats"
+import { formatDownloads } from "@/lib/npm-stats"
 
-export function Hero() {
+export function Hero({ stats }: { stats: NpmStats }) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -18,6 +20,24 @@ export function Hero() {
     <section className="relative px-4 pt-44 pb-32 sm:px-6 lg:px-8 lg:pt-56 lg:pb-48">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center text-center">
+          {/* Open Source pill */}
+          <motion.a
+            href="https://www.npmjs.com/package/agent-security-scanner-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0 }}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200/60 bg-emerald-50/80 px-4 py-1.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-100/80"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
+            Open Source
+            <ExternalLink className="h-3.5 w-3.5 text-emerald-500" />
+          </motion.a>
+
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -27,7 +47,7 @@ export function Hero() {
           >
             AI agents write the code.
             <br />
-            <span className="text-indigo-600">We make sure it&apos;s safe.</span>
+            <span className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-violet-500 bg-clip-text text-transparent">We make sure it&apos;s safe.</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -37,7 +57,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-400 sm:text-2xl lg:text-[28px] lg:leading-relaxed"
           >
-            62% of AI-generated code has vulnerabilities. We catch them before they ship — inside Cursor, Claude Code, and Copilot.
+            <span className="font-semibold text-gray-600">62%</span> of AI-generated code has vulnerabilities. We catch them before they ship — inside Cursor, Claude Code, and Copilot.
           </motion.p>
 
           {/* Capability badges */}
@@ -60,6 +80,17 @@ export function Hero() {
               12 Languages
             </div>
           </motion.div>
+
+          {/* Social proof line */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.28 }}
+            className="mt-5 flex items-center gap-1.5 text-sm text-gray-400"
+          >
+            <Download className="h-3.5 w-3.5" />
+            Joined by {formatDownloads(stats.weeklyDownloads)} developers this week
+          </motion.p>
 
           {/* CTAs */}
           <motion.div

@@ -22,7 +22,12 @@ export function FinalCta() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl font-extrabold tracking-tighter text-gray-900 sm:text-6xl lg:text-[72px] lg:leading-[1.05]">
+          {/* Stats strip */}
+          <p className="font-mono text-sm text-gray-400">
+            359 Rules · 4.3M Packages · 12 Languages
+          </p>
+
+          <h2 className="mt-6 text-5xl font-extrabold tracking-tighter text-gray-900 sm:text-6xl lg:text-[72px] lg:leading-[1.05]">
             AI is writing the code.
             <br />
             Make sure it&apos;s safe.
@@ -35,7 +40,7 @@ export function FinalCta() {
           <div className="mt-12 mx-auto max-w-lg">
             <button
               onClick={handleCopy}
-              className="group flex w-full items-center justify-between rounded-xl bg-gray-950 px-6 py-4 font-mono text-sm text-gray-300 transition-all hover:bg-gray-900"
+              className="group flex w-full items-center justify-between rounded-xl bg-gray-950 px-6 py-4 font-mono text-sm text-gray-300 shadow-[0_0_60px_-15px_rgba(79,70,229,0.15)] transition-all hover:bg-gray-900"
             >
               <span>
                 <span className="text-gray-500">$ </span>
@@ -59,6 +64,9 @@ export function FinalCta() {
               <Calendar className="h-4 w-4" />
               Book a Demo
             </a>
+            <p className="mt-3 text-xs text-gray-300">
+              Free and open source. No credit card required.
+            </p>
           </div>
         </motion.div>
       </div>

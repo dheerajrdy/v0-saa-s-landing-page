@@ -1,15 +1,29 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { NpmStatsBadge } from "@/components/npm-stats"
+import type { NpmStats } from "@/lib/npm-stats"
 
-export function Header() {
+export function Header({ stats }: { stats?: NpmStats }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10)
+    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-2xl">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-2xl transition-[border-color] ${
+        scrolled ? "border-b border-gray-100/80" : "border-b border-transparent"
+      }`}
+    >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -35,6 +49,7 @@ export function Header() {
           <Link href="/blog" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
             Blog
           </Link>
+          {stats && <NpmStatsBadge stats={stats} />}
           <div className="mx-1 h-5 border-l border-gray-200" />
           <a
             href="https://www.npmjs.com/package/agent-security-scanner-mcp"

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, Minus, CircleDot } from "lucide-react"
+import { Check, Minus, CircleDot, TrendingUp } from "lucide-react"
 
 const capabilities = [
   { feature: "Scans inside AI coding agents (MCP)", prooflayer: "yes", snyk: "no", semgrep: "no" },
@@ -61,7 +61,7 @@ export function WhyProofLayer() {
             {/* Table header */}
             <div className="grid grid-cols-4 border-b border-gray-100 bg-gray-50/80 px-6 py-4 text-sm font-semibold text-gray-900">
               <div className="col-span-1">Capability</div>
-              <div className="text-center font-bold text-indigo-600">ProofLayer</div>
+              <div className="rounded-t-lg bg-indigo-50/40 text-center font-bold text-indigo-600">ProofLayer</div>
               <div className="text-center">Snyk</div>
               <div className="text-center">Semgrep</div>
             </div>
@@ -70,12 +70,12 @@ export function WhyProofLayer() {
             {capabilities.map((cap, index) => (
               <div
                 key={cap.feature}
-                className={`grid grid-cols-4 items-center px-6 py-3.5 text-sm ${
+                className={`grid grid-cols-4 items-center px-6 py-3.5 text-sm transition-colors hover:bg-gray-50/80 ${
                   index < capabilities.length - 1 ? "border-b border-gray-50" : ""
                 } ${index % 2 === 0 ? "" : "bg-gray-50/40"}`}
               >
                 <div className="col-span-1 font-medium text-gray-700">{cap.feature}</div>
-                <div className="flex justify-center">
+                <div className="flex justify-center bg-indigo-50/40">
                   <FeatureStatus status={cap.prooflayer} />
                 </div>
                 <div className="flex justify-center">
@@ -95,14 +95,19 @@ export function WhyProofLayer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 text-center"
+          className="mt-12"
         >
-          <p className="text-lg leading-relaxed text-gray-400">
-            <span className="font-semibold text-gray-600">Snyk</span> is valued at{" "}
-            <span className="font-semibold text-gray-600">$8.5B</span> protecting human-written code.
-            <br />
-            We&apos;re building the security layer for the 41% that AI writes.
-          </p>
+          <div className="flex items-start gap-4 rounded-xl border border-indigo-100 bg-indigo-50/40 p-6">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-100">
+              <TrendingUp className="h-5 w-5 text-indigo-600" />
+            </div>
+            <p className="text-lg leading-relaxed text-gray-500">
+              <span className="font-semibold text-gray-600">Snyk</span> is valued at{" "}
+              <span className="font-semibold text-gray-600">$8.5B</span> protecting human-written code.
+              <br />
+              We&apos;re building the security layer for the 41% that AI writes.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -64,7 +64,7 @@ export function FinalCta() {
               <Calendar className="h-4 w-4" />
               Book a Demo
             </a>
-            <p className="mt-3 text-xs text-gray-300">
+            <p className="mt-3 text-xs text-gray-400">
               Free and open source. No credit card required.
             </p>
           </div>

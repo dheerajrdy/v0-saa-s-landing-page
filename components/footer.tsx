@@ -59,7 +59,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="mt-16 border-t border-gray-100 pt-10">
-          <p className="text-sm text-gray-300">
+          <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} ProofLayer. All rights reserved.
           </p>
         </div>

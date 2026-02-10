@@ -23,7 +23,7 @@ export default async function Home() {
 
       <div className="relative">
         <Header stats={stats} />
-        <Hero stats={stats} />
+        <Hero />
         <CompatibilityBar />
         <TrustBar downloads={formattedDownloads} />
         <WhySection />

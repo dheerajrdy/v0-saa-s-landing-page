@@ -1,13 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, ShieldCheck, Copy, Check, Calendar, ExternalLink, Download } from "lucide-react"
-import { SecurityAnimation } from "@/components/security-animation"
+import { ArrowRight, ShieldCheck, Copy, Check, Calendar, ExternalLink } from "lucide-react"
 import { useState } from "react"
-import type { NpmStats } from "@/lib/npm-stats"
-import { formatDownloads } from "@/lib/npm-stats"
 
-export function Hero({ stats }: { stats: NpmStats }) {
+export function Hero() {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -17,7 +14,7 @@ export function Hero({ stats }: { stats: NpmStats }) {
   }
 
   return (
-    <section className="relative px-4 pt-44 pb-32 sm:px-6 lg:px-8 lg:pt-56 lg:pb-48">
+    <section className="relative px-4 pt-44 pb-20 sm:px-6 lg:px-8 lg:pt-56 lg:pb-32">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center text-center">
           {/* Open Source pill */}
@@ -81,17 +78,6 @@ export function Hero({ stats }: { stats: NpmStats }) {
             </div>
           </motion.div>
 
-          {/* Social proof line */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.28 }}
-            className="mt-5 flex items-center gap-1.5 text-sm text-gray-400"
-          >
-            <Download className="h-3.5 w-3.5" />
-            Joined by {formatDownloads(stats.weeklyDownloads)} developers this week
-          </motion.p>
-
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,15 +131,6 @@ export function Hero({ stats }: { stats: NpmStats }) {
             </button>
           </motion.div>
 
-          {/* Hero Visual */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-24 w-full lg:mt-32"
-          >
-            <SecurityAnimation />
-          </motion.div>
         </div>
       </div>
     </section>

@@ -306,7 +306,7 @@ export function DemoSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl border border-gray-100 bg-white p-6 text-center"
+                className="rounded-xl border border-gray-100 bg-white p-6 text-center hover:border-indigo-100 hover:shadow-sm transition-all"
               >
                 <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50">
                   <Icon className="h-5 w-5 text-indigo-600" />

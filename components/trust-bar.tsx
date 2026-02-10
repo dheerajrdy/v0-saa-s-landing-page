@@ -7,7 +7,7 @@ const trustSignals = [
   { icon: Download, metric: null, label: "Weekly downloads", key: "downloads" },
   { icon: Shield, metric: "359", label: "Security rules", key: "rules" },
   { icon: Package, metric: "4.3M", label: "Packages verified", key: "packages" },
-  { icon: Zap, metric: "<5 min", label: "Setup time", key: "setup" },
+  { icon: Zap, metric: "<30s", label: "Setup time", key: "setup" },
 ]
 
 export function TrustBar({ downloads }: { downloads: string }) {

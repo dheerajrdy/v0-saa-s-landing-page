@@ -48,23 +48,7 @@ export const metadata: Metadata = {
     title: "ProofLayer — AI Coding Agent Security Scanner",
     description: "62% of AI-generated code has vulnerabilities. Catch them before they ship.",
   },
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
+
   verification: {
     google: "Jz2fsslsGoqDXMCaGZSWwv3lgWXir845IhkKayJCw64",
   },

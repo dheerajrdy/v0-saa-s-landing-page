@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, Minus, CircleDot, TrendingUp } from "lucide-react"
+import { Check, Minus, CircleDot } from "lucide-react"
 
 const capabilities = [
   { feature: "Scans inside AI coding agents (MCP)", prooflayer: "yes", snyk: "no", semgrep: "no" },
@@ -89,26 +89,6 @@ export function WhyProofLayer() {
           </div>
         </motion.div>
 
-        {/* Market context */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12"
-        >
-          <div className="flex items-start gap-4 rounded-xl border border-indigo-100 bg-indigo-50/40 p-6">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-100">
-              <TrendingUp className="h-5 w-5 text-indigo-600" />
-            </div>
-            <p className="text-lg leading-relaxed text-gray-500">
-              <span className="font-semibold text-gray-600">Snyk</span> is valued at{" "}
-              <span className="font-semibold text-gray-600">$8.5B</span> protecting human-written code.
-              <br />
-              We&apos;re building the security layer for the 41% that AI writes.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

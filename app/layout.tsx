@@ -49,6 +49,13 @@ export const metadata: Metadata = {
     description: "62% of AI-generated code has vulnerabilities. Catch them before they ship.",
   },
 
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-light-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-icon.png",
+  },
   verification: {
     google: "Jz2fsslsGoqDXMCaGZSWwv3lgWXir845IhkKayJCw64",
   },
